@@ -9,10 +9,15 @@ class ProjectsController < ApplicationController
   end
 
   def new
+    @neededs = neededs_list()
+    @project = Project.new()
   end
 
   def create 
     @project = Project.new(post_params())
+    @project.owner_id=current_user.id
+    @project.project_slug=project_path(@project.id)
+    p @project
     if @project.save
       redirect_to projects_path
     else
@@ -43,7 +48,13 @@ class ProjectsController < ApplicationController
   private
 
   def post_params
-    params.require(:project).permit(:description,:project_slug,:logo_url,:project_title,:description,:owner,:figma_link,:git_link,:trello_link,:story)
+    params.require(:project).permit(:description,:logo_url,:project_title,:description,:figma_link,:git_link,:trello_link,:story,:needed_id)
+  end
+
+  def neededs_list
+    neededs =[]
+    Needed.all.each {|needed| neededs << needed}
+    return neededs
   end
 
 end

@@ -13,6 +13,9 @@
       <div>
         <h4><%= project.project_title %></h4>
         <p><%= project.description%></p>
+        <br>
+        <%=button_to "Rejoindre le projet", project_path(project.id), method:'get'%>
         <a href="<%= project.figma_link %>">Figma</a>
       </div>
     <%end%>
+    <div>

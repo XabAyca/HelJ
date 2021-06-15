@@ -1,0 +1,39 @@
+<div>
+  <%= form_with model: @project, method: :post, url: projects_path do |f| %>
+    <div>
+      <label>Titre</label>
+      <%= f.text_field :project_title %>
+    </div>
+    <div>
+      <label>Description rapide</label>
+      <%= f.text_area :description %>
+    </div>
+    <div>
+      <label>Histoire complète</label>
+      <%= f.text_area :story %>
+    </div>
+    <div>
+      <label>Image</label>
+      <%= f.text_field :logo_url %>
+    </div>
+    <div>
+      <label>Lien Figma</label>
+      <%= f.text_field :figma_link %>
+    </div>
+    <div>
+      <label>Lien Trello</label>
+      <%= f.text_field :trello_link %>
+    </div>
+    <div>
+      <label>Lien GitHub</label>
+      <%= f.text_field :git_link %>
+    </div>
+    <div>
+      <label>Besoins de compétences</label>
+      <%= f.collection_select :needed_id, @neededs,:id , :name,{} %>
+    </div>
+  
+    <%= f.submit 'Créer un projet'%>
+  <% end %>
+</div>
+<%=link_to 'Retour', projects_path%>
