@@ -10,10 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2021_06_15_095724) do
+=======
+ActiveRecord::Schema.define(version: 2021_06_15_083041) do
+>>>>>>> development
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "projects", force: :cascade do |t|
+    t.string "project_slug"
+    t.string "logo_url"
+    t.string "project_title"
+    t.text "description"
+    t.bigint "owner_id"
+    t.string "figma_link"
+    t.string "git_link"
+    t.string "trello_link"
+    t.text "story"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["owner_id"], name: "index_projects_on_owner_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -30,4 +49,15 @@ ActiveRecord::Schema.define(version: 2021_06_15_095724) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "challenges", force: :cascade do |t|
+    t.string "c_type"
+    t.string "level"
+    t.string "challenge_slug"
+    t.string "challenge_description"
+    t.string "challenge_img"
+    t.string "challenge_link"
+    t.string "challenge_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 end
