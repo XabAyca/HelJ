@@ -120,8 +120,6 @@ GEM
     nokogiri (1.11.7)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
-    nokogiri (1.11.7-x86_64-linux)
-      racc (~> 1.4)
     nyan-cat-formatter (0.12.0)
       rspec (>= 2.99, >= 2.14.2, < 4)
     pg (1.2.3)
@@ -236,9 +234,7 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
-  -darwin-20
   ruby
-  x86_64-linux
 
 DEPENDENCIES
   bootsnap (>= 1.4.4)
@@ -267,7 +263,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 2.7.1p83
+   ruby 2.7.3p183
 
 BUNDLED WITH
-   2.2.17
+   2.1.4
