@@ -1,0 +1,55 @@
+//not necessary 
+//they're compiled anyway
+@use 'fonts';
+@use 'spacing';
+@use 'colors';
+// i'm not sure
+@import 'media';
+
+
+* {
+  box-sizing: border-box !important;
+}
+
+body {
+  margin: 0;
+  color: var(--defaultBlack);
+  font-family: var(--primaryFont);
+}
+
+.main__wrapper{
+	min-height: calc(100vh - 100px);
+	background-color: var(--beige);
+}
+
+//not needed since it's the last case
+//@media(max-width:$LaptopBig){
+//}
+.main__wrapper{
+	padding:0px 100px;
+}
+@media(max-width:$LaptopSmall){
+	.main__wrapper{
+		padding:0px 80px;
+	}
+}
+@media(max-width:$Tablet){
+	.main__wrapper{
+		padding:0px 50px;
+	}
+}
+@media(max-width:$PhoneBig){
+	.main__wrapper{
+		padding:0px 30px;
+	}
+}
+@media(max-width:$PhoneMiddle){
+	.main__wrapper{
+		padding:0px 20px;
+	}
+}
+@media(max-width:$PhoneSmall){
+	.main__wrapper{
+		padding:0px 15px
+	}
+}
