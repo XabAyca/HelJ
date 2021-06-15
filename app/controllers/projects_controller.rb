@@ -16,13 +16,13 @@ class ProjectsController < ApplicationController
   def create 
     @project = Project.new(post_params())
     @project.owner_id=current_user.id
-    @project.project_slug=project_path(@project.id)
-    p @project
     if @project.save
+      @project.project_slug="https://hel-j.herokuapp.com/project/#{@project.id}"
       redirect_to projects_path
     else
+      @neededs = neededs_list()
       flash.now[:messages] = @project.errors.full_messages[0]
-      render 'new'   
+      render 'new'  
     end
   end
 
