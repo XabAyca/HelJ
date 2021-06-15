@@ -10,10 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_15_083041) do
+ActiveRecord::Schema.define(version: 2021_06_15_112422) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "challenges", force: :cascade do |t|
+    t.string "c_type"
+    t.string "level"
+    t.string "challenge_slug"
+    t.string "challenge_description"
+    t.string "challenge_img"
+    t.string "challenge_link"
+    t.string "challenge_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "joint_users_to_projects", force: :cascade do |t|
+    t.bigint "project_id"
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["project_id"], name: "index_joint_users_to_projects_on_project_id"
+    t.index ["user_id"], name: "index_joint_users_to_projects_on_user_id"
+  end
+
+  create_table "neededs", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "projects", force: :cascade do |t|
     t.string "project_slug"
@@ -27,6 +55,8 @@ ActiveRecord::Schema.define(version: 2021_06_15_083041) do
     t.text "story"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "needed_id"
+    t.index ["needed_id"], name: "index_projects_on_needed_id"
     t.index ["owner_id"], name: "index_projects_on_owner_id"
   end
 
@@ -42,15 +72,4 @@ ActiveRecord::Schema.define(version: 2021_06_15_083041) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "challenges", force: :cascade do |t|
-    t.string "c_type"
-    t.string "level"
-    t.string "challenge_slug"
-    t.string "challenge_description"
-    t.string "challenge_img"
-    t.string "challenge_link"
-    t.string "challenge_name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
 end
