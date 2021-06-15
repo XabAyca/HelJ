@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_15_095724) do
+ActiveRecord::Schema.define(version: 2021_06_15_112422) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,22 @@ ActiveRecord::Schema.define(version: 2021_06_15_095724) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "joint_users_to_projects", force: :cascade do |t|
+    t.bigint "project_id"
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["project_id"], name: "index_joint_users_to_projects_on_project_id"
+    t.index ["user_id"], name: "index_joint_users_to_projects_on_user_id"
+  end
+
+  create_table "neededs", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string "project_slug"
     t.string "logo_url"
@@ -39,6 +55,8 @@ ActiveRecord::Schema.define(version: 2021_06_15_095724) do
     t.text "story"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "needed_id"
+    t.index ["needed_id"], name: "index_projects_on_needed_id"
     t.index ["owner_id"], name: "index_projects_on_owner_id"
   end
 
