@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :projects, foreign_key: 'owner_id', class_name: 'Project', dependent: :destroy
   
 
-  after_create :welcome_mail
+  #after_create :welcome_mail
   
   def welcome_mail
     UserMailer.welcome(self).deliver
