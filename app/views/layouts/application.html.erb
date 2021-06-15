@@ -8,12 +8,19 @@
     
     <!-- JS -->
     <%= javascript_include_tag 'application' %>
-
+  
     <!-- CSS -->
     <%= stylesheet_link_tag 'application', media: 'all' %>
   </head>
 
   <body>
+  <% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
     <%= yield %>
   </body>
 </html>
+

@@ -30,4 +30,27 @@ ActiveRecord::Schema.define(version: 2021_06_15_083041) do
     t.index ["owner_id"], name: "index_projects_on_owner_id"
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "challenges", force: :cascade do |t|
+    t.string "c_type"
+    t.string "level"
+    t.string "challenge_slug"
+    t.string "challenge_description"
+    t.string "challenge_img"
+    t.string "challenge_link"
+    t.string "challenge_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 end
