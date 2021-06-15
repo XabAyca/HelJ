@@ -1,5 +1,5 @@
 <div>
-  <%= form_with model: @project do |f| %>
+  <%= form_with model: @project, method: :post, url: projects_path do |f| %>
     <div>
       <label>Titre</label>
       <%= f.text_field :project_title %>
@@ -14,7 +14,7 @@
     </div>
     <div>
       <label>Image</label>
-      <%= f.text_field :image_url %>
+      <%= f.text_field :logo_url %>
     </div>
     <div>
       <label>Lien Figma</label>
@@ -27,6 +27,10 @@
     <div>
       <label>Lien GitHub</label>
       <%= f.text_field :git_link %>
+    </div>
+    <div>
+      <label>Besoins de compétences</label>
+      <%= f.collection_select :needed_id, @neededs,:id , :name,{} %>
     </div>
   
     <%= f.submit 'Créer un projet'%>
