@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  before_action :authenticate_user!, except: [:index]
+  before_action :project_owner?, only: [:edit,:destroy,:update]
 
   def index 
     @projects = Project.all
@@ -27,15 +29,17 @@ class ProjectsController < ApplicationController
   end
 
   def edit 
+    @neededs = neededs_list()
     @project = Project.find(params[:id])
   end
   
   def update
     @project = Project.find(params[:id])
-    if @project.update
+    if @project.update(post_params())
       redirect_to project_path(@project.id)
     else
       flash.now[:messages] = @project.errors.full_messages[0]
+      @neededs = neededs_list()
       render 'edit'   
     end
   end
