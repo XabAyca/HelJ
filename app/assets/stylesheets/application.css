@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+.form-border {
+    border: 2px, solid, black;
+}
