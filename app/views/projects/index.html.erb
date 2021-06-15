@@ -1,0 +1,10 @@
+<div>
+  <%@projects.each do |project|%>
+    <div>
+      <%=project.project_title%><br>
+      <%=project.logo_url%><br>
+      <%=project.description%><br>
+      <%=button_to "Rejoindre le projet", project_path(project.id), method:'get'%> 
+    </div>
+  <%end%>
+</div>
