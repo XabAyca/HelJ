@@ -6,6 +6,9 @@
 
 # Ignore bundler config.
 /.bundle
+*/bundle
+./bundle
+./vendor
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -31,3 +34,4 @@
 # Ignore API keys
 .env
 .env*
+
