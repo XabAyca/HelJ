@@ -1,0 +1,21 @@
+<div>
+  <%=@project.project_title%><br>
+  <%=@project.description%><br>
+  <%=@project.logo_url%><br>
+  <%=@project.figma_link%><br>
+  <%if @project.git_link%>
+    <%=@project.git_link%><br>
+  <%end%>
+  <%if @project.trello_link%>
+    <%=@project.trello_link%><br>
+  <%end%>
+  <%=@project.owner.email%><br>
+  <%if @project.story%>
+    <%=@project.story%><br>
+  <%end%>  
+  <%=@project.needed.name%><br>
+  <%=@project.needed.description%><br>
+  <%if @project.owner.id == current_user.id%>
+    <%=button_to "Supprimer le projet", project_path(@project.id), method:'delete',confirm:'Valider la suppression?'%><br>
+  <%end%>
+</div>
