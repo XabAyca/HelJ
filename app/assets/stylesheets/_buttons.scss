@@ -1,0 +1,75 @@
+.button {
+  font-size: 16px;
+  font-family: var(--primaryFont);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: white;
+  border: none;
+}
+
+.button__xl {
+  font-size: 18px;
+  padding: 9px 20px;
+}
+
+.button__lg {
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.button__md {
+  font-size: 14px;
+  padding: 5px 14px;
+}
+
+.button__sm {
+  font-size: 12px;
+  padding: 4px 12px;
+}
+
+.button__xsm {
+  padding: 3px 9px;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.button__filled {
+  background: #2252f9;
+  border-radius: 4px;
+  color: white;
+}
+
+.button__outlined {
+  border: 1px solid #2252f9 !important;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #2252f9;
+  background-color: transparent;
+}
+
+.button__text {
+  color: #2252f9;
+  background-color: transparent;
+  border: transparent !important;
+}
+
+.pill__semioutlined {
+  background: #e1e8fe;
+  border: 2px solid #2252f9 !important;
+  color: #2252f9;
+  border-radius: 20px;
+}
+
+.pill__outlined {
+  border: 2px solid #2252f9 !important;
+  color: #2252f9;
+  background-color: transparent;
+  border-radius: 20px;
+}
+
+.pill__filled {
+  background: #2252f9;
+  border-radius: 20px;
+}

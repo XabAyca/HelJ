@@ -1,0 +1,130 @@
+@import 'media';
+@use 'fonts';
+
+//not needed since it's the last case
+//@media(max-width:$LaptopBig){
+	
+//}
+#hero{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+}
+.hero__tagline{
+	font-size:var(--fs60);
+	text-align:center;
+	font-weight:700;
+}
+.hero__description{
+	font-size: var(--fs30);
+	font-family: var(--secondaryFont);
+	font-weight: 500;
+	width:60ch;
+	text-align: center;
+}
+.hero__cta{}
+#features{}
+.features__title{
+	text-align:center;
+	font-size:var(--fs36);
+	font-weight: 600;
+}
+.explanations{
+	display:flex;
+	justify-content: space-between;
+}
+.explanation{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.explanation__description{
+	width:40ch;
+	text-align: center;
+}
+
+.You__are__title{
+	font-size:var(--fs36);
+	font-weight:600;
+}
+@media(max-width:$LaptopSmall){
+	.hero__tagline{
+		font-size:var(--fs48)
+	}
+	.hero__description{
+		font-size: var(--fs20);
+	}
+	.features__title{
+		font-size:var(--fs30);
+	}
+	.You__are__title{
+		font-size:var(--fs30);
+	}
+}
+
+
+
+@media(max-width:$Tablet){
+	.hero__tagline{
+		font-size:var(--fs48)
+	}
+	.hero__description{
+		font-size: var(--fs18);
+	}
+	.features__title{
+		font-size:var(--fs24);
+	}
+	.You__are__title{
+		font-size:var(--fs24);
+	}
+}
+
+
+
+@media(max-width:$PhoneBig){
+	.hero__tagline{
+		font-size:var(--fs30)
+	}
+	.hero__description{
+		font-size: var(--fs16);
+	}
+	.features__title{
+		font-size:var(--fs20);
+	}
+	.explanations{
+		flex-direction: column;
+	}
+	.You__are__title{
+		font-size:var(--fs20);
+	}
+}
+
+
+@media(max-width:$PhoneMiddle){
+	.hero__tagline{
+		font-size:var(--fs24)
+	}
+	.hero__description{
+		font-size: var(--fs14);
+	}
+	.features__title{
+		font-size:var(--fs18);
+	}
+	.You__are__title{
+		font-size:var(--fs18);
+	}
+}
+
+
+@media(max-width:$PhoneSmall){
+	//.hero__tagline{
+	//	font-size:var(--fs24)
+	//}
+	//.hero__description{
+	//	font-size: var(--fs14);
+	//}
+	//.features__title{
+	//	font-size:var(--fs18);
+	//}
+}
