@@ -1,7 +1,9 @@
-<div>
-  <%=@project.project_title%><br>
+<div class="title">
+  <%= image_tag(@project.logo_url, class: "logo-img") %>
+  <h1 class="logo-title"><%= @project.project_title %></h1>
+</div>
+
   <%=@project.description%><br>
-  <%=@project.logo_url%><br>
   <%=@project.figma_link%><br>
   <%if @project.git_link%>
     <%=@project.git_link%><br>
@@ -25,4 +27,3 @@
     <%=button_to "Rejoindre le projet", joint_users_to_projects_path(), params:{ project_id:@project.id }, method:'post'%><br>
   <%end%>
 
-</div>
