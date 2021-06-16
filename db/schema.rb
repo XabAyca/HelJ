@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_15_112422) do
+ActiveRecord::Schema.define(version: 2021_06_15_194545) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,15 @@ ActiveRecord::Schema.define(version: 2021_06_15_112422) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "joint_users_to_ppations", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "participation_challenge_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["participation_challenge_id"], name: "index_joint_users_to_ppations_on_participation_challenge_id"
+    t.index ["user_id"], name: "index_joint_users_to_ppations_on_user_id"
+  end
+
   create_table "joint_users_to_projects", force: :cascade do |t|
     t.bigint "project_id"
     t.bigint "user_id"
@@ -41,6 +50,13 @@ ActiveRecord::Schema.define(version: 2021_06_15_112422) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "participation_challenges", force: :cascade do |t|
+    t.bigint "challenge_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["challenge_id"], name: "index_participation_challenges_on_challenge_id"
   end
 
   create_table "projects", force: :cascade do |t|

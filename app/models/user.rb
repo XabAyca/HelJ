@@ -6,13 +6,13 @@ class User < ApplicationRecord
 
   has_many :joint_users_to_projects
   has_many :projects, through: :joint_users_to_projects
-  has_many :projects, foreign_key: 'owner_id', class_name: 'Project', dependent: :destroy
-  
+  has_many :projects, foreign_key: "owner_id", class_name: "Project", dependent: :destroy
+  has_many :joint_users_to_ppations
+  has_many :participation_challenges, through: :joint_users_to_ppations
 
   #after_create :welcome_mail
-  
+
   def welcome_mail
     UserMailer.welcome(self).deliver
   end
-  
 end
