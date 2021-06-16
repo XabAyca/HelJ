@@ -16,6 +16,13 @@
   <%=@project.needed.name%><br>
   <%=@project.needed.description%><br>
   <%if @project.owner.id == current_user.id%>
-    <%=button_to "Supprimer le projet", project_path(@project.id), method:'delete',confirm:'Valider la suppression?'%><br>
+    <%=button_to "Supprimer le projet", project_path(@project.id), method:'delete',data: { confirm:'Valider la suppression?'}%><br>
+  <%elsif @participations.count > 3 %>
+    <%=button_to "Rejoindre le projet", {}, disabled: :disabled %><br>
+  <%elsif @user_participations.count > 0 %>
+    <%=button_to "Quitter le projet", joint_users_to_project_path(@project.id), params:{ project_id:@project.id }, method:'delete',data: { confirm:'Valider votre départ ?'}%><br>
+  <%else%>
+    <%=button_to "Rejoindre le projet", joint_users_to_projects_path(), params:{ project_id:@project.id }, method:'post'%><br>
   <%end%>
+
 </div>

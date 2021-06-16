@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :projects
   resources :challenges, only: [:index, :show]
+  resources :joint_users_to_projects, only: [:create,:destroy]
 end
