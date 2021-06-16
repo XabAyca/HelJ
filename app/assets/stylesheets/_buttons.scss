@@ -81,3 +81,21 @@
     color: red;
     background-color: transparent;
 }
+
+.button__outlined_red:hover {
+    border: 1px solid white !important;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: white;
+    background-color: red;
+    cursor: pointer;
+}
+
+.button__outlined:hover {
+    border: 1px solid white !important;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: white;
+    background-color: #2252f9;
+    cursor: pointer;
+}

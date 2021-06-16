@@ -1,6 +1,8 @@
-<h1>Hello <%=current_user.first_name%></h1>
+<h1 class="title-page">Hello <%=current_user.first_name%></h1>
 
-<%= link_to "Back", :back %>
+<%= link_to url_for(:back) do %>
+   <%= image_tag "https://image.flaticon.com/icons/png/512/638/638359.png", class: "arrow-back" %>
+<% end %>
 
 <div class="v-title">
 <span class="v-circle"></span>
