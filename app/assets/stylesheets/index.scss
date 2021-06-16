@@ -60,10 +60,11 @@
 	margin-bottom:var(--sp8)
 }
 .explanation__description{
-	width:40ch;
+	width:35ch;
 	text-align: center;
 	font-size:var(--fs14);
-	margin-bottom:var(--sp0)
+	margin-bottom:var(--sp0);
+	font-family: var(--secondaryFont);
 }
 
 .You__are__title{
@@ -92,7 +93,8 @@
 }
 .typology__card__list{
 	font-size:var(--fs18);
-	line-height: 138%;
+	line-height: 140%;
+	font-family: var(--secondaryFont);
 }
 .typology__list__first{
 	margin-bottom:var(--sp12)
@@ -148,7 +150,7 @@
 }
 .system__description{
 	margin-bottom:var(--sp48);
-	width:inherit;
+	width:100%;
 	line-height: 145%;
 	font-size:var(--fs20);
 	font-family: var(--secondaryFont);
@@ -200,7 +202,30 @@
 	.You__are__title{
 		font-size:var(--fs24);
 	}
-
+	.typologies__wrapper{
+		padding:var(--sp0) var(--sp0);
+	}
+	.typology__card__list{
+		font-size:var(--fs14)
+	}
+	.typology__card__img{
+		margin-right: var(--sp32);
+	}
+	.typology__card__img__left{
+		margin-left: var(--sp32);
+	}
+	#You__are div{
+		margin-bottom: var(--sp48)
+	}
+	.system__title{
+		margin-bottom:var(--sp48)
+	}
+	.inner__system__wrapper{
+		width: 50ch;
+	}
+	.system__description{
+		font-size:var(--fs18)
+	}
 }
 
 
@@ -239,6 +264,46 @@
 	.You__are__title{
 		margin-bottom:var(--sp48)
 	}
+	.typology__card{
+		display: flex;
+    flex-direction: column;
+	align-items:center;
+	}
+	.typology__card__img{
+		align-self:center;
+		margin:var(--sp0);
+	}
+	.typology__card__img__left{
+		align-self:center;
+		margin:var(--sp0);
+		order:-1;
+	}
+	.typology__card__title{
+		text-align:center;
+	}
+	.typology__card__list{
+		list-style: none;
+		text-align: center;
+		font-size: var(--fs12);
+	}
+	.typo__button{
+		font-size: 12px;
+		padding: 4px 12px;
+	}
+	.system__title
+	{
+		font-size: var(--fs20);
+	}
+	.system__description{
+		font-size: var(--fs14);
+		line-height: 155%;
+	}
+	.inner__system__wrapper{
+		max-width: 35ch;
+	}
+	.hero__description{
+		width: 35ch;
+	}
 }
 
 
@@ -264,6 +329,19 @@
 	.explanation__title{
 		font-size:var(--fs16);
 	}
+	.typology__card__title{
+		font-size:var(--fs20);
+	}
+	.system__description{
+		font-size: var(--fs12);
+		line-height: 155%;
+	}
+	.inner__system__wrapper{
+		max-width: 30ch;
+	}
+	.hero__description{
+		width: 30ch;
+	}
 }
 
 
@@ -271,10 +349,6 @@
 	//.hero__tagline{
 	//	font-size:var(--fs24)
 	//}
-	.hero__description{
-		font-size: var(--fs14);
-		width:38ch;
-	}
 	//.features__title{
 	//	font-size:var(--fs18);
 	//}
@@ -288,5 +362,21 @@
 		
 		font-size:var(--fs11);
 		
+	}
+	.typology__card__list{
+		
+		font-size: var(--fs11);
+	}
+	.typo__button{
+		padding: 3px 9px;
+		font-size: 9px;
+		font-weight: 600;
+	}
+	.system__description{
+		font-size: var(--fs11);
+		line-height: 155%;
+	}
+	.inner__system__wrapper{
+		max-width: 28ch;
 	}
 }
