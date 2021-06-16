@@ -68,6 +68,13 @@
     background-color: transparent;
     border-radius: 20px;
 }
+.pill__outlined:hover{
+    background-color: var(--blue300);
+    cursor:pointer
+}
+.pill__outlined:active{
+    box-shadow: 1px 1px 5px 2px rgba(0, 34, 187, 0.2);
+}
 
 .pill__filled {
     background: #2252f9;
@@ -99,3 +106,26 @@
     background-color: #2252f9;
     cursor: pointer;
 }
+
+.align_right{
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.link{
+    color:#2252f9;
+    text-decoration: none;
+    margin-top: 7px;
+}
+
+.move_left{
+    display: inline-block;
+    transition:400ms
+}
+.move_left:hover{
+    transform:translate(10px);
+}
+.move_left:active{
+    transform: scale(1.1);
+}
+
