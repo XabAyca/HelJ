@@ -1,5 +1,5 @@
 .form input {
-    margin-bottom: 10px !important;
+    margin-bottom: 20px !important;
 }
 
 .form:last-child {
@@ -7,7 +7,6 @@
 }
 
 .form {
-    max-width: 400px;
     margin-bottom: 50px;
     display: flex;
     flex-direction: column;
@@ -49,6 +48,9 @@
 
 .m-bot {
     margin-bottom: 0.5rem;
+}
+.m-top-5{
+    margin-top: 5rem;
 }
 
 .center {
@@ -99,4 +101,23 @@
 .arrow-back {
     height: 2rem;
     margin-left: 10%;
+}
+
+.form_group{
+    width: 80%;
+    margin: auto;
+}
+
+.form_page{
+    width:80%;
+    margin:auto;
+    padding: 100px
+}
+
+.actions{
+    text-align: right;
+}
+em{
+    font-size: 0.8rem;
+    color: grey;
 }
