@@ -19,10 +19,10 @@
 	margin-bottom:var(--sp16)
 }
 .hero__description{
-	font-size: var(--fs24);
+	font-size: var(--fs20);
 	font-family: var(--secondaryFont);
-	font-weight: 500;
-	width:60ch;
+	font-weight: 400;
+	width:50ch;
 	text-align: center;
 	margin-bottom:var(--sp32)
 }
@@ -69,25 +69,48 @@
 .You__are__title{
 	font-size:var(--fs36);
 	font-weight:600;
+	margin-bottom:var(--sp96)
 }
 #You__are div{
-	margin-bottom: 100px;
+	margin-bottom: var(--sp64)
+}
+.typologies__wrapper{
+	padding:var(--sp0) var(--sp96);
 }
 .typology__card{
 	display:flex
 	
 }
 .typology__card__img{
-	margin-right:30px;
-	align-self:center
+	margin-right:var(--sp48);
+	align-self:start;
 }
 .typology__card__img__left{
 	order:2;
-	margin-left:30px;
-	align-self:center
+	margin-left:var(--sp48);
+	align-self:start;
 }
 .typology__card__list{
-	
+	font-size:var(--fs18);
+	line-height: 138%;
+}
+.typology__list__first{
+	margin-bottom:var(--sp12)
+}
+.typology__list__last{
+	margin-bottom:var(--sp16)
+}
+.typology__text{
+	display:flex;
+	flex-direction: column;
+}
+
+.typo__button{
+	align-self: flex-end;
+}
+.typo__button_right{
+	align-self: flex-start;
+	padding-left: 0px;
 }
 .typology__card__title{
 	font-size:var(--fs24);
@@ -97,6 +120,43 @@
 	width:100%;
 	height: auto;
 }
+.typology__link{
+	display: flex;
+	text-decoration: none;
+	color:var(--blue500)
+}
+.arrow__right{
+	display: flex;
+	align-items: center;
+	margin-left:var(--sp8)
+}
+#the__system{
+
+}
+.system__title{
+	font-size: var(--fs36);
+    font-weight: 600;
+    margin-bottom: var(--sp64);
+}
+.inner__system__wrapper{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding-bottom:var(--sp96);
+	width:70ch;
+	margin:0 auto;
+}
+.system__description{
+	margin-bottom:var(--sp48);
+	width:inherit;
+	line-height: 145%;
+	font-size:var(--fs20);
+	font-family: var(--secondaryFont);
+}
+.system_cta{
+	align-self:flex-end
+}
+
 @media(max-width:$LaptopSmall){
 	#hero{
 		padding-top:var(--sp64)
@@ -158,6 +218,7 @@
 	.hero__description{
 		font-size: var(--fs16);
 		width:40ch;
+
 	}
 	.features__title{
 		font-size:var(--fs20);
@@ -174,6 +235,9 @@
 	}
 	.features__title{
 		margin-bottom:var(--sp24);
+	}
+	.You__are__title{
+		margin-bottom:var(--sp48)
 	}
 }
 

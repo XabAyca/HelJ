@@ -28,55 +28,79 @@
 </section>
 <section id="You__are">
   <h2 class="You__are__title">You are :</h2>
-  <div class="typology__card" id="typology">
-    <%= image_tag("designer.png", class: "typology__card__img",alt:"work designer")  %>
-    <div class="typology__text" id="designer">
-      <h5 class="typology__card__title">A Designer</h5>
-      <p>
-        <ul class="typology__card__list">
-          <li>Working with a  developper can tremendiously help you, what kind of assets to send, what can be done, how to integrate the better way.</li>
-          <li>CSS is a big plus for a designer, it help you understand how your webdesigns are translated into code. And it give you the ability to make your own site</li>
-        </ul>
-      </p>
-      <button class="button__w__arrow">
-        See amazing webflow sites from designer -->
-      </button>
+  <div class="typologies__wrapper">
+    <div class="typology__card" id="typology">
+      <%= image_tag("designer.png", class: "typology__card__img",alt:"work designer")  %>
+      <div class="typology__text" id="designer">
+        <h5 class="typology__card__title">A Designer</h5>
+        <p>
+          <ul class="typology__card__list">
+            <li class="typology__list__first">Working with a  developper can tremendiously help you, what kind of assets to send, what can be done, how to integrate the better way.</li>
+            <li class="typology__list__last">CSS is a big plus for a designer, it help you understand how your webdesigns are translated into code. And it give you the ability to make your own site</li>
+          </ul>
+        </p>
+        <button class="button button__md button__text typo__button">
+          <a href="" class="typology__link">
+            See amazing webflow sites from designer<span class="arrow__right">
+              <svg width="38" height="12" viewBox="0 0 38 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75L1 5.25ZM37.5303 6.53033C37.8232 6.23743 37.8232 5.76256 37.5303 5.46967L32.7574 0.696696C32.4645 0.403803 31.9896 0.403803 31.6967 0.696696C31.4038 0.98959 31.4038 1.46446 31.6967 1.75736L35.9393 6L31.6967 10.2426C31.4038 10.5355 31.4038 11.0104 31.6967 11.3033C31.9896 11.5962 32.4645 11.5962 32.7574 11.3033L37.5303 6.53033ZM1 6.75L37 6.75L37 5.25L1 5.25L1 6.75Z" fill="#2252F9"/>
+              </svg>
+            </span>
+          </a>
+        </button>
+      </div>
     </div>
-  </div>
-  <div class="typology__card">
-    <%= image_tag("developer.png", class:"typology__card__img__left",alt:"screen code") %>
-    <div class="typology__text" id="developer">
-      <h5 class="typology__card__title">A Developper</h5>
-      <p>
-        <ul>
-          <li>Every month you have the chance to do a peer-programming challenge, which is very helpful for getting new skills and get better at communicating</li>
-          <li>Working with others people on project will help you do more looking and bigger things, if you  a frontend or backend advocate either way you should see the advantages</li>
-        </ul>
-      </p>
-      <button class="button__w__arrow">
-        What is pair-programming ? -->
-      </button>
+    <div class="typology__card">
+      <%= image_tag("developer.png", class:"typology__card__img__left",alt:"screen code") %>
+      <div class="typology__text" id="developer">
+        <h5 class="typology__card__title">A Developper</h5>
+        <p>
+          <ul>
+            <li class="typology__list__first">Every month you have the chance to do a peer-programming challenge, which is very helpful for getting new skills and get better at communicating</li>
+            <li class="typology__list__last">Working with others people on project will help you do more looking and bigger things, if you  a frontend or backend advocate either way you should see the advantages</li>
+          </ul>
+        </p>
+        <button class="button button__md button__text typo__button typo__button_right">
+          <a href="" class="typology__link">
+            What is pair-programming ?  <span class="arrow__right">
+              <svg width="38" height="12" viewBox="0 0 38 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75L1 5.25ZM37.5303 6.53033C37.8232 6.23743 37.8232 5.76256 37.5303 5.46967L32.7574 0.696696C32.4645 0.403803 31.9896 0.403803 31.6967 0.696696C31.4038 0.98959 31.4038 1.46446 31.6967 1.75736L35.9393 6L31.6967 10.2426C31.4038 10.5355 31.4038 11.0104 31.6967 11.3033C31.9896 11.5962 32.4645 11.5962 32.7574 11.3033L37.5303 6.53033ZM1 6.75L37 6.75L37 5.25L1 5.25L1 6.75Z" fill="#2252F9"/>
+              </svg>
+            </span>
+          </a>
+        </button>
+      </div>
     </div>
-  </div>
-  <div class="typology__card">
-    <%= image_tag("marketer.png", class: "typology__card__img",alt:"post-it") %>
-    <div class="typology__text" id="marketer">
-      <h5 class="typology__card__title">A Marketer</h5>
-      <p>
-        <ul>
-          <li>Applying your marketing knowledge can be though.  Most of the times working with sandbox is limited, Google Analytics for example but it’s more for getting used to the product.</li>
-          <li>While Managing project / product, you can apply all your book smart, get a better sense at what is the web. And for the most pertinacious get an introduction at html and javascript</li>
-        </ul>
-      </p>
-      <button class="button__w__arrow">
-        See our ressources for marketing  -->
-      </button>
+    <div class="typology__card">
+      <%= image_tag("marketer.png", class: "typology__card__img",alt:"post-it") %>
+      <div class="typology__text" id="marketer">
+        <h5 class="typology__card__title">A Marketer</h5>
+        <p>
+          <ul>
+            <li class="typology__list__first">Applying your marketing knowledge can be though.  Most of the times working with sandbox is limited, Google Analytics for example but it’s more for getting used to the product.</li>
+            <li class="typology__list__last">While Managing project / product, you can apply all your book smart, get a better sense at what is the web. And for the most pertinacious get an introduction at html and javascript</li>
+          </ul>
+        </p>
+        <button class="button button__md button__text typo__button">
+          <a href="" class="typology__link">
+            See our ressources for marketing  <span class="arrow__right">
+              <svg width="38" height="12" viewBox="0 0 38 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75L1 5.25ZM37.5303 6.53033C37.8232 6.23743 37.8232 5.76256 37.5303 5.46967L32.7574 0.696696C32.4645 0.403803 31.9896 0.403803 31.6967 0.696696C31.4038 0.98959 31.4038 1.46446 31.6967 1.75736L35.9393 6L31.6967 10.2426C31.4038 10.5355 31.4038 11.0104 31.6967 11.3033C31.9896 11.5962 32.4645 11.5962 32.7574 11.3033L37.5303 6.53033ZM1 6.75L37 6.75L37 5.25L1 5.25L1 6.75Z" fill="#2252F9"/>
+              </svg>
+            </span>
+          </a>
+        </button>
+      </div>
     </div>
   </section>
-  <section id="the system">
-    <p class="system__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      <p>
-        <button class="system_cta">Sign up</button>
-      </section>
+  <section id="the__system">
+    <h2 class="system__title">The system</h2>
+    <div class="inner__system__wrapper">
+      <p class="system__description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <button class="button button__lg button__filled system_cta">Sign up</button>
+    </div>
+  </section>
