@@ -8,6 +8,8 @@ class ProjectsController < ApplicationController
 
   def show 
     @project = Project.find(params[:id])
+    @participations = JointUsersToProject.where(project_id:@project.id)
+    @user_participations = @participations.filter{|participation| participation.user_id == current_user.id}
   end
 
   def new
@@ -47,6 +49,7 @@ class ProjectsController < ApplicationController
   def destroy 
     @project = Project.find(params[:id])
     @project.destroy
+    redirect_to projects_path,notice:'Projet supprimé'
   end
 
   private
