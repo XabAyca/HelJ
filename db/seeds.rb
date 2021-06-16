@@ -180,7 +180,25 @@ Challenge.create(
 	That we handpicked some of them for you to pratice. For this challenge you gonna do 39 - Testimonial are part of many sites as make up for accountability "
 	challenge_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz7JMME936U977aqc_KsCTUwxG9OAM1TJ8AA&usqp=CAU"
 	challenge_link:"https://www.google.com/search?q=39+Testimonial+daily+ui",
-	challenge_name:"daily ui - 55 icon set",
+	challenge_name:"daily ui - 39 Testimonial",
+)
+
+Challenge.create(
+	c_type:"design",
+	level:"middle",
+	challenge_description:"dailyui.co, provide a 100 days of ui newsletter challenge. But some challenges are more useful than others..
+	That we handpicked some of them for you to pratice. For this challenge you gonna do 8 - 404 page "
+	challenge_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz7JMME936U977aqc_KsCTUwxG9OAM1TJ8AA&usqp=CAU"
+	challenge_link:"https://www.google.com/search?q=39+Testimonial+daily+ui",
+	challenge_name:"daily ui - 8 404 page",
+)
+Challenge.create(
+	c_type:"design",
+	level:"hard",
+	challenge_description:"Make your own - furniture store ( link some ressources / content) -  typeface store ( give some content / font ) - wine store - Online Mooc platerform  ( harder bc user session is important)"
+	challenge_img:""
+	challenge_link:"",
+	challenge_name:"Make your own design",
 )
 
 #create_table "challenges", force: :cascade do |t|
