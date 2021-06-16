@@ -105,6 +105,113 @@ end
   p "#{i} participation created"
 end
 
+#real challenges data
+Challenge.create(
+	c_type:"algorithm",
+	level:"easy",
+	challenge_description:"Codesignal is one of the best coding challenge platform there is. Mainly because your solution complexity matter comparing to others 
+	platform. There might be less challenges than others platform but their overall subjects are more aligned with tradition computer science
+	problem.  Finally there are also company challenges which are difficult but so much rewarding.For this challenge go to code https://codesignal.com/ and begin arcade",
+	challenge_img:"https://sdtimes.com/wp-content/uploads/2018/07/CodeSignalBanner-940x510-490x266.png"
+	challenge_link:"https://codesignal.com/",
+	challenge_name:"codesignal arcade",
+)
+Challenge.create(
+	c_type:"algorithm",
+	level:"middle",
+	challenge_description:"Codesignal is one of the best coding challenge platform there is. Mainly because your solution complexity matter comparing to others 
+	platform. There might be less challenges than others platform but their overall subjects are more aligned with tradition computer science
+	problem.  Finally there are also company challenges which are difficult but so much rewarding.For this challenge go to code https://codesignal.com/ and begin Interview pratice",
+	challenge_img:"https://sdtimes.com/wp-content/uploads/2018/07/CodeSignalBanner-940x510-490x266.png"
+	challenge_link:"https://codesignal.com/",
+	challenge_name:"codesignal Interview pratice",
+)
+Challenge.create(
+	c_type:"algorithm",
+	level:"hard",
+	challenge_description:"Codesignal is one of the best coding challenge platform there is. Mainly because your solution complexity matter comparing to others 
+	platform. There might be less challenges than others platform but their overall subjects are more aligned with tradition computer science
+	problem.  Finally there are also company challenges which are difficult but so much rewarding.For this challenge go to code https://codesignal.com/ and begin Company challenges",
+	challenge_img:"https://sdtimes.com/wp-content/uploads/2018/07/CodeSignalBanner-940x510-490x266.png"
+	challenge_link:"https://codesignal.com/",
+	challenge_name:"codesignal Company challenges",
+)
+Challenge.create(
+	c_type:"design",
+	level:"easy",
+	challenge_description:"Onepagelove is a great plateform to find inspiration, on the plus side it only list one page. Your challenge here is to find a page your  love
+	and redo it in the graphical ui tool of your choice (figma, sketch...). You can make web and mobile, but it’s not mandatory.    Pay attention on the font-size and color used by the creator  ( is there a hierarchy, how shades do they used..). Optional:redo the site with differents fonts and colors",
+	challenge_img:"https://onepagelove.com/wp-content/themes/onepagelove/frontend/img/social/one-page-love-screenshot.jpg"
+	challenge_link:"https://onepagelove.com/",
+	challenge_name:"Select One page and study it",
+)
+Challenge.create(
+	c_type:"design",
+	level:"middle",
+	challenge_description:"dailyui.co, provide a 100 days of ui newsletter challenge. But some challenges are more useful than others..
+	That we handpicked some of them for you to pratice. For this challenge you gonna do 79 itineary, designing itinerary can help when designing Interface with mutlpitle step, or guided sections ( take a look at your profile page)",
+	challenge_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz7JMME936U977aqc_KsCTUwxG9OAM1TJ8AA&usqp=CAU"
+	challenge_link:"https://www.google.com/search?q=79+itinerary+daily+ui",
+	challenge_name:"daily ui - 79 itineary",
+)
+Challenge.create(
+	c_type:"design",
+	level:"middle",
+	challenge_description:"dailyui.co, provide a 100 days of ui newsletter challenge. But some challenges are more useful than others..
+	That we handpicked some of them for you to pratice. For this challenge you gonna do 72  Image Slider"
+	challenge_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz7JMME936U977aqc_KsCTUwxG9OAM1TJ8AA&usqp=CAU"
+	challenge_link:"https://www.google.com/search?q=72+image+slider+daily+ui",
+	challenge_name:"daily ui - 72  Image Slider",
+)
+Challenge.create(
+	c_type:"design",
+	level:"middle",
+	challenge_description:"dailyui.co, provide a 100 days of ui newsletter challenge. But some challenges are more useful than others..
+	That we handpicked some of them for you to pratice. For this challenge you gonna do 55 - icon set giving a try at making an icon set will train your design consistency and give you a keen eye for picking next one"
+	challenge_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz7JMME936U977aqc_KsCTUwxG9OAM1TJ8AA&usqp=CAU"
+	challenge_link:"https://www.google.com/search?q=55+icon+set+daily+ui",
+	challenge_name:"daily ui - 55 icon set",
+)
+
+Challenge.create(
+	c_type:"design",
+	level:"middle",
+	challenge_description:"dailyui.co, provide a 100 days of ui newsletter challenge. But some challenges are more useful than others..
+	That we handpicked some of them for you to pratice. For this challenge you gonna do 39 - Testimonial are part of many sites as make up for accountability "
+	challenge_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz7JMME936U977aqc_KsCTUwxG9OAM1TJ8AA&usqp=CAU"
+	challenge_link:"https://www.google.com/search?q=39+Testimonial+daily+ui",
+	challenge_name:"daily ui - 39 Testimonial",
+)
+
+Challenge.create(
+	c_type:"design",
+	level:"middle",
+	challenge_description:"dailyui.co, provide a 100 days of ui newsletter challenge. But some challenges are more useful than others..
+	That we handpicked some of them for you to pratice. For this challenge you gonna do 8 - 404 page "
+	challenge_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz7JMME936U977aqc_KsCTUwxG9OAM1TJ8AA&usqp=CAU"
+	challenge_link:"https://www.google.com/search?q=39+Testimonial+daily+ui",
+	challenge_name:"daily ui - 8 404 page",
+)
+Challenge.create(
+	c_type:"design",
+	level:"hard",
+	challenge_description:"Make your own - furniture store ( link some ressources / content) -  typeface store ( give some content / font ) - wine store - Online Mooc platerform  ( harder bc user session is important)"
+	challenge_img:""
+	challenge_link:"",
+	challenge_name:"Make your own design",
+)
+
+#create_table "challenges", force: :cascade do |t|
+#    t.string "c_type"
+#    t.string "level"
+#    t.string "challenge_slug"
+#    t.string "challenge_description"
+#    t.string "challenge_img"
+#    t.string "challenge_link"
+#    t.string "challenge_name"
+#    t.datetime "created_at", precision: 6, null: false
+#    t.datetime "updated_at", precision: 6, null: false
+#  end
 p "*" * 30
 p "Seed finished"
 p "Well done 🎉 🍺"
