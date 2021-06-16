@@ -67,3 +67,27 @@
 .m-top-one {
     margin-top: 1rem;
 }
+
+.v-line {
+    border-left: 5px solid #6686F4;
+    margin-left: 10rem;
+}
+
+.v-title {
+    display: flex;
+    margin-left: 8.75rem;
+}
+
+.v-circle {
+    height: 2.8rem;
+    width: 2.8rem;
+    border: 7px solid #6686F4;
+    border-radius: 50%;
+}
+
+.v-text {
+    color: #0D2475;
+    margin-top: .5rem;
+    margin-left: 1rem;
+    margin-bottom: 0 !important;
+}

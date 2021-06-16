@@ -1,5 +1,14 @@
 <h1>Hello <%=current_user.first_name%></h1>
 
+<%= link_to "Back", :back %>
+
+<div class="v-title">
+<span class="v-circle"></span>
+<h2 class="v-text">Profile</h2>
+</div>
+
+
+<div class="v-line">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
   <div class="group-form">
@@ -63,6 +72,7 @@
 
 
   </div>
-<%= link_to "Back", :back %>
+  <div>
+
 
 
