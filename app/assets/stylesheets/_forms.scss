@@ -1,14 +1,69 @@
 .form input {
-  margin-bottom: 10px !important;
+    margin-bottom: 10px !important;
 }
 
 .form:last-child {
-  margin-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 .form {
-  max-width: 400px;
-  margin-bottom: 50px;
-  display: flex;
-  flex-direction: column;
+    max-width: 400px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.field {
+    display: flex;
+}
+
+.group-form {
+    display: flex;
+    justify-content: center;
+}
+
+.password_field {
+    margin-left: 10rem;
+}
+
+.text-form-top {
+    margin-top: .5rem;
+    margin-left: .75rem;
+    margin-right: .5rem;
+}
+
+.field-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-area {
+    width: 16rem;
+    height: 8rem;
+    margin-left: 3rem;
+}
+
+.m-top {
+    margin-top: 2rem;
+}
+
+.m-bot {
+    margin-bottom: 0.5rem;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.m-left {
+    margin-left: 10rem;
+}
+
+.m-left-3 {
+    margin-left: 3rem;
+}
+
+.m-top-one {
+    margin-top: 1rem;
 }
