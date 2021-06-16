@@ -6,8 +6,8 @@
       We want to create a space for juniors creative to really collaborate
     </p>
   </div>
-  <div class="hero_graphic">
-    <%= image_tag("hero_image.png") %>
+  <div class="hero__graphic">
+    <%= image_tag("hero_image.png", class:"hero__img",alt:"people collaborating") %>
   </div>
   <button class="hero__cta button button__lg button__filled">Join the community</button>
 </section>
@@ -15,12 +15,12 @@
   <h2 class="features__title"> The features </h2>
   <div class="explanations">
     <div class="explanation pairs__making" id="pairs">
-      <%= image_tag("pair_making.png") %>
+      <%= image_tag("pair_making.png", class: "explanation_logo",alt:"two people mentoring themself") %>
       <h4 class='explanation__title'>Pair making</h4>
       <p class="explanation__description">Once every month we will make a team up for little project, that way you will have a chance to meet a potential partners</p>
     </div>
     <div class="explanation projects" id="projects">
-      <%= image_tag("project_image.png") %>
+      <%= image_tag("project_image.png", class: "explanation_logo",alt:"light bulb") %>
       <h4 class='explanation__title'>Projects</h4>
       <p  class="explanation__description">Every member can propose a project to the community,much like open-source</p>
     </div>
@@ -29,11 +29,11 @@
 <section id="You__are">
   <h2 class="You__are__title">You are :</h2>
   <div class="typology__card" id="typology">
-    <%= image_tag("designer.png") %>
+    <%= image_tag("designer.png", class: "typology__card__img",alt:"work designer")  %>
     <div class="typology__text" id="designer">
-      <h5>A Designer</h5>
+      <h5 class="typology__card__title">A Designer</h5>
       <p>
-        <ul>
+        <ul class="typology__card__list">
           <li>Working with a  developper can tremendiously help you, what kind of assets to send, what can be done, how to integrate the better way.</li>
           <li>CSS is a big plus for a designer, it help you understand how your webdesigns are translated into code. And it give you the ability to make your own site</li>
         </ul>
@@ -44,9 +44,9 @@
     </div>
   </div>
   <div class="typology__card">
-    <%= image_tag("developer.png") %>
+    <%= image_tag("developer.png", class:"typology__card__img__left",alt:"screen code") %>
     <div class="typology__text" id="developer">
-      <h5>A Developper</h5>
+      <h5 class="typology__card__title">A Developper</h5>
       <p>
         <ul>
           <li>Every month you have the chance to do a peer-programming challenge, which is very helpful for getting new skills and get better at communicating</li>
@@ -57,25 +57,26 @@
         What is pair-programming ? -->
       </button>
     </div>
-    <div class="typology__card">
-      <%= image_tag("marketer.png") %>
-      <div class="typology__text" id="marketer">
-        <h5>A Marketer</h5>
-        <p>
-          <ul>
-            <li>Applying your marketing knowledge can be though.  Most of the times working with sandbox is limited, Google Analytics for example but it’s more for getting used to the product.</li>
-            <li>While Managing project / product, you can apply all your book smart, get a better sense at what is the web. And for the most pertinacious get an introduction at html and javascript</li>
-          </ul>
-        </p>
-        <button class="button__w__arrow">
-          See our ressources for marketing  -->
-        </button>
-      </div>
-    </section>
-    <section id="the system">
-      <p class="system__description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        <p>
-          <button class="system_cta">Sign up</button>
-        </section>
+  </div>
+  <div class="typology__card">
+    <%= image_tag("marketer.png", class: "typology__card__img",alt:"post-it") %>
+    <div class="typology__text" id="marketer">
+      <h5 class="typology__card__title">A Marketer</h5>
+      <p>
+        <ul>
+          <li>Applying your marketing knowledge can be though.  Most of the times working with sandbox is limited, Google Analytics for example but it’s more for getting used to the product.</li>
+          <li>While Managing project / product, you can apply all your book smart, get a better sense at what is the web. And for the most pertinacious get an introduction at html and javascript</li>
+        </ul>
+      </p>
+      <button class="button__w__arrow">
+        See our ressources for marketing  -->
+      </button>
+    </div>
+  </section>
+  <section id="the system">
+    <p class="system__description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      <p>
+        <button class="system_cta">Sign up</button>
+      </section>

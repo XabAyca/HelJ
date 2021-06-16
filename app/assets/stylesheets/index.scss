@@ -9,46 +9,101 @@
 	display:flex;
 	flex-direction: column;
 	align-items: center;
+	padding-top:var(--sp96);
+	margin-bottom:var(--sp128)
 }
 .hero__tagline{
 	font-size:var(--fs60);
 	text-align:center;
 	font-weight:700;
+	margin-bottom:var(--sp16)
 }
 .hero__description{
-	font-size: var(--fs30);
+	font-size: var(--fs24);
 	font-family: var(--secondaryFont);
 	font-weight: 500;
 	width:60ch;
 	text-align: center;
+	margin-bottom:var(--sp32)
 }
-.hero__cta{}
+.hero__img{
+	margin-bottom:var(--sp24)
+}
+.hero__cta{
+	
+}
 #features{}
 .features__title{
 	text-align:center;
 	font-size:var(--fs36);
 	font-weight: 600;
+	margin-bottom:var(--sp48);
 }
 .explanations{
 	display:flex;
 	justify-content: space-between;
+	margin-bottom:var(--sp128);
+	padding:var(--sp0) var(--sp152);
 }
 .explanation{
 	display:flex;
 	flex-direction: column;
 	align-items: center;
+	
 }
-
+.explanation_logo{
+	margin-bottom: var(--sp12);
+}
+.explanation__title{
+	font-size:var(--fs18);
+	font-weight: 500;
+	margin-bottom:var(--sp8)
+}
 .explanation__description{
 	width:40ch;
 	text-align: center;
+	font-size:var(--fs14);
+	margin-bottom:var(--sp0)
 }
 
 .You__are__title{
 	font-size:var(--fs36);
 	font-weight:600;
 }
+#You__are div{
+	margin-bottom: 100px;
+}
+.typology__card{
+	display:flex
+	
+}
+.typology__card__img{
+	margin-right:30px;
+	align-self:center
+}
+.typology__card__img__left{
+	order:2;
+	margin-left:30px;
+	align-self:center
+}
+.typology__card__list{
+	
+}
+.typology__card__title{
+	font-size:var(--fs24);
+	font-weight: 500;
+}
+.hero__graphic img{
+	width:100%;
+	height: auto;
+}
 @media(max-width:$LaptopSmall){
+	#hero{
+		padding-top:var(--sp64)
+	}
+	.explanations{
+		padding:var(--sp0) var(--sp96);
+	}
 	.hero__tagline{
 		font-size:var(--fs48)
 	}
@@ -66,6 +121,9 @@
 
 
 @media(max-width:$Tablet){
+	.explanations{
+		padding:var(--sp0) var(--sp0);
+	}
 	.hero__tagline{
 		font-size:var(--fs48)
 	}
@@ -75,33 +133,55 @@
 	.features__title{
 		font-size:var(--fs24);
 	}
+	.explanation__description{
+		
+		font-size:var(--fs12)
+	}
 	.You__are__title{
 		font-size:var(--fs24);
 	}
+
 }
 
 
 
 @media(max-width:$PhoneBig){
+	#pairs{
+		margin-bottom:var(--sp32)
+	}
+	#hero{
+		margin-bottom:var(--sp96)
+	}
 	.hero__tagline{
 		font-size:var(--fs30)
 	}
 	.hero__description{
 		font-size: var(--fs16);
+		width:40ch;
 	}
 	.features__title{
 		font-size:var(--fs20);
 	}
 	.explanations{
 		flex-direction: column;
+		margin-bottom:var(--sp64);
 	}
 	.You__are__title{
 		font-size:var(--fs20);
+	}
+	.hero__graphic{
+		width:354px
+	}
+	.features__title{
+		margin-bottom:var(--sp24);
 	}
 }
 
 
 @media(max-width:$PhoneMiddle){
+	#hero{
+		margin-bottom:var(--sp64)
+	}
 	.hero__tagline{
 		font-size:var(--fs24)
 	}
@@ -114,6 +194,12 @@
 	.You__are__title{
 		font-size:var(--fs18);
 	}
+	.hero__graphic{
+		width:280px;
+	}
+	.explanation__title{
+		font-size:var(--fs16);
+	}
 }
 
 
@@ -121,10 +207,22 @@
 	//.hero__tagline{
 	//	font-size:var(--fs24)
 	//}
-	//.hero__description{
-	//	font-size: var(--fs14);
-	//}
+	.hero__description{
+		font-size: var(--fs14);
+		width:38ch;
+	}
 	//.features__title{
 	//	font-size:var(--fs18);
 	//}
+	#hero{
+		padding-top:var(--sp64);
+	}
+	.hero__graphic{
+		width:220px;
+	}
+	.explanation__description{
+		
+		font-size:var(--fs11);
+		
+	}
 }
