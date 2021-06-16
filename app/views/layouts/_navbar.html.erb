@@ -11,9 +11,10 @@
           <button onclick="myFunction()" class="button pill__outlined button__pill__outlined dropbtn"><%=current_user.email%></button>
           <div id="myDropdown" class="dropdown-content">
             <a href="<%=edit_user_registration_path()%>">Mon profil</a>
+            <a href="<%= new_project_path() %>">Create a project</a>
             <a href="<%=destroy_user_session_path()%>" data-method='delete'>Se déconnecter</a>
           </div>
-        </div>  
+        </div>
       <%else%>
         <div class="dropdown">
           <button onclick="myFunction()" class="button pill__outlined button__pill__outlined dropbtn">Connexion</button>
@@ -21,9 +22,8 @@
             <a href="<%=new_user_session_path()%>">Se connecter</a>
             <a href="<%=new_user_registration_path()%>">S'inscrire</a>
           </div>
-        </div>  
+        </div>
       <%end%>
-
     </ul>
   </div>
   <div class="burger__menu">
