@@ -29,15 +29,15 @@
   <% end %>
 
 <div class="password_field ">
-<p>Change your password</p>
+<label>Change your password</label><br>
 <small>leave blank if you don't want to change it</small>
-
-  <div class="field-col">
+ 
+  <div class="field-col m-left-3">
     <%= f.label :password %>
     <%= f.password_field :password, autocomplete: "new-password" , class: "input", placeholder: "#{@minimum_password_length} characters minimum"%>
   </div>
 
-  <div class="field-col">
+  <div class="field-col m-left-3">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" , class: "input"%>
   </div>
