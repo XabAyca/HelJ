@@ -1,5 +1,5 @@
  <% if notice %>
-  <p class="notice widh-all"><%= notice %>
+  <p class="notice"><%= notice %>
   <span class="close">Close</span>
   </p>
 <% end %>
@@ -8,10 +8,8 @@
 <% end %>
 
 <script>
-var closebtns = document.getElementsByClassName("close");
-
-  closebtns[0].addEventListener("click", function() {
+let closeBtn = document.querySelector(".close");
+  closeBtn.addEventListener("click", function() {
     this.parentElement.style.display = 'none';
   });
-
 </script>
