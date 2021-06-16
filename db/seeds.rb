@@ -77,12 +77,15 @@ end
   end
   p "#{i} joint user project created"
 end
+#p Project.class
+#p Challenge.class
+#p Challenge.exists?
 
 (1..10).each do |i|
 	c = Challenge.all.sample
 	p c
   ParticipationChallenge.create!(
-    challenges_id: c.id,
+    challenge_id: c.id,
   )
   p "#{i} Participation Challenge created"
 end
