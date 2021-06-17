@@ -9,6 +9,12 @@
   padding: 0px 30px;
   order:5
 }
+
+.logo:hover{
+  animation-name: vibration;
+  animation-duration: 1s;
+}
+
 .logo__svg {
   height: 30px;
   width: auto;
@@ -23,6 +29,8 @@
 }
 .nav__link {
   color: var(--defaultBlack);
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .nav__link a {
@@ -34,6 +42,10 @@
 }
 .nav__link {
   margin-right: 15px;
+  transition: 400ms;
+}
+.nav__link:hover{
+  transform: scale(1.05);
 }
 .burger__menu {
   display: none;
@@ -87,3 +99,37 @@
 }
 
 .show {display:block;}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--blue600);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+@keyframes vibration {
+  0%   {transform:rotateZ(0deg);}
+  20%  {transform:rotateZ(10deg);}
+  40%  {transform:rotateZ(-10deg);}
+  60%  {transform:rotateZ(10deg);}
+  80%  {transform:rotateZ(-10deg);}
+  100% {transform:rotateZ(0deg);}
+}
