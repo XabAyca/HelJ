@@ -1,15 +1,18 @@
-<h1>Browser project</h1>
-<p>FORMS to search project</p>
-<form id="Todo">
-  <input type="text" />
-</form>
-<div>
-  card-view-option
-</div>
-<div>
-  Sort By : Most Upvoted
+<main class="main__wrapper">
+  <h1>Browser project</h1>
+  <p>FORMS to search project</p>
+  <form  id="project_search">
+    <input type="text" />
+    <div>
+      card-view-option
+    </div>
+    <div>
+      Sort By : Most Upvoted
+    </div>
+  </form>
   <div class="projects_wrapper">
     <%= @projects.each do |project| %>
       <%= render "projects/card_project", project: project%>
     <%end%>
-    <div>
+  </div>
+</main>
