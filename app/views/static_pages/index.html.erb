@@ -7,8 +7,17 @@
         Nous voulons créer un espace pour que les juniors créatifs puissent vraiment collaborer
       </p>
     </div>
-    <div class="hero__graphic">
+    <div class="hero__graphic graphic__laptop">
       <%= image_tag("hero_image.png", class:"hero__img",alt:"people collaborating") %>
+    </div>
+    <div class="hero__graphic graphic__mobile__xl">
+      <%= image_tag("hero_image_xlmobile.png", class:"hero__img",alt:"people collaborating") %>
+    </div>
+    <div class="hero__graphic graphic__mobile__md">
+      <%= image_tag("hero_image_mdmobile.png", class:"hero__img",alt:"people collaborating") %>
+    </div>
+    <div class="hero__graphic graphic__mobile__sm">
+      <%= image_tag("hero_image_smmobile.png", class:"hero__img",alt:"people collaborating") %>
     </div>
     <%if user_signed_in?%>
       <a href="<%=new_project_path%>" class="button pill__outlined button__pill__outlined dropbtn link">Proposer un projet</a>
@@ -105,7 +114,7 @@
     <section id="the__system">
       <h2 class="system__title">Notre conception :</h2>
       <div class="inner__system__wrapper">
-        <p class="system__description justify_text">Hel-J est une contraction de "Help Junior". Nous avons pour ambition de créer un réseau solide pour les différents intervenants des métiers du web et du développement.
+        <p class="system__description ">Hel-J est une contraction de "Help Junior". Nous avons pour ambition de créer un réseau solide pour les différents intervenants des métiers du web et du développement.
           Ici, tout repose sur la communauté, Nous partons du principe que chacun d'entre nous à a apprendre des autres. 
           Nous ne juront que par le peer-learning /peer-programming car nous savons que c'est une forme d'apprentissage dynamique. 
           On se retrouve constament confronter des problemes, nous cherchons les réponses en groupe et nous apprenons ensemble. Un travail d'équipe permet aussi a chacun de 
