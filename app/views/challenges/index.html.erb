@@ -1,7 +1,9 @@
-<h1>Challenges#index</h1>
-<p>Find me in app/views/challenges/index.html.erb</p>
-<% @challenges.each do |challenge|  %>
-  <h3><%= challenge.challenge_name %></h3>
-  <p><%= challenge.challenge_description %></p>
-  <%= link_to "View challenge",  challenge_path(challenge) %>
-<%end%>
+ <main class="main__wrapper">
+  <h1>Challenges#index</h1>
+  <p>Find me in app/views/challenges/index.html.erb</p>
+  <% @challenges.each do |challenge|  %>
+    <h3><%= challenge.challenge_name %></h3>
+    <p><%= challenge.challenge_description %></p>
+    <%= link_to "View challenge",  challenge_path(challenge) %>
+  <%end%>
+</main >
