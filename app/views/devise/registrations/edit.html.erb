@@ -1,5 +1,4 @@
-  <%= render "devise/shared/error_messages", resource: resource %>
-
+<%= render "devise/shared/error_messages", resource: resource %>
 <h1 class="title-page">Hello <%=current_user.first_name%></h1>
 
 <%= link_to url_for(:back) do %>
@@ -10,7 +9,6 @@
 <span class="v-circle"></span>
 <h2 class="v-text">Profile</h2>
 </div>
-
 
 <div class="v-line">
 <%= form_with model: @user, method: :patch, url: user_registration_path do |f| %>

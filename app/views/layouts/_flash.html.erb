@@ -1,17 +1,15 @@
  <% if notice %>
-  <p class="alert"><%= notice %></p>
+  <p class="notice"><%= notice %>
   <span class="close">Close</span>
+  </p>
 <% end %>
 <% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
-   <span class="close">Close</span>
+  <p class="alert"><%= alert %><span class="close">Close</span></p>
 <% end %>
 
 <script>
-var closebtns = document.getElementsByClassName("close");
-
-  closebtns[0].addEventListener("click", function() {
+let closeBtn = document.querySelector(".close");
+  closeBtn.addEventListener("click", function() {
     this.parentElement.style.display = 'none';
   });
-
 </script>
