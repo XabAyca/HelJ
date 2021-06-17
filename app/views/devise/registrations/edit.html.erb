@@ -43,26 +43,26 @@
 <label>Change your password</label><br>
 <small>leave blank if you don't want to change it</small>
  
-  <div class="field-col m-left-3">
+  <div class="field-col">
     <%= f.label :password %>
     <%= f.password_field :password, autocomplete: "new-password" , class: "input", placeholder: "#{@minimum_password_length} characters minimum"%>
   </div>
 
-  <div class="field-col m-left-3">
+  <div class="field-col">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" , class: "input"%>
   </div>
 </div>
   </div>
 
-<div class="field center m-top">
+<div class="field sparound m-top">
   <div class="field-col">
 
 <h3>Cancel my account</h3>
 
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete , class: "button button__outlined_red button__md m-top-one"%></p>
 </div>
-  <div class="field-col m-left">
+  <div class="field-col">
   <h3>Save your change</h3>  
     <%= f.password_field :current_password, autocomplete: "current-password", placeholder: "current password " , class: "input"%>
   <div class="actions">

@@ -19,11 +19,7 @@
 
 .group-form {
     display: flex;
-    justify-content: center;
-}
-
-.password_field {
-    margin-left: 10rem;
+    justify-content: space-around;
 }
 
 .text-form-top {
@@ -40,7 +36,6 @@
 .input-area {
     width: 16rem;
     height: 8rem;
-    margin-left: 3rem;
 }
 
 .m-top {
@@ -51,17 +46,9 @@
     margin-bottom: 0.5rem;
 }
 
-.center {
+.sparound {
     display: flex;
-    justify-content: center;
-}
-
-.m-left {
-    margin-left: 10rem;
-}
-
-.m-left-3 {
-    margin-left: 3rem;
+    justify-content: space-around;
 }
 
 .m-top-one {
