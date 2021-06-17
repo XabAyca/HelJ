@@ -1,118 +1,122 @@
-<section id="hero">
-  <div class="hero__text">
-    <h1 class="hero__tagline">Entrainons nous ensemble! !</h1>
-    <p class="hero__description">
-
-      Il peut être difficile de créer des projets numériques remarquables.
-      Nous voulons créer un espace pour que les juniors créatifs puissent vraiment collaborer
-    </p>
-  </div>
-  <div class="hero__graphic">
-    <%= image_tag("hero_image.png", class:"hero__img",alt:"people collaborating") %>
-  </div>
-  <button class="hero__cta button button__lg button__filled">Rejoindre la communauté</button>
-</section>
-<section id="features">
-  <h2 class="features__title"> La Fonction </h2>
-  <div class="explanations">
-    <div class="explanation pairs__making" id="pairs">
-      <%= image_tag("pair_making.png", class: "explanation_logo",alt:"two people mentoring themself") %>
-      <h4 class='explanation__title'>"Peer-making"</h4>
-      <p class="explanation__description">
-       Une fois par mois, nous formerons une équipe pour réaliser un projet, vous aurez ainsi la chance de rencontrer des partenaires potentiels.</p>
-    </div>
-    <div class="explanation projects" id="projects">
-      <%= image_tag("project_image.png", class: "explanation_logo",alt:"light bulb") %>
-      <h4 class='explanation__title'>Projets</h4>
-      <p  class="explanation__description">Chaque membre peut proposer un projet à la communauté, a l'image de l'open-source</p>
-    </div>
-  </div>
-</section>
-<section id="You__are">
-  <h2 class="You__are__title">Je suis :</h2>
-  <div class="typologies__wrapper">
-    <div class="typology__card" id="typology">
-      <%= image_tag("designer.png", class: "typology__card__img",alt:"work designer")  %>
-      <div class="typology__text" id="designer">
-        <h5 class="typology__card__title">Un Designer</h5>
-        <p>
-          <ul class="typology__card__list">
-            <li class="typology__list__first">
-              Travailler avec un développeur peut vous aider à comprendre comment changer un "Visuel" en code, ce qui peut être fait, et comment il intègre au mieux a vos sites et applications.</li>
-            <li class="typology__list__last">
-             L'apprentissage du language CSS est une compétence appréciee pour un designer, il vous aide à comprendre comment vos instructions sont traduites en code. 
-             Cela vous donne la possibilité de créer votre propre site.</li>
-          </ul>
-        </p>
-        <button class="button button__md button__text typo__button">
-          <a href="" class="typology__link">
-            Visitez le Sites webflow pour designer et organiser votre page avec des outils sans code / no code.<span class="arrow__right">
-              <svg width="38" height="12" viewBox="0 0 38 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75L1 5.25ZM37.5303 6.53033C37.8232 6.23743 37.8232 5.76256 37.5303 5.46967L32.7574 0.696696C32.4645 0.403803 31.9896 0.403803 31.6967 0.696696C31.4038 0.98959 31.4038 1.46446 31.6967 1.75736L35.9393 6L31.6967 10.2426C31.4038 10.5355 31.4038 11.0104 31.6967 11.3033C31.9896 11.5962 32.4645 11.5962 32.7574 11.3033L37.5303 6.53033ZM1 6.75L37 6.75L37 5.25L1 5.25L1 6.75Z" fill="#2252F9"/>
-              </svg>
-            </span>
-          </a>
-        </button>
-      </div>
-    </div>
-    <div class="typology__card">
-      <%= image_tag("developer.png", class:"typology__card__img__left",alt:"screen code") %>
-      <div class="typology__text" id="developer">
-        <h5 class="typology__card__title">Un Developpeur</h5>
-        <p>
-          <ul class="typology__card__list">
-            <li class="typology__list__first">Chaque mois, vous avez l'opportunité de participer à un défi de programmation en "peer learning". Ce qui est très utile pour acquérir de nouvelles compétences et apprendre a s'organiser efficacement en groupe.</li>
-            <li class="typology__list__last">Travailler avec d'autres personnes sur les projets vous aidera a réaliser des sites/applications plus aboutis qui vous pousseront a acquerir d'avantage d'expérience de maniere plus rapide qu'un apprentissage traditionnel. Que vous soyez developpeur front-end ou back-end, vous devriez y voir les nombreux avantages que ce type de pratique proposes.</li>
-          </ul>
-        </p>
-        <button class="button button__md button__text typo__button typo__button_right">
-          <a href="" class="typology__link">
-            Qu'est ce que le peer-programming?  <span class="arrow__right">
-              <svg width="38" height="12" viewBox="0 0 38 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75L1 5.25ZM37.5303 6.53033C37.8232 6.23743 37.8232 5.76256 37.5303 5.46967L32.7574 0.696696C32.4645 0.403803 31.9896 0.403803 31.6967 0.696696C31.4038 0.98959 31.4038 1.46446 31.6967 1.75736L35.9393 6L31.6967 10.2426C31.4038 10.5355 31.4038 11.0104 31.6967 11.3033C31.9896 11.5962 32.4645 11.5962 32.7574 11.3033L37.5303 6.53033ZM1 6.75L37 6.75L37 5.25L1 5.25L1 6.75Z" fill="#2252F9"/>
-              </svg>
-            </span>
-          </a>
-        </button>
-      </div>
-    </div>
-    <div class="typology__card">
-      <%= image_tag("marketer.png", class: "typology__card__img",alt:"post-it") %>
-      <div class="typology__text" id="marketer">
-        <h5 class="typology__card__title">Un Commercant</h5>
-        <p>
-          <ul class="typology__card__list">
-            <li class="typology__list__first">L'application de vos connaissances en marketing peut être un plus pour la communauté. </li>
-            <li class="typology__list__last">Tout en gérant un projet / produit, vous pouvez appliquer toutes vos compétences en matière de commerce et marketing.
-            Vous pourrez comprendre ce qu'est le Web, comment il fonctionne et vous servir de ces atouts pour mieux cibler votre clientèle, et également, 
-            vous rendre plus a l'aise sur des outils numériques. Pour ceux qui ont soif de conaissances, 
-            vous trouverez sur Hel-J de quoi vous formez sur des languages tels que Html, Css ou bien encore JavaScript.</li>
-          </ul>
-        </p>
-        <button class="button button__md button__text typo__button">
-          <a href="" class="typology__link">
-            Nos Ressources sur le Marketing  <span class="arrow__right">
-              <svg width="38" height="12" viewBox="0 0 38 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75L1 5.25ZM37.5303 6.53033C37.8232 6.23743 37.8232 5.76256 37.5303 5.46967L32.7574 0.696696C32.4645 0.403803 31.9896 0.403803 31.6967 0.696696C31.4038 0.98959 31.4038 1.46446 31.6967 1.75736L35.9393 6L31.6967 10.2426C31.4038 10.5355 31.4038 11.0104 31.6967 11.3033C31.9896 11.5962 32.4645 11.5962 32.7574 11.3033L37.5303 6.53033ZM1 6.75L37 6.75L37 5.25L1 5.25L1 6.75Z" fill="#2252F9"/>
-              </svg>
-            </span>
-          </a>
-        </button>
-      </div>
-    </div>
-  </section>
-  <section id="the__system">
-    <h2 class="system__title">Notre conception :</h2>
-    <div class="inner__system__wrapper">
-      <p class="system__description">Hel-J est une contraction de "Help Junior". Nous avons pour ambition de créer un réseau solide pour les différents intervenants des métiers du web et du développement.
-      Ici, tout repose sur la communauté, Nous partons du principe que chacun d'entre nous à a apprendre des autres. 
-      Nous ne juront que par le peer-learning /peer-programming car nous savons que c'est une forme d'apprentissage dynamique. 
-      On se retrouve constament confronter des problemes, nous cherchons les réponses en groupe et nous apprenons ensemble. Un travail d'équipe permet aussi a chacun de 
-      pouvoir s'affirmer a travers la confiance d'un groupe.
-      C'est aussi un très bon moyens de responsabiliser chaques membres du groupe.
-      Nous sommes ici pour apprendre. qu'on soit un débutant autodidacte ou bien Developpeur de métier, chacun d'entre nous a quelques choses a partagé.
-      bienvenu sur HelJ
+ <main class="main__wrapper">
+  <section id="hero">
+    <div class="hero__text">
+      <h1 class="hero__tagline">Entrainons nous ensemble!</h1>
+      <p class="hero__description">
+        Il peut être difficile de créer des projets numériques remarquables.
+        Nous voulons créer un espace pour que les juniors créatifs puissent vraiment collaborer
       </p>
-      <button class="button button__lg button__filled system_cta">Se Connecter</button>
+    </div>
+    <div class="hero__graphic">
+      <%= image_tag("hero_image.png", class:"hero__img",alt:"people collaborating") %>
+    </div>
+    <%if user_signed_in?%>
+      <a href="<%=new_project_path%>" class="button pill__outlined button__pill__outlined dropbtn link">Proposer un projet</a>
+    <% else %>
+      <a href="<%=new_user_session_path%>" class="button pill__outlined button__pill__outlined dropbtn link">Rejoindre la communauté</a>
+    <%end%>
+  </section>
+  <section id="features">
+    <h2 class="features__title"> La Fonction </h2>
+    <div class="explanations">
+      <div class="explanation pairs__making" id="pairs">
+        <%= image_tag("pair_making.png", class: "explanation_logo",alt:"two people mentoring themself") %>
+        <h4 class='explanation__title'>"Peer-making"</h4>
+        <p class="explanation__description">
+          Une fois par mois, nous formerons une équipe pour réaliser un projet, vous aurez ainsi la chance de rencontrer des partenaires potentiels.</p>
+      </div>
+      <div class="explanation projects" id="projects">
+        <%= image_tag("project_image.png", class: "explanation_logo",alt:"light bulb") %>
+        <h4 class='explanation__title'>Projets</h4>
+        <p  class="explanation__description">Chaque membre peut proposer un projet à la communauté, a l'image de l'open-source</p>
+      </div>
     </div>
   </section>
+  <section id="You__are">
+    <h2 class="You__are__title">Je suis :</h2>
+    <div class="typologies__wrapper">
+      <div class="typology__card" id="typology">
+        <%= image_tag("designer.png", class: "typology__card__img",alt:"work designer")  %>
+        <div class="typology__text" id="designer">
+          <h5 class="typology__card__title">Un Designer</h5>
+          <p class="justify_text">
+            <ul class="typology__card__list">
+              <li class="typology__list__first">
+                Travailler avec un développeur peut vous aider à comprendre comment changer un "Visuel" en code, ce qui peut être fait, et comment il intègre au mieux a vos sites et applications.</li>
+              <li class="typology__list__last">
+                L'apprentissage du language CSS est une compétence appréciee pour un designer, il vous aide à comprendre comment vos instructions sont traduites en code. 
+                Cela vous donne la possibilité de créer votre propre site.</li>
+            </ul>
+          </p>
+          <button class="button button__md button__text typo__button">
+            <a href="https://webflow.com/" target="_blank" class="link move_left">
+              Visitez le Sites webflow pour designer et organiser votre page avec des outils sans code / no code.
+              <svg width="38" height="12" viewBox="0 0 38 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75L1 5.25ZM37.5303 6.53033C37.8232 6.23743 37.8232 5.76256 37.5303 5.46967L32.7574 0.696696C32.4645 0.403803 31.9896 0.403803 31.6967 0.696696C31.4038 0.98959 31.4038 1.46446 31.6967 1.75736L35.9393 6L31.6967 10.2426C31.4038 10.5355 31.4038 11.0104 31.6967 11.3033C31.9896 11.5962 32.4645 11.5962 32.7574 11.3033L37.5303 6.53033ZM1 6.75L37 6.75L37 5.25L1 5.25L1 6.75Z" fill="#2252F9"/>
+              </svg>
+            </a>
+          </button>
+        </div>
+      </div>
+      <div class="typology__card">
+        <%= image_tag("developer.png", class:"typology__card__img__left",alt:"screen code") %>
+        <div class="typology__text" id="developer">
+          <h5 class="typology__card__title">Un Developpeur</h5>
+          <p class="justify_text">
+            <ul class="typology__card__list">
+              <li class="typology__list__first">Chaque mois, vous avez l'opportunité de participer à un défi de programmation en "peer learning". Ce qui est très utile pour acquérir de nouvelles compétences et apprendre a s'organiser efficacement en groupe.</li>
+              <li class="typology__list__last">Travailler avec d'autres personnes sur les projets vous aidera a réaliser des sites/applications plus aboutis qui vous pousseront a acquerir d'avantage d'expérience de maniere plus rapide qu'un apprentissage traditionnel. Que vous soyez developpeur front-end ou back-end, vous devriez y voir les nombreux avantages que ce type de pratique proposes.</li>
+            </ul>
+          </p>
+          <button class="button button__md button__text typo__button typo__button_right">
+            <a href="https://fr.wikipedia.org/wiki/Programmation_en_bin%C3%B4me" target="_blank" class="link move_left">
+              Qu'est ce que le peer-programming?
+              <svg width="38" height="12" viewBox="0 0 38 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75L1 5.25ZM37.5303 6.53033C37.8232 6.23743 37.8232 5.76256 37.5303 5.46967L32.7574 0.696696C32.4645 0.403803 31.9896 0.403803 31.6967 0.696696C31.4038 0.98959 31.4038 1.46446 31.6967 1.75736L35.9393 6L31.6967 10.2426C31.4038 10.5355 31.4038 11.0104 31.6967 11.3033C31.9896 11.5962 32.4645 11.5962 32.7574 11.3033L37.5303 6.53033ZM1 6.75L37 6.75L37 5.25L1 5.25L1 6.75Z" fill="#2252F9"/>
+              </svg>
+            </a>
+          </button>
+        </div>
+      </div>
+      <div class="typology__card">
+        <%= image_tag("marketer.png", class: "typology__card__img",alt:"post-it") %>
+        <div class="typology__text" id="marketer">
+          <h5 class="typology__card__title">Un Commercant</h5>
+          <p class="justify_text">
+            <ul class="typology__card__list">
+              <li class="typology__list__first">L'application de vos connaissances en marketing peut être un plus pour la communauté. </li>
+              <li class="typology__list__last">Tout en gérant un projet / produit, vous pouvez appliquer toutes vos compétences en matière de commerce et marketing.
+                Vous pourrez comprendre ce qu'est le Web, comment il fonctionne et vous servir de ces atouts pour mieux cibler votre clientèle, et également, 
+                vous rendre plus a l'aise sur des outils numériques. Pour ceux qui ont soif de conaissances, 
+                vous trouverez sur Hel-J de quoi vous formez sur des languages tels que Html, Css ou bien encore JavaScript.</li>
+            </ul>
+          </p>
+          <button class="button button__md button__text typo__button">
+            <a href="<%=resources_path%>" class="link move_left">
+              Nos Ressources sur le Marketing  
+              <svg width="38" height="12" viewBox="0 0 38 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75L1 5.25ZM37.5303 6.53033C37.8232 6.23743 37.8232 5.76256 37.5303 5.46967L32.7574 0.696696C32.4645 0.403803 31.9896 0.403803 31.6967 0.696696C31.4038 0.98959 31.4038 1.46446 31.6967 1.75736L35.9393 6L31.6967 10.2426C31.4038 10.5355 31.4038 11.0104 31.6967 11.3033C31.9896 11.5962 32.4645 11.5962 32.7574 11.3033L37.5303 6.53033ZM1 6.75L37 6.75L37 5.25L1 5.25L1 6.75Z" fill="#2252F9"/>
+              </svg>
+            </a>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="the__system">
+      <h2 class="system__title">Notre conception :</h2>
+      <div class="inner__system__wrapper">
+        <p class="system__description justify_text">Hel-J est une contraction de "Help Junior". Nous avons pour ambition de créer un réseau solide pour les différents intervenants des métiers du web et du développement.
+          Ici, tout repose sur la communauté, Nous partons du principe que chacun d'entre nous à a apprendre des autres. 
+          Nous ne juront que par le peer-learning /peer-programming car nous savons que c'est une forme d'apprentissage dynamique. 
+          On se retrouve constament confronter des problemes, nous cherchons les réponses en groupe et nous apprenons ensemble. Un travail d'équipe permet aussi a chacun de 
+          pouvoir s'affirmer a travers la confiance d'un groupe.
+          C'est aussi un très bon moyens de responsabiliser chaques membres du groupe.
+          Nous sommes ici pour apprendre. qu'on soit un débutant autodidacte ou bien Developpeur de métier, chacun d'entre nous a quelques choses a partagé.
+          bienvenu sur HelJ
+        </p>
+        <%if !user_signed_in?%>
+          <a href="<%=new_user_registration_path%>" class="button pill__outlined button__pill__outlined dropbtn link">Rejoindre la communauté</a>
+        <%end%>
+      </div>
+    </section>
+  </main>

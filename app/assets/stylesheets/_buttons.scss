@@ -7,6 +7,7 @@
     font-weight: 600;
     color: white;
     border: none;
+    padding:5px 5px 5px 5px ;
 }
 
 .button__xl {
@@ -79,6 +80,20 @@
 .pill__filled {
     background: #2252f9;
     border-radius: 20px;
+}   
+.pill__outlined__red {
+    border: 2px solid red;
+    color: red;
+    background-color: transparent;
+    border-radius: 20px;
+}
+.pill__outlined__red:hover{
+    background-color: rgba(255, 0, 0, 0.315);
+    cursor:pointer
+}
+
+.pill__outlined__red:active{
+    box-shadow: 1px 1px 5px 2px rgba(187, 0, 0, 0.2);
 }
 
 .button__outlined_red {
@@ -122,10 +137,20 @@
     display: inline-block;
     transition:400ms
 }
+
 .move_left:hover{
     transform:translate(10px);
 }
+
 .move_left:active{
     transform: scale(1.1);
 }
 
+.animation_scale{
+    text-decoration: none;
+    transition: 400ms;
+  }
+
+.animation_scale:hover{
+    transform: scale(1.05);
+}
