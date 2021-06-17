@@ -19,3 +19,10 @@
     width: 4rem;
     height: 4rem;
 }
+
+.links_list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;  
+}
