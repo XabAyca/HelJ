@@ -16,8 +16,8 @@
     </div>-->
   <% end %>
   <div class="projects_wrapper">
-    <%= @projects.each.with_index do |project,i| %>
-      <%= render "projects/card_project", project: project %>
+    <% @projects.each do |project| %>
+      <%= render "projects/card_project", project: project%>
     <%end%>
   </div>
 </main>
