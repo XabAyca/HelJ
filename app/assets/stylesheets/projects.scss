@@ -24,3 +24,10 @@
 	min-width:300px;
 	margin:var(--sp0) auto;
 }
+
+.links_list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;  
+}
