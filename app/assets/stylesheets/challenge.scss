@@ -1,19 +1,23 @@
+@import 'media';
+
 .challenge__hero {
   position: relative;
-  border: 1px red solid;
   width: 100%;
-  min-height: 450px;
-  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%221395%22%20height%3D%22389%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1395%20.002c0%20214.286-312.28%20388-697.5%20388C312.281%20388.002%200%20214.288%200%20.002h697.5c385.22%200%20387-.002%20697.5%200z%22%20fill%3D%22%23AABCFB%22%2F%3E%3C%2Fsvg%3E");
+  height: 350px;
+  background: url("data:image/svg+xml,%3Csvg%20width%3D%221589%22%20height%3D%22331%22%20viewBox%3D%220%200%201589%20331%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1589%200.000532489C1589%20182.806%201233.29%20331%20794.5%20331C355.71%20331%200%20182.806%200%200.000532489C353.681%200.000532489%20355.71%200.000298181%20794.5%200.000298181C1233.29%200.000298181%201233.04%20-0.000598788%201589%200.000532489Z%22%20fill%3D%22%23AABCFB%22%2F%3E%0A%3C%2Fsvg%3E%0A");
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--beige);
   margin-bottom: var(--sp64);
+  background-position-x: center;
+  background-size: cover;
+ 
 }
 
 .header__top__title{
-	font-size: 24px;
+	font-size: var(--fs24);
 	font-weight: 600;
 }
 
@@ -64,6 +68,8 @@
   align-self: center;
 
 }
+//%3Csvg%20width%3D%221075%22%20height%3D%22331%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1075%200c0%20182.807-240.647%20331-537.5%20331S0%20182.807%200%200h1075z%22%20fill%3D%22%23AABCFB%22%2F%3E%3C%2Fsvg%3E
+
 //.challenge__hero__circle {
 //	position:absolute;
 //	clip-path:path("M0 50a1 1 0 00100 0");
@@ -74,3 +80,93 @@
 
 //<svg width="1395" height="389" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1395 .002c0 214.286-312.28 388-697.5 388C312.281 388.002 0 214.288 0 .002h697.5c385.22 0 387-.002 697.5 0z" fill="#AABCFB"/></svg>
 //%3Csvg%20width%3D%221395%22%20height%3D%22389%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1395%20.002c0%20214.286-312.28%20388-697.5%20388C312.281%20388.002%200%20214.288%200%20.002h697.5c385.22%200%20387-.002%20697.5%200z%22%20fill%3D%22%23AABCFB%22%2F%3E%3C%2Fsvg%3E
+
+
+
+//
+@media(max-width:$LaptopSmall){
+	.challenge__hero{
+		background: url("data:image/svg+xml,%3Csvg%20width%3D%221325%22%20height%3D%22318%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1325%200c0%20175.627-296.61%20318-662.5%20318C296.611%20318%200%20175.627%200%200h1325z%22%20fill%3D%22%23AABCFB%22%2F%3E%3C%2Fsvg%3E");
+	}
+}
+@media(max-width:$Tablet){
+	.challenge__hero {
+		
+		background: url("data:image/svg+xml,%3Csvg%20width%3D%22959%22%20height%3D%22291%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M959%200c0%20160.715-214.679%20291-479.5%20291S0%20160.715%200%200h959z%22%20fill%3D%22%23AABCFB%22%2F%3E%3C%2Fsvg%3E");
+		background-repeat: no-repeat;
+		background-position-x: center;
+		height: 250px;
+		background-size: cover;
+	  }
+	  .challenge__content{
+		padding: var(--sp0) var(--sp64);
+	  }
+	  .challenge__main__text{
+		width:45ch;
+		font-size:var(--fs16)
+	  }
+}
+//background: url("data:image/svg+xml,");
+//%3Csvg%20width%3D%22863%22%20height%3D%22222%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M863%200c0%20122.607-193.189%20222-431.5%20222S0%20122.607%200%200h863z%22%20fill%3D%22%23AABCFB%22%2F%3E%3C%2Fsvg%3E
+@media(max-width:$PhoneBig){
+	.challenge__hero {
+		background: url("data:image/svg+xml,%3Csvg%20width%3D%22627%22%20height%3D%22222%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M627%200c0%20122.607-140.359%20222-313.5%20222S0%20122.607%200%200h627z%22%20fill%3D%22%23AABCFB%22%2F%3E%3C%2Fsvg%3E");
+		background-repeat: no-repeat;
+		background-position-x: center;
+		height: 200px;
+		background-size: cover;
+	  }
+	  .header__top__title{
+		font-size: var(--fs18);
+		
+	}
+	.challenge__content{
+		padding: var(--sp0) var(--sp32);
+	}
+	.challenge__main__text{
+		width:35ch;
+		font-size:var(--fs14)
+	  }
+	  .challenge__img{
+		  width:100%
+	  }
+}
+@media(max-width:$PhoneMiddle){
+	.challenge__hero {
+		background: url("data:image/svg+xml,%3Csvg%20width%3D%22627%22%20height%3D%22222%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M627%200c0%20122.607-140.359%20222-313.5%20222S0%20122.607%200%200h627z%22%20fill%3D%22%23AABCFB%22%2F%3E%3C%2Fsvg%3E");
+		background-repeat: no-repeat;
+		background-position-x: center;
+		height: 180px;
+		background-size: cover;
+	  }
+	  .challenge__content{
+		padding: var(--sp0) var(--sp28);
+	}
+	.challenge__main__text{
+		width:30ch;
+		font-size:var(--fs14)
+	  }
+	  .header__top__title{
+		font-size: var(--fs16);
+		
+	}
+}
+@media(max-width:$PhoneSmall){
+	.challenge__hero {
+		background: url("data:image/svg+xml,%3Csvg%20width%3D%22627%22%20height%3D%22222%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M627%200c0%20122.607-140.359%20222-313.5%20222S0%20122.607%200%200h627z%22%20fill%3D%22%23AABCFB%22%2F%3E%3C%2Fsvg%3E");
+		background-repeat: no-repeat;
+		background-position-x: center;
+		height: 160px;
+		background-size: cover;
+	  }
+	  .challenge__content{
+		padding: var(--sp0) var(--sp16);
+	}
+	.challenge__main__text{
+		width:30ch;
+		font-size:var(--fs12)
+	  }
+}
+//.git{
+
+//}
