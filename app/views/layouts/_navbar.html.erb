@@ -4,6 +4,7 @@
   </div>
   <div class="nav__links__wrapper">
     <ul class="nav__links__list">
+      <li class="nav__link hover-underline-animation"><a href="<%=root_path()%>">Accueil</a></li>
       <li class="nav__link hover-underline-animation"><a href="<%=projects_path()%>">Projets</a></li>
       <li class="nav__link hover-underline-animation"><a href="<%=challenges_path()%>">Challenges</a></li>
       <li class="nav__link hover-underline-animation"><a href="<%=resources_path()%>">Ressources</a></li>
@@ -30,15 +31,15 @@
   <div class="burger__menu">
     <div id="menuToggle">
  
-      <input type="checkbox" />
+      <input class='btnmenu' type="checkbox" />
 
       <span></span>
       <span></span>
       <span></span>
  
       <ul id="menu">
+        <a href="<%=root_path()%>"><li>Accueil</li></a>
         <a href="<%=projects_path()%>"><li>Projets</li></a>
-        
         <%if user_signed_in?()%>
           <a href="<%=edit_user_registration_path()%>"><li>Mon profil</li></a>
           <a href="<%= new_project_path() %>"><li>Créer un projet</li></a>
