@@ -14,7 +14,7 @@
     </select>
   <% end %>
   <div class="projects_wrapper">
-    <%= @projects.each do |project| %>
+    <% @projects.each do |project| %>
       <%= render "projects/card_project", project: project%>
     <%end%>
   </div>
