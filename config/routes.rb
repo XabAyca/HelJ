@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :projects
   resources :challenges, only: [:index, :show]
   resources :joint_users_to_projects, only: [:create,:destroy]
+  get '/joint_the_project', to: 'joint_the_project#index'
 end
