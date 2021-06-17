@@ -5,11 +5,7 @@
     <div class="search__input">
       <%= form.text_field :project_title %>
       <%= submit_tag("Search") %>
-      <%= form.select :sort, ["Old", "Recent"] %>
-      <select id="Sort By">
-        <option value="Old" selected> Old </option>
-        <option value="Recent"> Recent </option>
-      </select>
+      <%= form.select :sort, ["Old", "Recent"], prompt: true %>
     </div>
     <!--<div>
       card-view-option
