@@ -1,6 +1,21 @@
-<h2><%= @challenge.challenge_name%></h2>
-<p> <%= @challenge.challenge_description%> </p>
-<br>
-<p> level : <%= @challenge.level %> </p>
-<p> type : <%= @challenge.c_type %> </p>
-<p> url : <%= @challenge.challenge_link%> </p>
+<div>
+  <div class="challenge__hero">
+    <div class="challenge__hero__circle ">
+      <h2>
+        Challenges
+      </h2>
+    </div>
+  </div>
+  <div class="challenge__content">
+    <div class="content__header">
+      <h3><%= @challenge.challenge_name%></h3>
+      <button class="button button__md  button__filled">rejoindre</button>
+      <p> <%= @challenge.c_type %> - <%= @challenge.level %> </p>
+    </div>
+    <div>
+      <p> <%= @challenge.challenge_description%> </p>
+      <p> url : <%= @challenge.challenge_link%> </p>
+      <img src="<%=@challenge.challenge_img %>">
+    </div>
+  </div>
+</div>
