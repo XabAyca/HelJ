@@ -11,9 +11,9 @@
       <%= image_tag("hero_image.png", class:"hero__img",alt:"people collaborating") %>
     </div>
     <%if user_signed_in?%>
-      <a href="<%=new_project_path%>" class="animation_scale hero__cta button button__lg button__filled">Proposer un projet</a>
+      <a href="<%=new_project_path%>" class="button pill__outlined button__pill__outlined dropbtn link">Proposer un projet</a>
     <% else %>
-      <a href="<%=new_user_session_path%>" class="animation_scale hero__cta button button__lg button__filled">Rejoindre la communauté</a>
+      <a href="<%=new_user_session_path%>" class="button pill__outlined button__pill__outlined dropbtn link">Rejoindre la communauté</a>
     <%end%>
   </section>
   <section id="features">
@@ -115,7 +115,7 @@
           bienvenu sur HelJ
         </p>
         <%if !user_signed_in?%>
-          <a href="<%=new_user_registration_path%>" class="animation_scale hero__cta button button__lg button__filled">Rejoindre la communauté</a>
+          <a href="<%=new_user_registration_path%>" class="button pill__outlined button__pill__outlined dropbtn link">Rejoindre la communauté</a>
         <%end%>
       </div>
     </section>
