@@ -1,0 +1,24 @@
+.group_resources{
+  display: flex;
+  flex: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+}
+
+.bloc_resources{
+  min-width: 200px;
+  margin-top: 20px;
+}
+
+.resources{
+  color: var(--grey1000);
+  text-decoration: none;
+}
+.resources:hover{
+  text-decoration: underline;
+}
+
+.bloc_center{
+  margin: 0 10px;
+}
