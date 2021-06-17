@@ -158,6 +158,21 @@
 .system_cta{
 	align-self:flex-end
 }
+.graphic__laptop{
+
+}
+.graphic__mobile__xl{
+	display:none
+}
+.graphic__mobile__md{
+	display:none
+}
+.graphic__mobile__sm{
+	display:none
+}
+
+
+
 
 @media(max-width:$LaptopSmall){
 	#hero{
@@ -178,6 +193,7 @@
 	.You__are__title{
 		font-size:var(--fs30);
 	}
+
 }
 
 
@@ -227,6 +243,7 @@
 		font-size:var(--fs18)
 	}
 }
+
 
 
 
@@ -304,6 +321,18 @@
 	.hero__description{
 		width: 35ch;
 	}
+	.graphic__laptop{
+		display:none
+	}
+	.graphic__mobile__xl{
+		display:block
+	}
+	.graphic__mobile__md{
+		display:none
+	}
+	.graphic__mobile__sm{
+		display:none
+	}
 }
 
 
@@ -342,6 +371,19 @@
 	.hero__description{
 		width: 30ch;
 	}
+
+	.graphic__laptop{
+		display:none
+	}
+	.graphic__mobile__xl{
+		display:none
+	}
+	.graphic__mobile__md{
+		display:block
+	}
+	.graphic__mobile__sm{
+		display:none
+	}
 }
 
 
@@ -378,5 +420,18 @@
 	}
 	.inner__system__wrapper{
 		max-width: 28ch;
+	}
+
+	.graphic__laptop{
+		display:none
+	}
+	.graphic__mobile__xl{
+		display:none
+	}
+	.graphic__mobile__md{
+		display:none
+	}
+	.graphic__mobile__sm{
+		display:block
 	}
 }
