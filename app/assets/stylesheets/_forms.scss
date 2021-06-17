@@ -57,23 +57,24 @@
 
 .m-top-one {
     margin-top: 1rem;
+    width: 100%
 }
 
 .v-line {
     border-left: 5px solid #6686F4;
-    margin-left: 5rem;
+    margin-left: 1.2rem;
 }
 
 .v-title {
     display: flex;
-    margin-left: 4rem;
 }
 
 .v-circle {
     height: 2.8rem;
     width: 2.8rem;
-    border: 7px solid #6686F4;
+    border: 10px solid #6686F4;
     border-radius: 50%;
+    background-color: var(--beige);
 }
 
 .v-text {
@@ -84,12 +85,8 @@
 }
 
 .title-page {
-    margin-left: 10%;
-}
-
-.arrow-back {
-    height: 2rem;
-    margin-left: 10%;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .form_group {
@@ -111,4 +108,8 @@
 em {
     font-size: 0.8rem;
     color: grey;
+}
+
+.bottom-margin-for-footer {
+    padding-bottom: 5rem;
 }
