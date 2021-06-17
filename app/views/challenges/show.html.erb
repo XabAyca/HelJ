@@ -1,4 +1,4 @@
-<div>
+<div style="background-color: var(--beige)">
   <div class="challenge__hero">
     <div class="challenge__hero__circle ">
       <h2>
@@ -23,7 +23,7 @@
           <p> <%= @challenge.challenge_description%> </p>
           <p> url : <%= @challenge.challenge_link%> </p>
           <div>
-            <img src="<%=@challenge.challenge_img %>">
+            <img class="challenge__img" src="<%=@challenge.challenge_img %>">
           </div>
         </div>
       </main >
