@@ -24,8 +24,12 @@ Ou passer par le process d'inscription classique.
 
 ## API:
 
-Github
-Google Authentificator
+-Github
+-Google Authentificator
+
+## Database:
+
+-Postgresql
 
 ## FONCTIONNALITÉS:
 
