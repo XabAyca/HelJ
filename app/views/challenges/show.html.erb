@@ -8,14 +8,21 @@
   </div>
   <div class="challenge__content">
     <div class="content__header">
-      <h3><%= @challenge.challenge_name%></h3>
-      <button class="button button__md  button__filled">rejoindre</button>
-      <p> <%= @challenge.c_type %> - <%= @challenge.level %> </p>
+      <div class="content__header__top">
+        <h3 class="header__top__title"><%= @challenge.challenge_name%></h3>
+        <button class="button button__md  button__filled">rejoindre</button>
+      </div>
+      <div class="content__header__bottom">
+        <p class="challenge__classification"> <span class="challenge__type"><%= @challenge.c_type %></span> <span class="challenge__classification__separator"></span> <span class="challenge__level"><%= @challenge.level %></span> </p>
+      </div>
     </div>
-    <div>
-      <p> <%= @challenge.challenge_description%> </p>
-      <p> url : <%= @challenge.challenge_link%> </p>
-      <img src="<%=@challenge.challenge_img %>">
+    <hr class="challenge__separator">
+    <div class="challenge__main">
+      <div class="challenge__main__text">
+        <p> <%= @challenge.challenge_description%> </p>
+        <p> url : <%= @challenge.challenge_link%> </p>
+        <div>
+          <img src="<%=@challenge.challenge_img %>">
+        </div>
+      </div>
     </div>
-  </div>
-</div>

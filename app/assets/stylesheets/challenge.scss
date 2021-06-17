@@ -1,15 +1,76 @@
-.challenge__hero{
-	position:relative;
-	border:1px red solid;
-	width:100%;
-	height: 300px;
+.challenge__hero {
+  position: relative;
+  border: 1px red solid;
+  width: 100%;
+  min-height: 450px;
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%221395%22%20height%3D%22389%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1395%20.002c0%20214.286-312.28%20388-697.5%20388C312.281%20388.002%200%20214.288%200%20.002h697.5c385.22%200%20387-.002%20697.5%200z%22%20fill%3D%22%23AABCFB%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--beige);
+  margin-bottom: var(--sp64);
 }
 
-.challenge__hero__circle {
-	position:absolute;
-	clip-path:path("M0 50a1 1 0 00100 0");
-	background:lightblue;
-	top:50%;
-	left:50%
+.header__top__title{
+	font-size: 24px;
+	font-weight: 600;
 }
 
+.challenge__content {
+	padding:var(--sp0) var(--sp128);
+	padding-bottom:var(--sp64)
+}
+.challenge__main__text{
+	width:65ch;
+	margin:var(--sp0) auto;
+	font-size:var(--fs18);
+	line-height: 140%;
+}
+.content__header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.challenge__classification {
+  display: flex;
+  align-items: center;
+  font-size: var(--fs16);
+}
+.challenge__type {
+  color: var(--blue600);
+  font-weight: 400;
+}
+.challenge__level {
+  color: var(--blue450);
+  font-weight: 500;
+}
+.challenge__separator{
+	
+	border-style: dashed solid;
+  border-top:1px;
+  height:1px;
+ background: linear-gradient(270deg, #89A1F8 -1.1%, #0E35BE 103.12%);
+ margin:var(--sp32) var(--sp0);
+}
+.challenge__classification__separator {
+  display: block;
+  width: var(--sp8);
+  height: var(--sp8);
+  
+  margin: var(--sp0) var(--sp4);
+  border-radius: 50%;
+  background: linear-gradient(143.13deg, #123fe2 11.9%, #aabcfb 71.43%);
+  align-self: center;
+
+}
+//.challenge__hero__circle {
+//	position:absolute;
+//	clip-path:path("M0 50a1 1 0 00100 0");
+//	background:lightblue;
+//	top:50%;
+//	left:50%
+//}
+
+//<svg width="1395" height="389" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1395 .002c0 214.286-312.28 388-697.5 388C312.281 388.002 0 214.288 0 .002h697.5c385.22 0 387-.002 697.5 0z" fill="#AABCFB"/></svg>
+//%3Csvg%20width%3D%221395%22%20height%3D%22389%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1395%20.002c0%20214.286-312.28%20388-697.5%20388C312.281%20388.002%200%20214.288%200%20.002h697.5c385.22%200%20387-.002%20697.5%200z%22%20fill%3D%22%23AABCFB%22%2F%3E%3C%2Fsvg%3E
