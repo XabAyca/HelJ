@@ -6,7 +6,7 @@
     <ul class="nav__links__list">
       <li class="nav__link hover-underline-animation"><a href="<%=projects_path()%>">Projets</a></li>
       <li class="nav__link hover-underline-animation"><a href="<%=challenges_path()%>">Challenges</a></li>
-      <li class="nav__link hover-underline-animation"><a href=" ">Ressources</a></li>
+      <li class="nav__link hover-underline-animation"><a href="<%=resources_path()%>">Ressources</a></li>
       <%if user_signed_in?()%>
         <div class="dropdown">
           <button onclick="myFunction()" class="button pill__outlined button__pill__outlined dropbtn"><%=current_user.email%></button>
@@ -43,7 +43,7 @@
           <a href="<%=edit_user_registration_path()%>"><li>Mon profil</li></a>
           <a href="<%= new_project_path() %>"><li>Créer un projet</li></a>
           <a href="<%=challenges_path()%>"><li>Challenges</li></a>
-          <a href="#"><li>Ressources</li></a>
+          <a href="<%=resources_path()%>"><li>Ressources</li></a>
           <a href="<%=destroy_user_session_path()%>" data-method='delete'><li>Se déconnecter</li></a>
         <%else%>
           <a href="<%=new_user_session_path()%>"><li>Se connecter</li></a>
