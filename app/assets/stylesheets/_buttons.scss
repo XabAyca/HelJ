@@ -7,6 +7,7 @@
     font-weight: 600;
     color: white;
     border: none;
+    padding:5px 5px 5px 5px ;
 }
 
 .button__xl {
@@ -136,16 +137,20 @@
     display: inline-block;
     transition:400ms
 }
+
 .move_left:hover{
     transform:translate(10px);
 }
+
 .move_left:active{
     transform: scale(1.1);
 }
+
 .animation_scale{
     text-decoration: none;
     transition: 400ms;
   }
+
 .animation_scale:hover{
     transform: scale(1.05);
 }
