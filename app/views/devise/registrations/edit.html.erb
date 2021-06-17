@@ -1,9 +1,8 @@
 <%= render "devise/shared/error_messages", resource: resource %>
 <main class="main__wrapper">
-  <h1 class="title-page">Hello <%=current_user.first_name%></h1>
-  <%= link_to url_for(:back) do %>
-    <%= image_tag "https://image.flaticon.com/icons/png/512/638/638359.png", class: "arrow-back" %>
-  <% end %>
+
+    <h1 class="title-page">Hello <%=current_user.first_name%></h1>
+
   <div class="v-title">
     <span class="v-circle"></span>
     <h2 class="v-text">Profile</h2>
@@ -33,10 +32,10 @@
           <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
         <% end %>
         <div class="password_field ">
-          <label>Change your password</label><br>
-          <small>leave blank if you don't want to change it</small>
           <div class="field-col m-left-3">
-            <%= f.label :password %>
+          <label>Change your password</label><br>
+                    <small>leave blank if you don't want to change it</small>
+
             <%= f.password_field :password, autocomplete: "new-password" , class: "input", placeholder: "#{@minimum_password_length} characters minimum"%>
           </div>
           <div class="field-col m-left-3">
@@ -45,7 +44,13 @@
           </div>
         </div>
       </div>
-      <div class="field center m-top">
+
+
+      <div class="field center m-top bottom-margin-for-footer">
+            <div class="field-col">
+                <h3>Cancel my account</h3>
+        <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete , class: "button button__outlined_red button__md m-top-one"%>
+      </div>
         <div class="field-col">
           <h3>Save your change</h3>
           <%= f.password_field :current_password, autocomplete: "current-password", placeholder: "current password " , class: "input"%>
@@ -54,9 +59,7 @@
           </div>
         </div>
       <% end %>
-      <div class="field-col m-left">
-        <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete , class: "button button__outlined_red button__md m-top-one"%>
-      </div>
+
     </div>
     <div>
     </main >
