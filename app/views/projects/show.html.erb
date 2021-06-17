@@ -50,7 +50,7 @@
       <%else%>
         <%=button_to "Rejoindre le projet", joint_users_to_projects_path(), params:{ project_id:@project.id }, method:'post',class:'pill__outlined button m-top align_right'%>
       <%end%>
-
+    </div>
   </div>
   <div class='actions m-top-5'>
     <%=link_to projects_path, class:'link move_left align_right' do%> 
