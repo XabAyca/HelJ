@@ -2,17 +2,14 @@
   <div id="error_explanation" class="alert ">
     <p>
       <% resource.errors.full_messages.each do |message| %>
-      <%= message %></p>
-      <% end %>
-          <span class="close">Close</span>
-
+        <%= message %></p>
+    <% end %>
+    <span class="close">Close</span>
   </div>
 <% end %>
-
 <script>
-let closebtns = document.getElementsByClassName("close");
-  closebtns[0].addEventListener("click", function() {
-    this.parentElement.style.display = 'none';
-  });
-
+  let closeBtn = document.querySelector(".close");
+  closeBtn.addEventListener("click", function() {
+      this.parentElement.style.display = 'none';
+    });
 </script>
