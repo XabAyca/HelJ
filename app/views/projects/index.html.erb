@@ -1,21 +1,19 @@
 <main class="main__wrapper">
   <h1>Browser project</h1>
   <p>FORMS to search project</p>
-  <%= form_with url:projects_path ,:html => {:class => '',:id =>"project_search"} , method: "get" do |form|   %>
-    <%= form.text_field :project_title %>
-    <%= submit_tag("Search") %>
-    <div>
-      card-view-option
+  <%= form_with url: projects_path, :html => { :class => "", :id => "project_search" }, method: "get" do |form| %>
+    <div class="search__input">
+      <%= form.text_field :project_title %>
+      <%= submit_tag("Search") %>
+      <%= form.select :sort, ["Old", "Recent"], prompt: true %>
     </div>
-    <select id="Sort By">
-      <option value="Old" selected> Old </option>
-      <option value="Recent"> Recent </option>
-      <option value="Upvoted"> Upvoted</option>
-    </select>
+    <!--<div>
+      card-view-option
+    </div>-->
   <% end %>
   <div class="projects_wrapper">
-    <%= @projects.each do |project| %>
-      <%= render "projects/card_project", project: project%>
+    <%= @projects.each.with_index do |project,i| %>
+      <%= render "projects/card_project", project: project %>
     <%end%>
   </div>
 </main>
