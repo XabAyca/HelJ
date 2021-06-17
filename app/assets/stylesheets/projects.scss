@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .title {
     display: flex;
-    margin-left: 15vw;
+    margin-left: 10%;
 }
 
 .logo-title {
@@ -18,4 +18,29 @@
     border-radius: 50%;
     width: 4rem;
     height: 4rem;
+}
+
+.description {
+    margin-left: 17.5%;
+}
+
+.link {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button-ml {
+    margin-left: .5rem;
+    text-decoration-line: none;
+}
+
+.team {}
+
+.name {
+    display: flex;
+}
+
+.email {
+    display: flex;
+    justify-content: flex-end;
 }
