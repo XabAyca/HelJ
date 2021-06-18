@@ -1,4 +1,4 @@
-class JointTheProjectController < ApplicationController
+class JointTheChallengeController < ApplicationController
     def index
         @user = User.find(params['id_user'])
         @challenge = Challenge.find(params['id_challenge'])
@@ -6,6 +6,6 @@ class JointTheProjectController < ApplicationController
     end
     def send_mail
         ids = [32 , 12]
-        ApplicationMailer.joint_the_project(ids).deliver
+        ApplicationMailer.joint_the_challenge(ids).deliver
     end
 end
