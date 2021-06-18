@@ -1,10 +1,11 @@
- 
 <div class="card__project">
   <div class="card__project__top" id="">
     <div class="project__infos">
       <img class="project__logo"  src="<%= project.logo_url %>">
       <div class="project__infos__text">
-        <h3 class="project__title"><%= project.project_title %></h3>
+        <h3 class="project__title">
+          <a class="link" href="<%project_path(project.id)%>"> <%= project.project_title %></a>
+        </h3>
         <p class="project__description"><%= project.description%></p>
         <div class="project__link">
           <button class="button button__xsm pill__semioutlined"><a class="figma_project__link" href="<%= project.figma_link %>">Figma</a></button>

@@ -1,0 +1,30 @@
+@import 'media';
+
+.form_page{
+	padding: 100px 15% 0px 15%;
+}
+.remember_me{
+	margin:var(--sp12) var(--sp0)
+}
+@media(max-width:$LaptopSmall){
+
+}
+
+@media(max-width:$PhoneBig){
+	.form_page{
+		padding: 0px;
+		padding-top:100px;
+	}
+
+}
+
+
+@media(max-width:$PhoneMiddle){
+
+
+}
+
+
+@media(max-width:$PhoneSmall){
+
+}

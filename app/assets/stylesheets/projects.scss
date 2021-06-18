@@ -1,6 +1,14 @@
+
+@import 'media';
 // Place all the styles related to the projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.projects__title{
+	text-align: center;
+	font-size:var(--fs36);
+	padding-top:var(--sp64);
+	padding-bottom:var(--sp16);
+}
 .title {
     display: flex;
     margin-left: 15vw;
@@ -23,11 +31,14 @@
 	max-width:600px;
 	min-width:300px;
 	margin:var(--sp0) auto;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #project_search{
 	display:flex;
 	justify-content: center;
-	margin-bottom:var(--sp12)
+	margin-bottom:var(--sp24)
 }
 
 .links_list{
@@ -35,4 +46,58 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;  
+}
+
+.search__bar{
+	display:flex;
+	border: 1px solid var(--defaultBlack);
+    border-radius: 18px;
+    width:100%;
+	padding:var(--sp4);
+    outline: none;
+}
+
+.search__inputs{
+display:grid;
+grid-template-columns: 1fr 55px 150px;
+	width:550px;
+	grid-gap:var(--sp12)
+}
+
+.search__bar__text{
+	border:none;
+	background:var(--beige);
+	outline: none;
+	margin: var(--sp0) var(--sp4);
+	flex:1
+}
+.search__bar__icon{
+	border: none;
+	background:var(--beige)
+}
+@media(max-width:$LaptopSmall){
+
+}
+
+
+
+
+@media(max-width:$PhoneBig){
+
+	.projects__title{
+
+		font-size:var(--fs24);
+
+	}
+}
+
+
+@media(max-width:$PhoneMiddle){
+
+
+}
+
+
+@media(max-width:$PhoneSmall){
+
 }
