@@ -12,6 +12,11 @@
 	padding-top:var(--sp96);
 	margin-bottom:var(--sp128)
 }
+.hero__text{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .hero__tagline{
 	font-size:var(--fs60);
 	text-align:center;
@@ -24,7 +29,9 @@
 	font-weight: 400;
 	width:50ch;
 	text-align: center;
-	margin-bottom:var(--sp32)
+	margin-bottom:var(--sp32);
+	line-height: 145%;
+	align-self: center;
 }
 .hero__img{
 	margin-bottom:var(--sp24)
@@ -152,7 +159,7 @@
 	margin-bottom:var(--sp48);
 	width:100%;
 	line-height: 145%;
-	font-size:var(--fs20);
+	font-size:var(--fs18);
 	font-family: var(--secondaryFont);
 }
 .system_cta{
