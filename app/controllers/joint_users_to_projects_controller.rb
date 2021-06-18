@@ -4,6 +4,7 @@ class JointUsersToProjectsController < ApplicationController
 
   def create 
     @participation = JointUsersToProject.create(project_id:params[:project_id],user_id:current_user.id)
+    UserMailer.joint_project(current_user, params[:project_id]).deliver
     redirect_to project_path(params[:project_id]),notice:'Vous êtes inscrit sur le projet, un email vous a été envoyé'
   end
 
