@@ -7,7 +7,5 @@ Rails.application.routes.draw do
   resources :projects
   resources :challenges, only: [:index, :show]
   resources :joint_users_to_projects, only: [:create,:destroy]
-  get '/joint_the_challenge/:id_user/:id_challenge', to: 'joint_the_challenge#index'
-  get '/joint_the_challenge/send_mail', to: 'joint_the_challenge#send_mail'
-
+  get '/joint_the_challenge/:id_user/:id_challenge', to: 'joint_the_challenge#index', as: 'joint_the_challenge'
 end

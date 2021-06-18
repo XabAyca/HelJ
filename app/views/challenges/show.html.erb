@@ -11,6 +11,7 @@
       <div class="content__header">
         <div class="content__header__top">
           <h3 class="header__top__title"><%= @challenge.challenge_name%></h3>
+          <%= link_to 'text', joint_the_challenge_path(current_user.id, @challenge.id) %>
           <button class="button button__md  button__filled">rejoindre</button>
         </div>
         <div class="content__header__bottom">
