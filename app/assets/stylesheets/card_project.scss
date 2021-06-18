@@ -1,7 +1,7 @@
 .card__project{
-	width:550px;
+	width:580px;
 	border: 1px solid #000000;
-	border-radius:var(--sp8);
+	border-radius:var(--sp12);
 	margin-bottom:var(--sp24);
 	padding:var(--sp16) var(--sp20)
 }
@@ -13,16 +13,18 @@
 	flex-direction: column;
 }
 .project__logo{
-	width:80px;
-	height: 80px;
+	width:70px;
+	height: 70px;
 	border-radius: 50%;
 	margin-right:var(--sp12)
 }
 .project__title{
-	font-size:var(--fs16)
+	font-size:var(--fs16);
+	margin-bottom:var(--sp8)
 }
 .project__description{
-	font-size:var(--fs12)
+	font-size:var(--fs12);
+	margin-bottom:var(--sp8)
 }
 .project__link{
 	display:flex
@@ -40,4 +42,8 @@ margin:var(--sp0) var(--sp4)
 .card__project__bottom{
 	display:flex;
 	justify-content: flex-end;
+}
+
+.project__title a{
+	color:var(--defaultBlack)
 }
