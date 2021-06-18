@@ -1,0 +1,15 @@
+ <% if notice %>
+  <p class="notice"><%= notice %>
+  <span class="close">Close</span>
+  </p>
+<% end %>
+<% if alert %>
+  <p class="alert"><%= alert %><span class="close">Close</span></p>
+<% end %>
+
+<script>
+let closeBtn = document.querySelector(".close");
+  closeBtn.addEventListener("click", function() {
+    this.parentElement.style.display = 'none';
+  });
+</script>

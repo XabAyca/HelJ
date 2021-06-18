@@ -1,0 +1,43 @@
+.card__project{
+	width:550px;
+	border: 1px solid #000000;
+	border-radius:var(--sp8);
+	margin-bottom:var(--sp24);
+	padding:var(--sp16) var(--sp20)
+}
+.project__infos{
+	display:flex;
+}
+.project__infos__text{
+	display:flex;
+	flex-direction: column;
+}
+.project__logo{
+	width:80px;
+	height: 80px;
+	border-radius: 50%;
+	margin-right:var(--sp12)
+}
+.project__title{
+	font-size:var(--fs16)
+}
+.project__description{
+	font-size:var(--fs12)
+}
+.project__link{
+	display:flex
+}
+.figma_project__link{
+	color:var(--blue500);
+	text-decoration: none;
+}
+.logo__link{
+	margin:var(--sp0) var(--sp4)
+}
+.logo__link i{
+margin:var(--sp0) var(--sp4)
+}
+.card__project__bottom{
+	display:flex;
+	justify-content: flex-end;
+}

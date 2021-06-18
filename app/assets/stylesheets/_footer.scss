@@ -1,0 +1,23 @@
+footer {
+  background-color:var(--blue300);
+  padding: 15px 40px;
+  height: auto;
+
+}
+
+.footer_nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.footer_nav a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.powered {
+  margin: 0px;
+  color: whitesmoke;
+}

@@ -1,25 +1,33 @@
-<h2>Change your password</h2>
-
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-  <%= f.hidden_field :reset_password_token %>
-
-  <div class="field">
-    <%= f.label :password, "New password" %><br />
-    <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em><br />
-    <% end %>
-    <%= f.password_field :password, autofocus: true, autocomplete: "new-password" %>
+ <main class="main__wrapper">
+  <div class="form_page">
+    <div class="form_group">
+      <h1 class='center'>Changement du mot de passe</h1>
+      <div>
+        <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put },class:'form') do |f| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
+          <%= f.hidden_field :reset_password_token %>
+          <div>
+            <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em><br />
+            <% end %>
+            <%= f.password_field :password, autofocus: true, autocomplete: "new-password",class:'input input__lg ', placeholder:'Nouveau mot de passe' %>
+          </div>
+          <div>
+            <%= f.password_field :password_confirmation, autocomplete: "new-password",class:'input input__lg ', placeholder:'Confirmation'  %>
+          </div>
+          <div class="actions">
+            <%= f.submit "Changer mon mot de passe",class:'pill__outlined button m-top align_right'%>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class='actions m-top-5'>
+      <%=link_to new_user_session_path, class:'link move_left align_right' do%>
+        Se connecter
+        <svg width="47" height="12" viewBox="0 0 47 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 7C0.447715 7 -4.82823e-08 7.44772 0 8C4.82823e-08 8.55228 0.447715 9 1 9L1 7ZM46.7071 8.7071C47.0976 8.31658 47.0976 7.68341 46.7071 7.29289L40.3431 0.928929C39.9526 0.538404 39.3195 0.538404 38.9289 0.928929C38.5384 1.31945 38.5384 1.95262 38.9289 2.34314L44.5858 8L38.9289 13.6569C38.5384 14.0474 38.5384 14.6805 38.9289 15.0711C39.3195 15.4616 39.9526 15.4616 40.3431 15.0711L46.7071 8.7071ZM1 9L46 9L46 7L1 7L1 9Z" fill="#2252F9"/>
+        </svg>
+      <%end%>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation, "Confirm new password" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Change my password" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</main>
