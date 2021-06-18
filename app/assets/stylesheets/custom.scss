@@ -17,7 +17,9 @@ body {
   font-family: var(--primaryFont);
 	overflow-x: hidden;
 }
-
+.contact__link{
+	text-decoration: underline;
+}
 .main__wrapper{
 	min-height: calc(100vh - 100px);
 	background-color: var(--beige);
