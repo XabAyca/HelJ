@@ -1,5 +1,6 @@
 <div class="v-line">
-  <% current_user.challenges.each do |challenge|  %>
+  <% current_user.participation_challenges.each do |participation|  %>
+    <%participation.challenges.each do |challenge|%>
     <hr class="challenge__separator">
     <div class="challenge__main">
       <div class="challenge__main__text">
@@ -10,5 +11,6 @@
         </div>
       </div>
     </div>
+    <%end%>
   <%end%>
 </div>
