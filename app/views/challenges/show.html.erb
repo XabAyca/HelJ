@@ -11,7 +11,7 @@
       <div class="content__header">
         <div class="content__header__top">
           <h3 class="header__top__title"><%= @challenge.challenge_name%></h3>
-          <button class="button button__md  button__filled">rejoindre</button>
+          <%= button_to "rejoindre", challenge_path, method: :delete, class:"button button__md  button__filled" %>
         </div>
         <div class="content__header__bottom">
           <p class="challenge__classification"> <span class="challenge__type"><%= @challenge.c_type %></span> <span class="challenge__classification__separator"></span> <span class="challenge__level"><%= @challenge.level %></span> </p>
