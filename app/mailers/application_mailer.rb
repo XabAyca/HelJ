@@ -1,8 +1,11 @@
 class ApplicationMailer < ActionMailer::Base
   default from: 'webcat6@protonmail.com'
   layout 'mailer'
-  def joint_the_project
+
+  def joint_the_project(id_user, id_challenge)
+    @id_user = id_user
+    @id_challenge = id_challenge
     user_email = "leolair.pro@gmail.com"
-    mail(to: user_email, subject: "hey joint_the_project")
+    mail(to: user_email, subject: "hey joint_the_challenge")
   end
 end
