@@ -1,0 +1,14 @@
+<div class="v-line">
+  <% current_user.challenges.each do |challenge|  %>
+    <hr class="challenge__separator">
+    <div class="challenge__main">
+      <div class="challenge__main__text">
+        <h4> <%= challenge.challenge_name%> </h4>
+        <p><%= challenge.challenge_description%> </p>
+        <div class="submit_button"> 
+            <%= link_to "Voir le challenge",  challenge_path(challenge), class: "button button__md button__outlined rm_decoration" %>
+        </div>
+      </div>
+    </div>
+  <%end%>
+</div>
