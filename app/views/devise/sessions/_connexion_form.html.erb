@@ -1,0 +1,20 @@
+<div>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name),class:'form') do |f| %>
+    <div >
+      <%= f.email_field :email, autofocus: true, autocomplete: "email",class:'input input__lg ',placeholder:'Email' %>
+    </div>
+    <div>
+      <%= f.password_field :password, autocomplete: "current-password", class:'input input__lg',placeholder:'Mot de passe' %>
+    </div>
+    <% if devise_mapping.rememberable? %>
+      <div>
+        <%= f.check_box :remember_me %>
+        <%= f.label :Se_souvenir_de_moi %>
+      </div>
+    <% end %>
+    <div class="actions">
+      <%= f.submit "Connexion",class:'pill__outlined button m-top align_right' %>
+      <%= link_to "Mot de passe oublié", new_user_password_path(), class:'link move_left'%>
+    </div>
+  <% end %>
+</div>
