@@ -1,6 +1,5 @@
 <main class="main__wrapper">
-  <h1>Browser project</h1>
-  <p>FORMS to search project</p>
+  <h1 class="projects__title">Trouvez votre prochain projet</h1>
   <%= form_with url: projects_path, :html => { :class => "", :id => "project_search" }, method: "get" do |form| %>
     <div class="search__input">
       <%= form.text_field :project_title %>
