@@ -12,6 +12,12 @@
         <p>Voici le graphique relatif aux inscriptions sur du site.</p>
         <%= line_chart User.group_by_day(:created_at).count %>
       </div>
+
+      <div class="header__graph">
+      <p>Voici le nombre de projets en ligen actuellement: <%=Project.count%></p>
+    
+      <p>Voici le nombre de Challenges en ligne actuellement: <%=Challenge.count%></p>
+      </div>
       
     </div>
   </div>
