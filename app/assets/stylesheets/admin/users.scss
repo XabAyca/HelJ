@@ -1,3 +1,26 @@
 // Place all the styles related to the admin/users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.user_admin_list{
+  width: 100%;
+}
+
+.row_admin{
+  background-color: var(--blue100);
+  margin:10px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.child_row{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+}
+
+.info_text{
+  font-size: 14px;
+  color: grey;
+}

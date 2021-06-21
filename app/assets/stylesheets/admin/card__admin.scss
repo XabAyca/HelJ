@@ -1,37 +1,33 @@
 .admin_title {
-  padding-top: 50px;
-  margin-bottom: 70px;
+  margin-bottom: 20px;
   text-align: center;
 }
 .admin__dash{
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 .card__admin{
   background-color: var(--blue100);
-  width: 160px;
-  height: 350px;
+  width: 160px; 
   margin-left: 3%;
-  margin-right: 3%;
   list-style-type: none;
 	border: 1px solid #000000;
-	border-radius:var(--sp12);
-	margin-bottom:var(--sp24);
+	border-radius:var(--sp12);;
 	padding:var(--sp16) var(--sp20);
 }
 
 .card__graph{
-  width: 1450px;
-  min-width: 160px;
+  width: 70%;
   height: 628px;
-  margin-left: 3%;
   margin-right: 3%;
   list-style-type: none;
 	border: 1px solid #000000;
 	border-radius:var(--sp12);
-	margin-bottom:var(--sp24);
-	padding:var(--sp16) var(--sp20);
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
 }
 
 .header__graph{
@@ -40,7 +36,6 @@
   font-family: "Jost";
   border: 1px solid #000000;
   border-radius:var(--sp12);
-  bottom: 0%;
   text-align: center;
 }
 

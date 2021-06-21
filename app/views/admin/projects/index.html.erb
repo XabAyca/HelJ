@@ -1,14 +1,23 @@
 <main class="main__wrapper">
-  <div>
-    <h1 class="admin_title">Liste des projets</h1>
-  </div>
-  <div class="form_page">
-    <%=button_to 'Créer un projet', new_admin_project_path, method:'get', class: 'button pill__outlined button__sm ml-1'%>
-    <div>
-      <%@projects.each do |project|%>
-        <%=render 'project_card_admin', project: project%>
-      <%end%>
+  <h1 class="admin_title">Liste des projets</h1>
+  
+  <div class="admin__dash">
+
+    <div class="card__admin">
+        <%=render 'admin/static_pages/admin_menu'%>
+        <%=button_to 'Créer un projet', new_admin_project_path, method:'get', class: 'button pill__outlined button__sm ml-1'%>
     </div>
-    <%=render 'link_back_root'%>
+
+    <div class="card__graph">
+
+      <div >
+        <%@projects.each do |project|%>
+          <%=render 'project_card_admin', project: project%>
+        <%end%>
+      </div>
+      
+    </div>
+    
   </div>
+  <%=render 'link_back_root'%>
 </main>

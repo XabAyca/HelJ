@@ -1,36 +1,18 @@
-<h1 class="admin_title">Bienvenu sur le Dashboard Administrateur <%=current_user.first_name.capitalize%></h1>
-<div class="admin__dash">
+<main class="main__wrapper">
+  <h1 class="admin_title">Bienvenu sur le Dashboard Administrateur <%=current_user.first_name.capitalize%></h1>
+  <div class="admin__dash">
 
-  <div class="card__admin">
-      <nav class="">
-        <ul class="navlink__list__admin "> 
-          <div class="space_under">
-            <li class="hover-underline-animation nav__link"><a class="" href="<%=admin_root_path%>">Accueil</a></li>
-          </div>
-          <div class="space_under">
-            <li class="hover-underline-animation nav__link"><a class="" href="<%=admin_users_path%>">Utilisateur</a></li>
-          </div>
-          <div class="space_under">
-            <li class="hover-underline-animation nav__link"><a class="" href="<%=admin_projects_path%>">Projets</a></li>
-          </div>
-          <div class="space_under">
-            <li class="hover-underline-animation nav__link"><a class="" href="<%=admin_challenges_path%>">Challenges</a></li>
-          </div>
-          <div class="space_under">
-            <li class="hover-underline-animation nav__link"><a class="" href="<%=admin_neededs_path%>">Besoins</a></li>
-          </div>
-        </ul>
-      </nav>
-  </div>
-
-  <div class="card__graph">
-
-    <div class="header__graph">
-    <p>Voici le graphique relatif au inscription sur du site.</p>
-
+    <div class="card__admin">
+        <%=render 'admin_menu'%>
     </div>
-    <%= line_chart User.group_by_day(:created_at).count %>
 
+    <div class="card__graph">
+
+      <div class="header__graph">
+        <p>Voici le graphique relatif au inscription sur du site.</p>
+        <%= line_chart User.group_by_day(:created_at).count %>
+      </div>
+      
+    </div>
   </div>
-
-</div>
+</main>
