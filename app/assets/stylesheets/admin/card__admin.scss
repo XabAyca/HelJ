@@ -19,14 +19,12 @@
 	border-radius:var(--sp12);
 	margin-bottom:var(--sp24);
 	padding:var(--sp16) var(--sp20);
-
 }
 
 .card__graph{
-  background-color:whitesmoke;
   width: 1450px;
   min-width: 160px;
-  height: 350px;
+  height: 577px;
   margin-left: 3%;
   margin-right: 3%;
   list-style-type: none;
@@ -34,7 +32,16 @@
 	border-radius:var(--sp12);
 	margin-bottom:var(--sp24);
 	padding:var(--sp16) var(--sp20);
+}
 
+.header__graph{
+  background-color: var(--blue100);
+  font-size: 22px;
+  font-family: "Jost";
+  border: 1px solid #000000;
+  border-radius:var(--sp12);
+  bottom: 0%;
+  text-align: center;
 }
 
 .nav__admin {
