@@ -1,0 +1,13 @@
+<main class="main__wrapper">
+  <div>
+    <h1 class="admin_title">Liste des projets</h1>
+  </div>
+  <div class="form_page">
+    <div>
+      <%@projects.each do |project|%>
+        <%=render 'project_card_admin', project: project%>
+      <%end%>
+    </div>
+    <%=render 'link_back_root'%>
+  </div>
+</main>
