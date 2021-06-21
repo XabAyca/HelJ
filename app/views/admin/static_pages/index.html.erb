@@ -26,8 +26,10 @@
   <div class="card__graph">
 
     <div class="header__graph">
-    <p>Voici de le graphique relatif à la fréquentation du site.</p>
+    <p>Voici le graphique relatif au inscription sur du site.</p>
+
     </div>
+    <%= line_chart User.group_by_day(:created_at).count %>
 
   </div>
 
