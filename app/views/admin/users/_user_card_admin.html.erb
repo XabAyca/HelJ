@@ -15,13 +15,13 @@
   </div>
   <div class='child_row'>
     <div>
-      <%=button_to 'Supprimer', admin_user_path(user.id), method:'delete', data: { confirm:'Supprimer l\'utilisateur ?'}%>
+      <%=button_to 'Supprimer', admin_user_path(user.id), method:'delete', data: { confirm:'Supprimer l\'utilisateur ?'}, class:'button pill__outlined__red button__xsm'%>
     </div>
-    <div>
-      <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-      </label>
+    <div >
+      <%= form_with model: [:admin, user], method: :put ,class:'checkbox' do |form| %>
+        <%= form.check_box :admin %>
+        <%= form.submit "Admin ?",class:'button pill__outlined button__xsm  ' %>
+      <% end %>
     </div>
   </div>  
 </div>

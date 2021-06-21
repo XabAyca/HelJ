@@ -11,6 +11,12 @@
   </span></p>
 <% end %>
 
+<% flash.each do |type, msg| %>
+  <p class="alert"><%= msg %><span class="close">
+  X
+  </span></p>
+<% end %>
+
 <script>
 let closeBtn = document.querySelector(".close");
   closeBtn.addEventListener("click", function() {
