@@ -3,6 +3,7 @@
     <h1 class="admin_title">Liste des projets</h1>
   </div>
   <div class="form_page">
+    <%=button_to 'Créer un projet', new_admin_project_path, method:'get', class: 'button pill__outlined button__sm ml-1'%>
     <div>
       <%@projects.each do |project|%>
         <%=render 'project_card_admin', project: project%>

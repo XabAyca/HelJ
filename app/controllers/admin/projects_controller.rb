@@ -6,6 +6,26 @@ class Admin::ProjectsController < ApplicationController
     @projects = Project.all
   end
 
+  def new
+    @project = Project.new
+    @neededs = neededs_list()
+    @users = User.all
+  end
+
+  def create
+    @users = User.all
+    @neededs = neededs_list()
+    @project = Project.new(post_params)
+    if @project.save
+      @project.project_slug = "https://hel-j.herokuapp.com/project/#{@project.id}"
+      flash[:success] = 'Projet crée'
+      redirect_to admin_projects_path
+    else
+      flash.now[:messages] = @project.errors.full_messages[0]
+      render 'new'
+    end
+  end
+
   def destroy
     @project = Project.find(params[:id])
     @project.destroy
@@ -31,7 +51,7 @@ class Admin::ProjectsController < ApplicationController
   private
 
   def post_params
-    params.require(:project).permit(:description, :logo_url, :project_title, :description, :figma_link, :git_link, :trello_link, :story, :needed_id)
+    params.require(:project).permit(:description, :logo_url, :project_title, :description, :figma_link, :git_link, :trello_link, :story, :needed_id, :owner_id)
   end
 
   def neededs_list
