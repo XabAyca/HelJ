@@ -1,0 +1,28 @@
+<h1> Messagerie </h1>
+<p>you have <%= @rooms.count%> rooms</p>
+<div style="display:flex">
+  <div class="nav__messagerie">
+    <% @rooms.all.each do |room|%>
+      <%= link_to  user_messagerie_path(user_id:current_user.id,id:room.id) do %>
+        <h3>room # <%= room.name%></h3>
+      <%end%>
+    <%end%>
+  </div>
+  <span> <%= p @room %></span>
+  <div class="messagerie__content">
+    <% if @room.present? %>
+      <%@room.messages.each do |message| %>
+        <p><% message.id %></p>
+        <p><% message.content %></p>
+      <%end%>
+      <%= form_with(model: @message, url: messages_path) do |form| %>
+        <div>
+          <%= form.label :content %>
+          <%= form.text_area :content, size: "60x10" %>
+        </div>
+        <%= form.hidden_field :room_id, value:@room.id %>
+        <%= form.submit %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

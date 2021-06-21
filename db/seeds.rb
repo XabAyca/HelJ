@@ -272,17 +272,30 @@ Challenge.create(
   challenge_link: "https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0",
   challenge_name: "ip adresse tracker",
 )
-#create_table "challenges", force: :cascade do |t|
-#    t.string "c_type"
-#    t.string "level"
-#    t.string "challenge_slug"
-#    t.string "challenge_description"
-#    t.string "challenge_img"
-#    t.string "challenge_link"
-#    t.string "challenge_name"
-#    t.datetime "created_at", precision: 6, null: false
-#    t.datetime "updated_at", precision: 6, null: false
-#  end
+
+10.times do |i|
+  Room.create(
+    name: "#{i}",
+  )
+  p "#{i} room created"
+end
+10.times do |i|
+  JointUserRoom.create(
+    user_id: User.all.sample.id,
+    room_id: Room.all.sample.id,
+  )
+  p "#{i} joint user room created"
+end
+
+30.times do |i|
+  Message.create(
+    user_id: User.all.sample,
+    room_id: Room.all.sample,
+    content: "#{i}",
+  )
+  p "#{i} message created"
+end
+
 p "*" * 30
 p "Seed finished"
 p "Well done 🎉 🍺"
