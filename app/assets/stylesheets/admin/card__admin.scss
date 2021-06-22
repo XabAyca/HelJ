@@ -3,6 +3,9 @@
   text-align: center;
 }
 .admin__dash{
+  margin-left: 5%;
+  margin-right: 5%;
+  
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -13,28 +16,30 @@
   width: 160px; 
   margin-left: 3%;
   list-style-type: none;
-	border: 1px solid #000000;
 	border-radius:var(--sp12);;
 	padding:var(--sp16) var(--sp20);
+  height: auto;
+  margin-top: 25px;
 }
 
 .card__graph{
-  width: 70%;
-  height: 628px;
+  margin-top: 25px;
+  width: auto;
+  height: auto;
   margin-right: 3%;
+  margin-left: 3%;
   list-style-type: none;
-	border: 1px solid #000000;
 	border-radius:var(--sp12);
-  overflow-y: scroll;
   display: flex;
   justify-content: center;
 }
 
 .header__graph{
+  width: 1200px;
+  padding-top: 35px;
   background-color: var(--blue100);
   font-size: 22px;
   font-family: "Jost";
-  border: 1px solid #000000;
   border-radius:var(--sp12);
   text-align: center;
 }
