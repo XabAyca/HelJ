@@ -3,6 +3,9 @@
   text-align: center;
 }
 .admin__dash{
+  margin-left: 5%;
+  margin-right: 5%;
+  
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -13,7 +16,6 @@
   width: 160px; 
   margin-left: 3%;
   list-style-type: none;
-	border: 1px solid #000000;
 	border-radius:var(--sp12);;
 	padding:var(--sp16) var(--sp20);
   height: 360px;
@@ -27,11 +29,9 @@
   margin-right: 3%;
   margin-left: 3%;
   list-style-type: none;
-	border: 1px solid #000000;
 	border-radius:var(--sp12);
   display: flex;
   justify-content: center;
-
 }
 
 .header__graph{
