@@ -63,3 +63,6 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'chartkick'
 gem 'groupdate'
+gem 'omniauth-google-oauth2'
+gem 'omniauth'
+gem "omniauth-rails_csrf_protection"
