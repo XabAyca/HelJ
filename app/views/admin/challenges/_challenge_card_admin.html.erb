@@ -1,0 +1,26 @@
+<div class="card__project">
+  <div class="card__project__top" id="">
+    <div class="project__infos">
+      <%if challenge.challenge_img != '' && challenge.challenge_img != nil%>
+        <%= image_tag(challenge.challenge_img, class: "project__logo") %>
+      <%else%>
+        <%= image_tag('https://images.unsplash.com/photo-1572177812156-58036aae439c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80', class: "project__logo") %>
+      <%end%>
+      <div class="project__infos__text">
+        <h3 class="project__title">
+          <a class="link"> <%= challenge.challenge_name %></a>
+        </h3>
+        <p class="project__description"><%= challenge.challenge_description%></p>
+        <p class="challenge__classification"> <span class="challenge__type"><%= challenge.c_type %></span> <span class="challenge__classification__separator"></span> <span class="challenge__level"><%= challenge.level %></span> </p>
+        <div class="project__link admin_project_list_link">
+          
+        </div>
+      </div>
+    </div>
+    <div class="card__project__bottom" id="owner__infos">
+      <%=button_to "Voir le Challenge", challenge_path(challenge.id), :class=> 'button pill__outlined button__sm ml-1'  ,method:'get' %>
+      <%=button_to "Supprimer le Challenge", admin_challenge_path(challenge.id), method:'delete',data: { confirm:'Valider la suppression?'}, :class=> 'button pill__outlined__red button__sm ml-1'%>
+
+    </div>
+  </div>
+</div>

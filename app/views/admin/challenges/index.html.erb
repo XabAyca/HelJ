@@ -1,0 +1,20 @@
+<main class="main__wrapper">
+  <h1 class="admin_title">Liste des Challenges</h1>
+  
+  <div class="admin__dash">
+
+    <div class="card__admin">
+        <%=render 'admin/static_pages/admin_menu'%>
+    </div>
+
+    <div class="card__graph scroll">
+
+      <div >
+        <%@challenges.each do |challenge|%>
+          <%=render 'challenge_card_admin', challenge: challenge%>
+        <%end%>
+      </div>
+      
+    </div>
+  </div>
+</main>
