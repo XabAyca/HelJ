@@ -11,9 +11,9 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root 'static_pages#index'
-    resources :projects
-    resources :users
-    resources :challenges
-    resources :neededs
+    resources :projects, except: [:show]
+    resources :users, only: [:index,:destroy,:update]
+    resources :challenges, except: [:update,:edit,:show]
+    resources :neededs, except: [:update,:edit,:show]
   end
 end
