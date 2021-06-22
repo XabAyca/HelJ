@@ -1,25 +1,31 @@
-<h1> Messagerie </h1>
-<p>you have <%= @rooms.count%> rooms</p>
-<div style="display:flex">
-  <div class="nav__messagerie">
-    <% @rooms.all.each do |room|%>
-      <%= link_to  user_messagerie_path(user_id:current_user.id,id:room.id) do %>
-        <h3>room # <%= room.name%></h3>
-      <%end%>
-    <%end%>
-  </div>
-  <span> <%= p @room %></span>
-  <div class="messagerie__content">
-    <% if @room.present? %>
-      <%@room.messages.each do |message| %>
-        <div class="message">
-          <div class="content <%= 'me' if message.user == current_user %>" >
-            <%= message.content %>
-          </div>
-          <div class="author">
-            <%= "#{message.user.first_name} #{message.user.last_name}" %>
-          </div>
+<main class="main__wrapper">
+  <h1> Messagerie </h1>
+  <p>you have <%= @rooms.count%> rooms</p>
+  <div style="display:flex">
+    <div class="nav__messagerie">
+      <% @rooms.all.each do |room|%>
+        <%= link_to  user_messagerie_path(user_id:current_user.id,id:room.id) do %>
+          <h3>room # <%= room.name%></h3>
         <%end%>
+      <%end%>
+    </div>
+    <span> <%= p @room %></span>
+    <div class="messagerie">
+      <div class="messagerie__content">
+        <% if @room.present? %>
+          <%@room.messages.each do |message| %>
+            <div class="message <%= 'me' if message.user == current_user %>">
+              <div class="content__wrapper">
+                <div class="content " >
+                  <%= message.content %>
+                </div>
+                <div class="author">
+                  <%= "#{message.user.first_name} #{message.user.last_name}" %>
+                </div>
+              </div>
+            </div>
+          <%end%>
+        </div>
         <%= form_with(model: @message, url: messages_path, local:true) do |form| %>
           <div>
             <%= form.label :content %>
@@ -31,3 +37,5 @@
       <% end %>
     </div>
   </div>
+</div>
+</main>
