@@ -20,7 +20,8 @@ gem 'redis', '~> 4.0'
 gem 'turbolinks'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
-
+gem 'turbolinks'
+gem 'webpacker'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'rails-i18n'
@@ -63,3 +64,6 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'chartkick'
 gem 'groupdate'
+gem 'omniauth-google-oauth2'
+gem 'omniauth'
+gem "omniauth-rails_csrf_protection"
