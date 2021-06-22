@@ -1,32 +1,34 @@
 <div class="card__project">
-  <div class="card__project__top" id="">
-    <div class="project__infos">
-      <%if project.logo_url != '' && project.logo_url != nil%>
-        <%= image_tag(project.logo_url, class: "project__logo") %>
-      <%else%>
-        <%= image_tag('https://images.unsplash.com/photo-1572177812156-58036aae439c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80', class: "project__logo") %>
-      <%end%>
-      <div class="project__infos__text">
-        <h3 class="project__title">
-          <a class="link" href="<%project_path(project.id)%>"> <%= project.project_title %></a>
-        </h3>
-        <p class="project__description"><%= project.description%></p>
-        <div class="project__link">
-          <button class="button button__xsm pill__semioutlined"><a class="figma_project__link" href="<%= project.figma_link %>">Figma</a></button>
-          <div class="logo__link">
-            <span><i class="fab fa-github"></i></span>
-            <span><i class="fab fa-dribbble"></i></span>
-            <span> <i class="fab fa-behance"></i></span>
+  <%if project != nil%>
+    <div class="card__project__top" id="">
+      <div class="project__infos">
+        <%if project.logo_url != '' && project.logo_url != nil%>
+          <%= image_tag(project.logo_url, class: "project__logo") %>
+        <%else%>
+          <%= image_tag('https://images.unsplash.com/photo-1572177812156-58036aae439c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80', class: "project__logo") %>
+        <%end%>
+        <div class="project__infos__text">
+          <h3 class="project__title">
+            <a class="link" href="<%project_path(project.id)%>"> <%= project.project_title %></a>
+          </h3>
+          <p class="project__description"><%= project.description%></p>
+          <div class="project__link">
+            <button class="button button__xsm pill__semioutlined"><a class="figma_project__link" href="<%= project.figma_link %>">Figma</a></button>
+            <div class="logo__link">
+              <span><i class="fab fa-github"></i></span>
+              <span><i class="fab fa-dribbble"></i></span>
+              <span> <i class="fab fa-behance"></i></span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!--
+      <!--
   <div class="upvote"></div>
   </div>
    -->
-    <div class="card__project__bottom" id="owner__infos">
-      <%=button_to "voir le projet", project_path(project.id), :class=> 'button button__filled button__sm'  ,method:'get' %>
+      <div class="card__project__bottom" id="owner__infos">
+        <%=button_to "voir le projet", project_path(project.id), :class=> 'button button__filled button__sm'  ,method:'get' %>
+      </div>
     </div>
-  </div>
+  <%end%>
 </div>
