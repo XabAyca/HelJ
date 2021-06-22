@@ -5,10 +5,9 @@
 
     <div class="card__admin">
         <%=render 'admin/static_pages/admin_menu'%>
-        <%=button_to 'Créer un projet', new_admin_project_path, method:'get', class: 'button pill__outlined button__sm ml-1'%>
     </div>
 
-    <div class="card__graph">
+    <div class="card__graph scroll">
 
       <div >
         <%@projects.each do |project|%>

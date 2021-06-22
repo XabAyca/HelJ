@@ -7,10 +7,15 @@
 }
 
 .row_admin{
-  background-color: rgba(219, 219, 219, 0.308);
+  background-color:var(--grey100);
   margin:10px 0;
   display: flex;
   flex-direction: column;
+}
+
+.row_admin:hover{
+  background-color: var(--blue100);
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.178) ;
 }
 
 .child_row{
@@ -29,5 +34,13 @@
   display: flex;
   flex-flow: row wrap;
 
+}
+
+.scroll{
+  overflow-y: scroll;
+  border:none;
+  background-color: white;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.089) ;
+  padding: 10px 0;
 }
 
