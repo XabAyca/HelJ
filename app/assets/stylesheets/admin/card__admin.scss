@@ -19,6 +19,7 @@
 }
 
 .card__graph{
+  margin-top: 25px;
   width: 70%;
   height: 628px;
   margin-right: 3%;
@@ -28,6 +29,7 @@
   overflow-y: scroll;
   display: flex;
   justify-content: center;
+
 }
 
 .header__graph{
@@ -37,6 +39,7 @@
   border: 1px solid #000000;
   border-radius:var(--sp12);
   text-align: center;
+  width: 650px;
 }
 
 .nav__admin {
