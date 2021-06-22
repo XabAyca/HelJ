@@ -3,6 +3,12 @@
     <div class="form_group">
       <h1 class='center'>Connexion</h1>
       <%=render 'connexion_form'%>
+      <div class="google-btn"><a href='<%=user_google_oauth2_omniauth_authorize_path%>' data-method='post'>
+        <div class="google-icon-wrapper">
+          <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+        </div>
+        <p class="btn-text" ><b>Sign in with google</b></p></a>
+      </div>
     </div>
     <%=render 'layouts/link_sign_up'%>
   </div>

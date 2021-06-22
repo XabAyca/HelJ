@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root "static_pages#index"
   get '/resources', to:'static_pages#resources'
 
-  devise_for :users, :controllers => {:registrations => "registrations"}
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks', :registrations => "registrations" }
  
   resources :projects
   resources :challenges, only: [:index, :show]
