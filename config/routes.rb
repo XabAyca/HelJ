@@ -2,8 +2,6 @@ Rails.application.routes.draw do
   root "static_pages#index"
   get "/resources", to: "static_pages#resources"
 
-  devise_for :users, :controllers => { :registrations => "registrations" }
-
   resources :users do
     resources :messagerie, only: [:index, :show]
   end
