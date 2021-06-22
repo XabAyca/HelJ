@@ -4,6 +4,7 @@
   <div style="display:flex">
     <div class="nav__messagerie">
       <% @rooms.all.each do |room|%>
+        <div id="room-id" data-room-id="<%= @room.try(:id) %>"></div>
         <%= link_to  user_messagerie_path(user_id:current_user.id,id:room.id) do %>
           <h3>room # <%= room.name%></h3>
         <%end%>
@@ -13,18 +14,11 @@
     <div class="messagerie">
       <div class="messagerie__content">
         <% if @room.present? %>
-          <%@room.messages.each do |message| %>
-            <div class="message <%= 'me' if message.user == current_user %>">
-              <div class="content__wrapper">
-                <div class="content " >
-                  <%= message.content %>
-                </div>
-                <div class="author">
-                  <%= "#{message.user.first_name} #{message.user.last_name}" %>
-                </div>
-              </div>
-            </div>
-          <%end%>
+          <div id="messages">
+            <%@room.messages.each do |message| %>
+              <%= render 'messagerie/message', message:message%>
+            <%end%>
+          </div>
         </div>
         <%= form_with(model: @message, url: messages_path, local:true) do |form| %>
           <div>

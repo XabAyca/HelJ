@@ -1,0 +1,10 @@
+<div class="message <%= 'me' if message.user == current_user %>">
+  <div class="content__wrapper">
+    <div class="content " >
+      <%= message.content %>
+    </div>
+    <div class="author">
+      <%= "#{message.user.first_name} #{message.user.last_name}" %>
+    </div>
+  </div>
+</div>
