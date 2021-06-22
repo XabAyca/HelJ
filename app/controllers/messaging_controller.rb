@@ -1,4 +1,4 @@
-class MessagerieController < ApplicationController
+class MessagingController < ApplicationController
   def index
     if user_signed_in?
       @rooms = User.find(current_user.id).rooms

@@ -1,22 +1,22 @@
 <main class="main__wrapper">
-  <h1> Messagerie </h1>
+  <h1> Messaging </h1>
   <p>you have <%= @rooms.count%> rooms</p>
   <div style="display:flex">
-    <div class="nav__messagerie">
+    <div class="nav__messaging">
       <% @rooms.all.each do |room|%>
         <div id="room-id" data-room-id="<%= @room.try(:id) %>"></div>
-        <%= link_to  user_messagerie_path(user_id:current_user.id,id:room.id) do %>
+        <%= link_to  user_messaging_path(user_id:current_user.id,id:room.id) do %>
           <h3>room # <%= room.name%></h3>
         <%end%>
       <%end%>
     </div>
     <span> <%= p @room %></span>
-    <div class="messagerie">
-      <div class="messagerie__content">
+    <div class="messaging">
+      <div class="messaging__content">
         <% if @room.present? %>
           <div id="messages">
             <%@room.messages.each do |message| %>
-              <%= render 'messagerie/message', message:message%>
+              <%= render 'messaging/message', message:message%>
             <%end%>
           </div>
         </div>

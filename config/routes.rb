@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get "/resources", to: "static_pages#resources"
 
   resources :users do
-    resources :messagerie, only: [:index, :show]
+    resources :messaging, only: [:index, :show]
   end
   devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks", :registrations => "registrations" }
 

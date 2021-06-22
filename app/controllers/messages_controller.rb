@@ -18,7 +18,7 @@ class MessagesController < ApplicationController
     )
 
     MessagesController.render(
-      partial: "messagerie/message",
+      partial: "messaging/message",
       locals: {
         message: @message,
       },
