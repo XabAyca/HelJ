@@ -11,11 +11,6 @@ class MessagerieController < ApplicationController
     p params[:id]
     @rooms = User.find(current_user.id).rooms
     @room = Room.find(params[:id])
-    p "i" * 30
-    p @room
-    p @room.messages
-    p @room.messages[0]
-    p @room.messages[0].content
     render "index"
   end
 
