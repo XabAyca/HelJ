@@ -16,6 +16,7 @@ body {
   color: var(--defaultBlack);
   font-family: var(--primaryFont);
 	overflow-x: hidden;
+	position: relative;
 }
 .contact__link{
 	text-decoration: underline;
