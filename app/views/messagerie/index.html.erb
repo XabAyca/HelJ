@@ -12,17 +12,22 @@
   <div class="messagerie__content">
     <% if @room.present? %>
       <%@room.messages.each do |message| %>
-        <p><% message.id %></p>
-        <p><% message.content %></p>
-      <%end%>
-      <%= form_with(model: @message, url: messages_path) do |form| %>
-        <div>
-          <%= form.label :content %>
-          <%= form.text_area :content, size: "60x10" %>
-        </div>
-        <%= form.hidden_field :room_id, value:@room.id %>
-        <%= form.submit %>
+        <div class="message">
+          <div class="content <%= 'me' if message.user == current_user %>" >
+            <%= message.content %>
+          </div>
+          <div class="author">
+            <%= "#{message.user.first_name} #{message.user.last_name}" %>
+          </div>
+        <%end%>
+        <%= form_with(model: @message, url: messages_path, local:true) do |form| %>
+          <div>
+            <%= form.label :content %>
+            <%= form.text_area :content, size: "60x10" %>
+          </div>
+          <%= form.hidden_field :room_id, value:@room.id %>
+          <%= form.submit %>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
-</div>
