@@ -1,0 +1,25 @@
+<main class="main__wrapper">
+  <h1 class="admin_title">Bienvenu sur le Dashboard Administrateur <%=current_user.first_name.capitalize%></h1>
+  <div class="admin__dash">
+
+    <div class="card__admin">
+        <%=render 'admin_menu'%>
+    </div>
+
+    <div class="card__graph">
+
+      <div class="header__graph">
+        <p>Voici le graphique relatif aux inscriptions sur du site.</p>
+        <%= line_chart User.group_by_day(:created_at).count %>
+      
+
+      <div class="header__graph">
+        <p>Voici le nombre de projets en ligne actuellement:<a class="nav__link "href="admin_projects_path"><%=Project.count%></a></p>   
+      </div>
+      <div class="header__graph">
+        <p>Voici le nombre de Challenges en ligne actuellement:<a class="nav__link" href="admin_challenges_path"> <%=Challenge.count%></a></p>
+      </div>
+      
+    </div>
+  </div>
+</main>

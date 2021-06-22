@@ -1,0 +1,17 @@
+<main class="main__wrapper">
+  <h1 class="admin_title">Liste des utilisateurs</h1>
+  <div class="admin__dash">
+
+    <div class="card__admin">
+        <%=render 'admin/static_pages/admin_menu'%>
+    </div>
+
+    <div class="card__graph scroll">
+      <div class='user_admin_list'>
+        <%@users.each do |user|%>
+          <%=render 'user_card_admin', user: user%>
+        <%end%>
+      </div>
+    </div>
+  </div>
+</main>
