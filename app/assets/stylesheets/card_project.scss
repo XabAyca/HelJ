@@ -1,8 +1,10 @@
 .card__project{
-	width:580px;
+	max-width:580px;
 	border: 1px solid #000000;
 	border-radius:var(--sp12);
 	margin-bottom:var(--sp24);
+	margin-left: 15px;
+	margin-right: 15px;
 	padding:var(--sp16) var(--sp20)
 }
 .project__infos{

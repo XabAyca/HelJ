@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   root "static_pages#index"
   get '/resources', to:'static_pages#resources'
+  get '/good_project', to:'static_pages#good_project'
 
-  devise_for :users, :controllers => {:registrations => "registrations"}
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks', :registrations => "registrations" }
  
   resources :projects
   resources :challenges, only: [:index, :show]
@@ -11,9 +12,9 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root 'static_pages#index'
-    resources :projects
-    resources :users
-    resources :challenges
-    resources :neededs
+    resources :projects, except: [:show]
+    resources :users, only: [:index,:destroy,:update]
+    resources :challenges, except: [:update,:edit,:show]
+    resources :neededs, except: [:update,:edit,:show]
   end
 end

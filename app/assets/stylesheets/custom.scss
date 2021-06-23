@@ -16,6 +16,7 @@ body {
   color: var(--defaultBlack);
   font-family: var(--primaryFont);
 	overflow-x: hidden;
+	position: relative;
 }
 .contact__link{
 	text-decoration: underline;
@@ -62,4 +63,9 @@ body {
 		padding:0px 15px;
 		padding-bottom: 15px;
 	}
+}
+
+// for mobile view
+.hidden_menu{
+	overflow-x: hidden;
 }
