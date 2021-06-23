@@ -1,0 +1,3 @@
+module Admin::StaticPagesHelper
+
+end

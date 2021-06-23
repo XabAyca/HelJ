@@ -1,15 +1,10 @@
- <main class="main__wrapper">
-  <h1>Challenges</h1>
-  <% @challenges.each do |challenge|  %>
-    <hr class="challenge__separator">
-    <div class="challenge__main">
-      <div class="challenge__main__text">
-        <h4> <%= challenge.challenge_name%> </h4>
-        <p><%= challenge.challenge_description%> </p>
-        <div class="submit_button">
-          <%= link_to "View challenge",  challenge_path(challenge), class: "button button__md button__outlined rm_decoration" %>
-        </div>
-      </div>
+ <main class="main__wrapper background">
+  <div class='form_page'>
+    <h1 class="challenges__title">Challenges</h1>
+    <div class='challenge_list'>
+      <% @challenges.each do |challenge|  %>
+        <%=render 'card_challenge', challenge:challenge %>
+      <%end%>
     </div>
-  <%end%>
+  </div>
 </main>

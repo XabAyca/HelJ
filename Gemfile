@@ -14,13 +14,14 @@ gem 'sass-rails', '>= 6'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
+gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'turbolinks'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
-
+gem 'turbolinks'
+gem 'webpacker'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'rails-i18n'
@@ -33,6 +34,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'factory_bot_rails'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 4.1.0'
   # Display performance information such as SQL time and flame graphs for each request in your browser.
@@ -46,6 +48,7 @@ end
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 3.26'
+  gem 'factory_bot_rails'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
@@ -61,3 +64,8 @@ gem 'dotenv-rails'
 gem 'table_print'
 gem 'jquery-rails'
 gem 'devise'
+gem 'chartkick'
+gem 'groupdate'
+gem 'omniauth-google-oauth2'
+gem 'omniauth'
+gem "omniauth-rails_csrf_protection"

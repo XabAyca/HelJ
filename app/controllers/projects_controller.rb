@@ -3,11 +3,9 @@ class ProjectsController < ApplicationController
   before_action :project_owner?, only: [:edit, :destroy, :update]
 
   def index
-	p params
     if params[:project_title] && params[:sort]
       @projects = Project.where("project_title Like ?", "%#{params[:project_title]}%")
       @projects = sorting_as_label(@projects, params[:sort])
-      p @projects
     else
       @projects = Project.all
     end
