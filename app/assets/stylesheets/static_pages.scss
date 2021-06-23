@@ -4,3 +4,21 @@
 .justify_text{
   text-align: justify;
 }
+
+.project_img{
+  float: left;
+  height: 150px;
+  margin-right: 10px ;
+}
+
+.project_img_r{
+  float: right;
+  height: 150px;
+  margin-right: 10px ;
+}
+
+.separator{
+  margin-left:120px;
+  margin-right: 120px;
+  border: 1px solid var(--blue200);
+}
