@@ -43,7 +43,7 @@
 
 .room__link{
 	margin: var(--sp16)  var(--sp0) ;
-    color: black;
+    color: var(--defaultBlack);
     text-decoration: none;
     display: inline-block;
 
@@ -64,4 +64,30 @@
 
 .form__bar{
 	display: flex;
+}
+.room__group{
+	padding:var(--sp8);
+	border-radius:var(--sp8);
+	margin:var(--sp4) var(--sp0);
+}
+.room__group:hover{
+	background:var(--grey200);
+	
+}
+.room__group.active{
+	background:var(--grey800);
+	
+}
+.room__group.active .room__link{
+	color:var(--beige)
+}
+
+#messages{
+	max-height: 80vh;
+    overflow-x: hidden;
+    padding-bottom: 10px;
+}
+
+.messaging__wrapper{
+	height: calc(100vh - 100px);
 }

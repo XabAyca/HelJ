@@ -5,19 +5,22 @@
     </div>
     <div class="rooms__links">
       <% @rooms.all.each do |room|%>
-        <%= link_to user_messaging_path(user_id:current_user.id,id:room.id), class:"room__link" do %>
-          <h3 class="room__name">
-            demande de participation à <%= room.name%>
-          </h3>
-          <div class="room__members">
-            <% room.users.each do |user|%>
-              <%if current_user.id != user.id %>
-                <span class="member"><%= "#{user.first_name} #{user.last_name}"%></span>
-                <span> et vous </span>
+        <% active_class = (@room == room) ? 'active' : '' %>
+        <div class="room__group <%= active_class %>">
+          <%= link_to user_messaging_path(user_id:current_user.id,id:room.id), class:"room__link" do %>
+            <h3 class="room__name">
+              demande de participation à <%= room.name%>
+            </h3>
+            <div class="room__members">
+              <% room.users.each do |user|%>
+                <%if current_user.id != user.id %>
+                  <span class="member"><%= "#{user.first_name} #{user.last_name}"%></span>
+                  <span> et vous </span>
+                <%end%>
               <%end%>
-            <%end%>
-          </div>
-        <%end%>
+            </div>
+          <%end%>
+        </div>
       <%end%>
     </div>
   </div>
@@ -31,14 +34,14 @@
           </div>
         <%end%>
       </div>
-      <div>
-        <%= form_with(model: @message, url: messages_path, local:true) do |form| %>
-          <div class="form__bar">
-            <%= form.text_area :content, size: "60x10",id:"message-input" %>
-            <%= form.hidden_field :room_id, value:@room.id %> <%= form.submit "Envoyer",id:"send" %>
-          </div>
-        <% end %>
-      <% end %>
     </div>
+    <div>
+      <%= form_with(model: @message, url: messages_path, local:true) do |form| %>
+        <div class="form__bar">
+          <%= form.text_area :content, size: "60x10",id:"message-input" %>
+          <%= form.hidden_field :room_id, value:@room.id %> <%= form.submit "Envoyer",id:"send" %>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 </main>
