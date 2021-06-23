@@ -1,6 +1,5 @@
 class MessagesController < ApplicationController
   def create
-<<<<<<< HEAD
     @message = Message.new(content: params[:content], room_id: params[:room_id], user_id: current_user.id)
     if @message.save
       p @message
@@ -27,14 +26,5 @@ class MessagesController < ApplicationController
         message: @message,
       },
     )
-||||||| parent of d6b8d93 (messagerie not real time working)
-    p params
-    @message = Message.create(content: params[:content], room_id: params[:room_id], user_id: current_user.id)
-=======
-    @message = Message.new(content: params[:content], room_id: params[:room_id], user_id: current_user.id)
-    if @message.save
-      redirect_to request.referrer
-    end
->>>>>>> d6b8d93 (messagerie not real time working)
   end
 end
