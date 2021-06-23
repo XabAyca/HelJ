@@ -16,6 +16,11 @@
 !/log/.keep
 !/tmp/.keep
 
+#ignore js files
+*/yarn.lock
+yarn.lock
+public/packs/js
+
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
 !/tmp/pids/
