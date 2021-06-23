@@ -1,4 +1,7 @@
 {
+	"scripts": {
+		"heroku-prebuild":"npm run install"
+	},
   "dependencies": {
     "@rails/actioncable": "^6.0.4",
     "@rails/ujs": "^6.0.4",
