@@ -7,6 +7,6 @@ class StaticPagesController < ApplicationController
   def resources
   end
 
-  def project
+  def good_project
   end
 end
