@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root "static_pages#index"
   get '/resources', to:'static_pages#resources'
+  get '/project', to:'static_pages#project'
 
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks', :registrations => "registrations" }
  
