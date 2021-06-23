@@ -23,10 +23,10 @@
         <%= form_with(model: @message, url: messages_path, local:true) do |form| %>
           <div>
             <%= form.label :content %>
-            <%= form.text_area :content, size: "60x10" %>
+            <%= form.text_area :content, size: "60x10" ,id:"message-input" %>
           </div>
           <%= form.hidden_field :room_id, value:@room.id %>
-          <%= form.submit %>
+          <%= form.submit "Envoyer", id:"send" %>
         <% end %>
       <% end %>
     </div>

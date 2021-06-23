@@ -16,7 +16,11 @@ document.addEventListener('turbolinks:load',()=>{
 		received(data) {
 			console.log(data)
 			const messagesContainer = document.querySelector('#messages')
+			const SendButton = document.querySelector('#send')
+			const messageInput = document.querySelector("#message-input")
 			messagesContainer.innerHTML = messagesContainer.innerHTML + data.html
+			messageInput.value =""
+			SendButton.disabled = false
 			console.log('send')
 		  // Called when there's incoming data on the websocket for this channel
 		}
