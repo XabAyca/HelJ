@@ -6,6 +6,9 @@ document.addEventListener('turbolinks:load',()=>{
 	consumer.subscriptions.create({ channel:"RoomChannel",room_id:roomId}, {
 		connected() {
 			console.log(`connected to ${roomId}`)
+			document.querySelector('#message-input',(e)=>{
+
+			})
 		  // Called when the subscription is ready for use on the server
 		},
 	  
