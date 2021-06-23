@@ -1,0 +1,18 @@
+<main class="main__wrapper background">
+  <h1 class="admin_title">Liste des Besoins</h1>
+  <div class="admin__dash">
+
+    <div class="card__admin">
+        <%=render 'admin/static_pages/admin_menu'%>
+    </div>
+    <div class='ml'>
+      <div class="card__graph scroll">
+        <div>
+          <%@neededs.each do |needed|%>
+            <%=render 'needed_card_admin', needed: needed%>
+          <%end%>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,12 +1,5 @@
- <% if notice %>
-  <p class="notice"><%= notice %>
-  <span class="close">
-  X
-  </span>
-  </p>
-<% end %>
-<% if alert %>
-  <p class="alert"><%= alert %><span class="close">
+<% flash.each do |type, msg| %>
+  <p class="<%=type%>"><%= msg %><span class="close">
   X
   </span></p>
 <% end %>

@@ -1,0 +1,15 @@
+<div class="card__project">
+  <div class="card__project__top" id="">
+    <div class="project__infos">
+      <div class="project__infos__text">
+        <h3 class="project__title">
+          <a class="link"> <%= needed.name %></a>
+        </h3>
+        <p class="project__description"><%= needed.description%></p>
+      </div>
+    </div>
+    <div class="card__project__bottom" id="owner__infos">
+      <%=button_to "Supprimer le besoin", admin_needed_path(needed.id), method:'delete',data: { confirm:'Valider la suppression?'}, :class=> 'button pill__outlined__red button__sm ml-1'%>
+    </div>
+  </div>
+</div>
