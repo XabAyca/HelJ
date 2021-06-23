@@ -2,8 +2,7 @@
 Challenge.create(
   c_type: "Algorithme",
   level: "easy",
-  challenge_description: 
-  "Codesignal est l'une des meilleures plateformes de défi de codage. Principalement parce que la complexité de votre solution est importante par rapport aux autres
+  challenge_description: "Codesignal est l'une des meilleures plateformes de défi de codage. Principalement parce que la complexité de votre solution est importante par rapport aux autres
   Plate-forme. Il y a peut-être moins de défis que d'autres plates-formes, mais leurs sujets généraux sont plus en rapport avec l'informatique traditionnel.
   problème. Enfin il y a aussi les challenges d'entreprise qui sont difficiles mais tellement valorisants. Pour ce challenge allez sur le code https://codesignal.com/ et commencez l'arcade",
   challenge_img: "https://sdtimes.com/wp-content/uploads/2018/07/CodeSignalBanner-940x510-490x266.png",
@@ -78,8 +77,7 @@ Challenge.create(
 Challenge.create(
   c_type: "Front-end:",
   level: "Easy",
-  challenge_description: 
-  "Front-end mentor est destiné à améliorer vos compétences de codage front-end en créant de vrais projets en résolvant des défis HTML, CSS et JavaScript du monde réel tout en travaillant sur des conceptions professionnelles. Les défis sont sélectionnés par niveau",
+  challenge_description: "Front-end mentor est destiné à améliorer vos compétences de codage front-end en créant de vrais projets en résolvant des défis HTML, CSS et JavaScript du monde réel tout en travaillant sur des conceptions professionnelles. Les défis sont sélectionnés par niveau",
   challenge_img: "",
   challenge_link: "https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7",
   challenge_name: "grid-section",
@@ -87,8 +85,7 @@ Challenge.create(
 Challenge.create(
   c_type: "Front-end:",
   level: "Easy",
-  challenge_description: 
-  "Front-end mentor est destiné à améliorer vos compétences de codage front-end en créant de vrais projets en résolvant des défis HTML, CSS et JavaScript du monde réel tout en travaillant sur des conceptions professionnelles. Les défis sont sélectionnés par niveau",
+  challenge_description: "Front-end mentor est destiné à améliorer vos compétences de codage front-end en créant de vrais projets en résolvant des défis HTML, CSS et JavaScript du monde réel tout en travaillant sur des conceptions professionnelles. Les défis sont sélectionnés par niveau",
   challenge_img: "",
   challenge_link: "https://www.frontendmentor.io/challenges/huddle-landing-page-with-alternating-feature-blocks-5ca5f5981e82137ec91a5100",
   challenge_name: "Page d'accueil",
@@ -147,54 +144,5 @@ Challenge.create(
   challenge_description: "Front-end mentor est destiné à améliorer vos compétences de codage front-end en créant de vrais projets en résolvant des défis HTML, CSS et JavaScript du monde réel tout en travaillant sur des conceptions professionnelles. Les défis sont sélectionnés par niveau",
   challenge_img: "",
   challenge_link: "https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0",
-<<<<<<< HEAD
-  challenge_name: "ip adresse tracker",
-)
-
-10.times do |i|
-  Room.create(
-    name: "#{i}",
-  )
-  p "#{i} room created"
-end
-10.times do |i|
-  JointUserRoom.create(
-    user_id: User.all.sample.id,
-    room_id: Room.all.sample.id,
-  )
-  p "#{i} joint user room created"
-end
-
-30.times do |i|
-  Message.create(
-    user_id: User.all.sample,
-    room_id: Room.all.sample,
-    content: "#{i}",
-  )
-  p "#{i} message created"
-end
-
-p "*" * 30
-p "Seed finished"
-p "Well done 🎉 🍺"
-||||||| 56bf643
-  challenge_name: "ip adresse tracker",
-)
-#create_table "challenges", force: :cascade do |t|
-#    t.string "c_type"
-#    t.string "level"
-#    t.string "challenge_slug"
-#    t.string "challenge_description"
-#    t.string "challenge_img"
-#    t.string "challenge_link"
-#    t.string "challenge_name"
-#    t.datetime "created_at", precision: 6, null: false
-#    t.datetime "updated_at", precision: 6, null: false
-#  end
-p "*" * 30
-p "Seed finished"
-p "Well done 🎉 🍺"
-=======
   challenge_name: "Tracker d'adresse IP",
 )
->>>>>>> development
