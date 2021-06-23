@@ -149,14 +149,3 @@ Challenge.create(
   challenge_link: "https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0",
   challenge_name: "Tracker d'adresse IP",
 )
-#create_table "challenges", force: :cascade do |t|
-#    t.string "c_type"
-#    t.string "level"
-#    t.string "challenge_slug"
-#    t.string "challenge_description"
-#    t.string "challenge_img"
-#    t.string "challenge_link"
-#    t.string "challenge_name"
-#    t.datetime "created_at", precision: 6, null: false
-#    t.datetime "updated_at", precision: 6, null: false
-#  end
