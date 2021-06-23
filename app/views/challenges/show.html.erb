@@ -1,30 +1,32 @@
 <div style="background-color: var(--beige)">
   <div class="challenge__hero">
     <div class="challenge__hero__circle ">
-      <h2>
-        Challenges
-      </h2>
+      <h1>
+        Challenge
+      </h1>
     </div>
   </div>
   <main class="main__wrapper">
-    <div class="challenge__content">
+    <div class='form_page'>
       <div class="content__header">
         <div class="content__header__top">
-          <h3 class="header__top__title"><%= @challenge.challenge_name%></h3>
-          <%= link_to 'rejoindre', joint_the_challenge_path(current_user.id, @challenge.id) , class: "button button__md  button__filled"%>
+          <h3 class="header__top__title"><%= @challenge.challenge_name.upcase%></h3>
+          <%= button_to 'Rejoindre', joint_the_challenge_path(current_user.id, @challenge.id) , class: "button button__md  pill__outlined"%>
         </div>
-        <div class="content__header__bottom">
+        <div>
           <p class="challenge__classification"> <span class="challenge__type"><%= @challenge.c_type %></span> <span class="challenge__classification__separator"></span> <span class="challenge__level"><%= @challenge.level %></span> </p>
         </div>
       </div>
-      <hr class="challenge__separator">
+      <hr class="separator">
       <div class="challenge__main">
         <div class="challenge__main__text">
           <p> <%= @challenge.challenge_description%> </p>
-          <p> url : <%= @challenge.challenge_link%> </p>
-          <div>
-            <img class="challenge__img" src="<%=@challenge.challenge_img %>">
+          <%=link_to 'Lien du challenge', @challenge.challenge_link, class:'link'%> 
+          <div class='challenge_img'>
+            <img class="challenge_img" src="<%=@challenge.challenge_img %>">
           </div>
-        </div>
-      </main >
+        </div>    
+      </div>
     </div>
+  </main>
+</div>
