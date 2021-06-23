@@ -2,6 +2,9 @@
 	"scripts": {
 		"heroku-prebuild":"npm run install"
 	},
+	"engines": {
+		"yarn": "1.22.10"
+	  },
   "dependencies": {
     "@rails/actioncable": "^6.0.4",
     "@rails/ujs": "^6.0.4",
