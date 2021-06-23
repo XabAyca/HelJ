@@ -1,3 +1,67 @@
 // Place all the styles related to the messaging controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.messaging__wrapper{
+	display: flex;
+
+}
+
+.left{
+	padding: var(--sp12);
+    border: 1px solid black;
+	max-width: 280px;
+}
+
+
+
+.right{
+	flex: 1;
+    padding: var(--sp8) var(--sp12);
+}
+#messages{
+	display: flex;
+    flex-direction: column;
+}
+
+.message__bar__wrapper{
+	display: flex;
+    flex: 1;
+}
+
+.message__form {
+    display: flex;
+    flex: 1;
+}
+.message__bar {
+    display: flex;
+    flex: 1;
+}
+#message-input {
+    flex: 1;
+    height: 60px;
+}
+
+.room__link{
+	margin: var(--sp16)  var(--sp0) ;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+.room__name{
+	font-weight: 600;
+	margin-bottom:var(--sp4);
+	font-size:var(--fs16);
+	line-height: 100%;
+
+}
+
+.room__members{
+	font-size:var(--fs14);
+	font-family:var(--secondaryFont)
+}
+
+.form__bar{
+	display: flex;
+}

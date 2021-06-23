@@ -16,6 +16,9 @@ display: inline-block;
 	border-radius: 20px;
 	margin-bottom: var(--sp4);
 }
+.message{
+	align-self:flex-start
+}
 .me{
 	align-self: flex-end;
 }

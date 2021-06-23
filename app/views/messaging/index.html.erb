@@ -1,35 +1,44 @@
-<main class="main__wrapper">
-  <h1> Messaging </h1>
-  <p>you have <%= @rooms.count%> rooms</p>
-  <div style="display:flex">
-    <div class="nav__messaging">
+<main class="messaging__wrapper">
+  <div class="left">
+    <div class="room__counter">
+      <h3>Vous avez <%= @rooms.count%> discussions en cours</h3>
+    </div>
+    <div class="rooms__links">
       <% @rooms.all.each do |room|%>
-        <div id="room-id" data-room-id="<%= @room.try(:id) %>"></div>
-        <%= link_to  user_messaging_path(user_id:current_user.id,id:room.id) do %>
-          <h3>room # <%= room.name%></h3>
+        <%= link_to user_messaging_path(user_id:current_user.id,id:room.id), class:"room__link" do %>
+          <h3 class="room__name">
+            demande de participation à <%= room.name%>
+          </h3>
+          <div class="room__members">
+            <% room.users.each do |user|%>
+              <%if current_user.id != user.id %>
+                <span class="member"><%= "#{user.first_name} #{user.last_name}"%></span>
+                <span> et vous </span>
+              <%end%>
+            <%end%>
+          </div>
         <%end%>
       <%end%>
     </div>
-    <span> <%= p @room %></span>
-    <div class="messaging">
-      <div class="messaging__content">
-        <% if @room.present? %>
-          <div id="messages">
-            <%@room.messages.each do |message| %>
-              <%= render 'messaging/message', message:message%>
-            <%end%>
+  </div>
+  <div class="right">
+    <div class="messages__wrapper">
+      <% if @room.present? %>
+        <div id="room-id" data-room-id="<%= @room.try(:id) %>"></div>
+        <div id="messages">
+          <%@room.messages.each do |message| %> <%= render 'messaging/message',
+        message:message%>
           </div>
-        </div>
+        <%end%>
+      </div>
+      <div>
         <%= form_with(model: @message, url: messages_path, local:true) do |form| %>
-          <div>
-            <%= form.label :content %>
-            <%= form.text_area :content, size: "60x10" ,id:"message-input" %>
+          <div class="form__bar">
+            <%= form.text_area :content, size: "60x10",id:"message-input" %>
+            <%= form.hidden_field :room_id, value:@room.id %> <%= form.submit "Envoyer",id:"send" %>
           </div>
-          <%= form.hidden_field :room_id, value:@room.id %>
-          <%= form.submit "Envoyer", id:"send" %>
         <% end %>
       <% end %>
     </div>
   </div>
-</div>
 </main>
