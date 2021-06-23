@@ -22,6 +22,8 @@ document.addEventListener('turbolinks:load',()=>{
 			messageInput.value =""
 			SendButton.disabled = false
 			console.log('send')
+			const messageContainer = document.querySelector('#messages')
+			messageContainer.scrollTop = messageContainer.scrollHeight
 		  // Called when there's incoming data on the websocket for this channel
 		}
 	  });
