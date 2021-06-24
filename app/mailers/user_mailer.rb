@@ -8,4 +8,9 @@ class UserMailer < ApplicationMailer
       @project = Project.find(project)
       mail(to: @user.email, subject: "Tu participes au projet")
   end
+  def user_on_challenge(user, challenge)
+    @user = User.find(user)
+    @challenge = Challenge.find(challenge)
+    mail(to: @user.email , subject: "Tu as rejoint un challenge")
+  end
 end

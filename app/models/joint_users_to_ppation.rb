@@ -4,6 +4,6 @@ class JointUsersToPpation < ApplicationRecord
   after_create :user_joint_challenge
 
     def user_joint_challenge
-      UserMailer.user_on_challenge(self).deliver
+      UserMailer.user_on_challenge(self.user_id, self.participation_challenge_id).deliver
     end
 end
