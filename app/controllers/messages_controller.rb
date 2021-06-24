@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
       p @message
       p @message.user.id
       p current_user.id
-      ActionCable.server.broadcast "roomchannel#{@message.room_id}", html: render_message
+      ActionCable.server.broadcast "room_channel_#{@message.room_id}", html: render_message
     end
   end
 
@@ -15,7 +15,7 @@ class MessagesController < ApplicationController
   def render_message
     MessagesController.renderer.instance_variable_set(
       :@env, {
-        "HTTP_HOST" => "https://hel-j.herokuapp.com/",
+        "HTTP_HOST" => "http://localhost:3000/",
         "HTTPS" => "off",
         "REQUEST_METHOD" => "GET",
         "SCRIPT_NAME" => "",
