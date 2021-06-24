@@ -2,9 +2,6 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(content: params[:content], room_id: params[:room_id], user_id: current_user.id)
     if @message.save
-      p @message
-      p @message.user.id
-      p current_user.id
       ActionCable.server.broadcast "roomchannel#{@message.room_id}", html: render_message
     end
   end

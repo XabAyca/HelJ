@@ -14,13 +14,11 @@
       
 
       <div class="header__graph">
-        <p>Projets total en ligne :<a class="nav__link "href="<%=admin_projects_path%>"><%=Project.count%></a></p>   
+        <p>Projets total en ligne : <%=link_to @projects.count, admin_projects_path, class:"nav__link " %></p>   
       </div>
       <div class="header__graph">
-        <p>Challenges total en ligne :<a class="nav__link" href="<%=  admin_challenges_path%>"> <%=Challenge.count%></a></p>
+        <p>Challenges total en ligne : <%=link_to @challenges.count, admin_challenges_path, class:"nav__link " %></p>
       </div>
-      
     </div>
   </div>
-
 </main>

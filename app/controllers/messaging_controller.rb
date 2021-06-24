@@ -8,7 +8,6 @@ class MessagingController < ApplicationController
   end
 
   def show
-    p params[:id]
     @rooms = User.find(current_user.id).rooms
     @room = Room.find(params[:id])
     render "index"

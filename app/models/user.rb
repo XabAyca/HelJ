@@ -16,7 +16,7 @@ class User < ApplicationRecord
 
   validates :first_name, presence: { message: "Prénom obligatoire" }
   validates :last_name, presence: { message: "Nom obligatoire" }
-  #after_create :welcome_mail
+  after_create :welcome_mail
 
   def welcome_mail
     UserMailer.welcome(self).deliver

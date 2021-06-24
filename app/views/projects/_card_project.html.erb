@@ -9,7 +9,7 @@
         <%end%>
         <div class="project__infos__text">
           <h3 class="project__title">
-            <a class="link" href="<%project_path(project.id)%>"> <%= project.project_title %></a>
+            <%= link_to project.project_title, project_path(project.id), class:'link'%>
           </h3>
           <p class="project__description"><%= project.description%></p>
           <div class="project__link">

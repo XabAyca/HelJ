@@ -11,13 +11,12 @@ class JointUsersToProjectsController < ApplicationController
 
     UserMailer.joint_project(current_user, params[:project_id]).deliver
 
-    redirect_to user_messaging_index_path(user_id: current_user.id)
-    #redirect_to project_path(params[:project_id]), notice: "Vous êtes inscrit sur le projet, un email vous a été envoyé"
+    redirect_to user_messaging_index_path(user_id: current_user.id),
+    notice: "Vous êtes inscrit sur le projet, un email vous a été envoyé"
   end
 
   def destroy
     @project_participations = JointUsersToProject.where(project_id: params[:project_id])
-    p @project_participations
     @project_participations.filter {
       |participation|
       participation.user_id == current_user.id

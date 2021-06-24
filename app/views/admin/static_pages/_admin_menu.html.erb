@@ -1,45 +1,68 @@
-<nav class="">
+<nav>
   <ul class="navlink__list__admin "> 
     <div class="text_center">
-      <li class="hover-underline-animation nav__link"><a class="" href="<%=admin_root_path%>">
-      <i class="bi bi-speedometer"></i><br>
-      Accueil</a></li>
+      <li class="hover-underline-animation nav__link">
+      <%=link_to admin_root_path do%>
+        <i class="bi bi-speedometer"></i><br>
+        Accueil
+      <%end%>
+      </li>
     </div>
     <div class="space_under text_center">
-      <li class="hover-underline-animation nav__link"><a class="" href="<%=admin_users_path%>">
-      <i class="bi bi-person-lines-fill"></i><br>
-      Utilisateurs</a></li>
+      <li class="hover-underline-animation nav__link">
+        <%=link_to admin_users_path do%>
+          <i class="bi bi-person-lines-fill"></i><br>
+          Utilisateurs
+        <%end%>
+      </li>
     </div>
     <div class="space_under text_center">
-      <li class="hover-underline-animation nav__link"><a class="" href="<%=admin_projects_path%>">
-      <i class="bi bi-file-earmark-code-fill"></i><br>
-      Projets</a></li>
+      <li class="hover-underline-animation nav__link">
+        <%=link_to admin_projects_path do%>
+          <i class="bi bi-file-earmark-code-fill"></i><br>
+          Projets
+        <%end%>
+      </li>
     </div>
     <div class="space_under text_center">
-      <li class="hover-underline-animation nav__link"><a class="" href="<%=admin_challenges_path%>">
-      <i class="bi bi-list-check"></i><br>
-      Challenges</a></li>
+      <li class="hover-underline-animation nav__link">
+        <%=link_to admin_challenges_path do%>
+          <i class="bi bi-list-check"></i><br>
+          Challenges
+        <%end%>
+      </li>
     </div>
     <div class="space_under text_center">
-      <li class="hover-underline-animation nav__link"><a class="" href="<%=admin_neededs_path%>">
-      <i class="bi bi-bookmark-star-fill"></i><br>
-      Besoins</a></li>
+      <li class="hover-underline-animation nav__link">
+      <%=link_to admin_neededs_path do%>
+        <i class="bi bi-bookmark-star-fill"></i><br>
+        Besoins
+      <%end%></li>
     </div>
     <hr>
     <div class="space_under">
-      <li class="hover-underline-animation link_add "><a class="link_add" href="<%=new_admin_project_path%>">
-      <i class="bi bi-plus-circle-fill"></i>
-      Projet</a></li>
+      <li class="hover-underline-animation link_add ">
+        <%=link_to new_admin_project_path,class:"link_add" do%>
+          <i class="bi bi-plus-circle-fill"></i>
+          Projet
+        <%end%>
+      </li>
     </div>
     <div class="space_under">
-      <li class="hover-underline-animation link_add "><a class="link_add" href="<%=new_admin_needed_path%>">
-      <i class="bi bi-plus-circle-fill"></i>
-      Besoin</a></li>
+      <li class="hover-underline-animation link_add ">
+        <%=link_to new_admin_needed_path,class:"link_add" do%>
+          <i class="bi bi-plus-circle-fill"></i>
+          Besoin
+        <%end%>
+      </li>
     </div>
     <div class="space_under">
-      <li class="hover-underline-animation "><a class="link_add " href="<%=new_admin_challenge_path%>">
-      <i class="bi bi-plus-circle-fill"></i>
-      Challenge</a></li>
+      <li class="hover-underline-animation ">
+        <%=link_to new_admin_challenge_path,class:"link_add" do%>
+          <i class="bi bi-plus-circle-fill"></i>
+          Challenge
+        <%end%>
+      </li>
     </div>
 
   </ul>

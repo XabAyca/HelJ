@@ -4,21 +4,21 @@
   </div>
   <div class="nav__links__wrapper">
     <ul class="nav__links__list">
-      <li class="nav__link hover-underline-animation"><a href="<%=root_path()%>">Accueil</a></li>
-      <li class="nav__link hover-underline-animation"><a href="<%=projects_path()%>">Projets</a></li>
-      <li class="nav__link hover-underline-animation"><a href="<%=challenges_path()%>">Challenges</a></li>
-      <li class="nav__link hover-underline-animation"><a href="<%=resources_path()%>">Ressources</a></li>
+      <li class="nav__link hover-underline-animation"><%=link_to "Accueil",root_path()%></li>
+      <li class="nav__link hover-underline-animation"><%=link_to "Projets",projects_path()%></li>
+      <li class="nav__link hover-underline-animation"><%=link_to "Challenges",challenges_path()%></li>
+      <li class="nav__link hover-underline-animation"><%=link_to "Ressources",resources_path()%></li>
       <%if user_signed_in?()%>
         <div class="dropdown">
           <button onclick="myFunction()" class="button pill__outlined button__pill__outlined dropbtn"><%=current_user.email%></button>
           <div id="myDropdown" class="dropdown-content">
-            <a href="<%=edit_user_registration_path()%>">Mon profil</a>
-            <a href="<%= new_project_path() %>">Créer un projet</a>
-            <a href="<%= user_messaging_index_path(user_id:current_user.id) %>">Messagerie</a>
-            <a href="<%=destroy_user_session_path()%>" data-method='delete'>Se déconnecter</a>
+            <%=link_to "Mon profil",edit_user_registration_path()%>
+            <%=link_to "Créer un projet",new_project_path()%>
+            <%=link_to "Messagerie",user_messaging_index_path(user_id:current_user.id)%>
+            <%=link_to "Se déconnecter",destroy_user_session_path(), data: {method:'delete'}%>
             <%if current_user.admin == true %>
               <hr>
-              <a href='<%=admin_root_path%>'>Dashboard</a>
+              <%=link_to "Dashboard", admin_root_path%>
             <%end%>
           </div>
         </div>
@@ -26,8 +26,8 @@
         <div class="dropdown">
           <button onclick="myFunction()" class="button pill__outlined button__pill__outlined dropbtn">Connexion</button>
           <div id="myDropdown" class="dropdown-content">
-            <a href="<%=new_user_session_path()%>">Se connecter</a>
-            <a href="<%=new_user_registration_path()%>">S'inscrire</a>
+            <%=link_to "Se connecter",new_user_session_path()%>
+            <%=link_to "S'inscrire",new_user_registration_path()%>
           </div>
         </div>
       <%end%>
@@ -40,42 +40,44 @@
       <span></span>
       <span></span>
       <ul id="menu">
-        <a href="<%=root_path()%>">
+        <%=link_to root_path() do%>
           <li>Accueil</li>
-        </a>
-        <a href="<%=projects_path()%>">
+        <%end%>
+        <%=link_to projects_path() do%>
           <li>Projets</li>
-        </a>
+        <%end%>
         <%if user_signed_in?()%>
-          <a href="<%=edit_user_registration_path()%>">
+          <%=link_to edit_user_registration_path() do%>
             <li>Mon profil</li>
-          </a>
-          <a href="<%= new_project_path() %>">
+          <%end%>
+          <%= link_to new_project_path() do%>
             <li>Créer un projet</li>
-          </a>
-          <a href="<%= user_messaging_index_path(user_id:current_user.id) %>"><li>Messagerie</li></a>
-          <a href="<%=challenges_path()%>">
+          <%end%>
+          <%= link_to user_messaging_index_path(user_id:current_user.id) do%>
+            <li>Messagerie</li>
+          <%end%>
+          <%=link_to challenges_path() do%>
             <li>Challenges</li>
-          </a>
-          <a href="<%=resources_path()%>">
+          <%end%>
+          <%=link_to resources_path() do%>
             <li>Ressources</li>
-          </a>
-          <a href="<%=destroy_user_session_path()%>" data-method='delete'>
+          <%end%>
+          <%=link_to destroy_user_session_path(), data: {method:'delete'} do%>
             <li>Se déconnecter</li>
-          </a>
+          <%end%>
           <%if current_user.admin == true %>
             <hr>
-            <a href='<%=admin_root_path%>'>
+            <%=link_to admin_root_path do%>
               <li>Dashboard</li>
-            </a>
+            <%end%>
           <%end%>
         <%else%>
-          <a href="<%=new_user_session_path()%>">
+          <%=link_to new_user_session_path() do%>
             <li>Se connecter</li>
-          </a>
-          <a href="<%=new_user_registration_path()%>">
+          <%end%>
+          <%=link_to new_user_registration_path() do%>
             <li>S'inscrire</li>
-          </a>
+          <%end%>
         <%end%>
       </ul>
     </div>

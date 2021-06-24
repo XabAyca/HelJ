@@ -85,9 +85,6 @@ select{
 
 }
 
-
-
-
 @media(max-width:$PhoneBig){
 	.search__inputs{
 		grid-template-columns: 1fr 1fr;
@@ -105,12 +102,9 @@ select{
 	}
 }
 
-
 @media(max-width:$PhoneMiddle){
 
-
 }
-
 
 @media(max-width:$PhoneSmall){
 

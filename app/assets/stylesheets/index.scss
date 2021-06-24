@@ -1,10 +1,6 @@
 @import 'media';
 @use 'fonts';
 
-//not needed since it's the last case
-//@media(max-width:$LaptopBig){
-	
-//}
 #hero{
 	display:flex;
 	flex-direction: column;
@@ -137,9 +133,7 @@
 	align-items: center;
 	margin-left:var(--sp8)
 }
-#the__system{
 
-}
 .system__title{
 	font-size: var(--fs36);
     font-weight: 600;
@@ -163,9 +157,7 @@
 .system_cta{
 	align-self:flex-end
 }
-.graphic__laptop{
 
-}
 .graphic__mobile__xl{
 	display:none
 }
@@ -393,12 +385,6 @@
 
 
 @media(max-width:$PhoneSmall){
-	//.hero__tagline{
-	//	font-size:var(--fs24)
-	//}
-	//.features__title{
-	//	font-size:var(--fs18);
-	//}
 	#hero{
 		padding-top:var(--sp64);
 	}
