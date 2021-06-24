@@ -3,23 +3,27 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .messaging__wrapper{
 	display: flex;
+	background-color: var(--beige);
 
 }
 
 .left{
 	padding: var(--sp12);
-    border: 1px solid black;
+  margin:15px 5px 15px 0;
+	border-radius: 0 18px 18px 0	;
+	box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.13);
 	max-width: 280px;
+	background-color: var(--beige);
 }
-
-
 
 .right{
 	flex: 1;
-   
+  margin:15px; 
 	display: flex;
     flex-direction: column;
     justify-content: space-between;
+		padding-right: 10%;
+		padding-left: 10%;
 }
 #messages{
 	display: flex;
@@ -41,15 +45,22 @@
 }
 #message-input {
     flex: 1;
-    height: 60px;
+    height: 40px;
+		border:none;
+		box-shadow:inset 1px 1px 5px 1px rgba(0, 0, 0, 0.13);
+		border-radius: 30px;
+		outline: none;
+		margin: 15px 15px 0;
+		padding-left: 20px;
+		padding-top: 12px;
+		padding-bottom: auto;
+		color:grey
 }
-
 .room__link{
 	margin: var(--sp16)  var(--sp0) ;
     color: var(--defaultBlack);
     text-decoration: none;
     display: inline-block;
-
 }
 
 .room__name{
@@ -74,7 +85,7 @@
 	margin:var(--sp4) var(--sp0);
 }
 .room__group:hover{
-	background:var(--grey200);
+	background:var(--blue100);
 	
 }
 .room__group.active{
