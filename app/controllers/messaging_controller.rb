@@ -11,7 +11,6 @@ class MessagingController < ApplicationController
     p params[:id]
     @rooms = User.find(current_user.id).rooms
     @room = Room.find(params[:id])
-
     render "index"
   end
 
