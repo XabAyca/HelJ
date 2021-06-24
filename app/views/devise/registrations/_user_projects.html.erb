@@ -1,7 +1,7 @@
 <div class="v-line">
   <div class="projects_wrapper">
-  <%current_user.joint_users_to_projects.each  do |p|%>
-    <%=render 'projects/card_project', project: p.project%>
-  <%end%>
+    <%current_user.joint_users_to_projects.each  do |p|%>
+      <%=render 'projects/card_project', project: p.project%>
+    <%end%>
   </div>
 </div>
