@@ -59,7 +59,7 @@
 
 .search__inputs{
 display:grid;
-grid-template-columns: 1fr 55px 150px;
+grid-template-columns: 1fr 75px 150px;
 	width:550px;
 	grid-gap:var(--sp12)
 }
@@ -89,11 +89,19 @@ select{
 
 
 @media(max-width:$PhoneBig){
-
+	.search__inputs{
+		grid-template-columns: 1fr 1fr;
+	}
+	#sort{
+		grid-column: span 2;
+	}
 	.projects__title{
 
 		font-size:var(--fs24);
 
+	}
+	.projects_wrapper{
+		width:100%
 	}
 }
 
