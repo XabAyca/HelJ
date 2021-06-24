@@ -1,0 +1,52 @@
+<div class="v-line">
+  <%= form_with model: @user, method: :patch, url: user_registration_path do |f| %>
+    <div class="profile__wrapper">
+      <div class="personnal__information__grid">
+        <div class="personnal__input">
+          <%= f.label :Prénom %>
+          <%= f.text_field :first_name, autofocus: true , class: "form input input__xl  input__neumorphism"%>
+        </div>
+        <div class="personnal__input">
+          <%= f.label :Nom %>
+          <%= f.text_field :last_name, autofocus: true , class: "form input input__xl  input__neumorphism"%>
+        </div>
+        <div class="personnal__input">
+          <%= f.label :Email%>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" , class: "form input input__xl input__neumorphism"%>
+        </div>
+      </div>
+      <div class="site__related__information">
+        <div >
+          <%= f.label :Description %>
+          <%= f.text_area :description, autofocus: true , class: "input-area form input input__xl input__neumorphism"%>
+        </div>
+        <div class="password_field ">
+          <div class="password__warning">
+            <label>Changer le mot de passe</label>
+            <em>Ne pas remplir si tu ne souhaites pas le changer</em>
+          </div>
+          <div>
+            <%= f.password_field :Password, autocomplete: "new-password" , class: "input input__xl  input__neumorphism", placeholder: "#{@minimum_password_length} caractères minimum"%>
+            <%= f.password_field :password_confirmation, autocomplete: "new-password" , class: "input input__xl  input__neumorphism", placeholder:"Confirmation"%>
+          </div>
+        </div>
+      </div>
+      <div class="profile__actions__wrapper">
+        <div class="change__wrapper">
+          <div class="field-col">
+            <h3 class="save__change">Sauvegarder mes modifications</h3>
+            <%= f.password_field :current_password, autocomplete: "current-password", placeholder: "Mot de passe actuel" , class: "input  input__xl  input__neumorphism"%>
+            <div class="actions">
+              <%= f.submit "Mise à jour" , class: "button button__outlined button__md m-top-one"%>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <div class="field-col">
+        <h3>Supprimer mon compte</h3>
+        <%= button_to "Supprimer", registration_path(resource_name), data: { confirm: "Etes vous sur?" }, method: :delete , class: "button button__outlined_red button__md m-top-one"%>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

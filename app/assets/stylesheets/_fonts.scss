@@ -1,0 +1,155 @@
+
+:root{
+	--primaryFont: "Konnect";
+	--secondaryFont: "Libre Franklin";
+	--terciaryFont: "Jost";
+	--fs7: 7px;
+	--fs8: 8px;
+	--fs9: 9px;
+	--fs10: 10px;
+	--fs11: 11px;
+	--fs12: 12px;
+	--fs14: 14px;
+	--fs16: 16px;
+	--fs18: 18px;
+	--fs20: 20px;
+	--fs24: 24px;
+	--fs30: 30px;
+	--fs36: 36px;
+	--fs48: 48px;
+	--fs60: 60px;
+	--fs72: 72px;
+}
+
+/*FONTS*/
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('../fonts/Konnect/KonnectBlack.woff');
+@import url('../fonts/Konnect/KonnectRegular.woff');
+/*font-face konnect*/
+//  src: url('<%= asset_path('fonts/KonnectRegular.woff') %>');
+  //src:url(asset-path('fonts/KonnectRegular.woff))format("woff");
+@font-face {
+  font-family: "Konnect";
+  font-style: normal;
+  font-weight: normal;
+src:font-path("KonnectRegular.woff") format("woff");
+  
+
+}
+
+@font-face {
+  font-family: "Konnect";
+  font-style: italic;
+  font-weight: 400;
+  src:font-path("KonnectItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Konnect";
+  font-style: normal;
+  font-weight: 400;
+  src:font-path("KonnectHairline.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Konnect";
+  font-style: italic;
+  font-weight: 100;
+  src:font-path("KonnectHairlineItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Konnect";
+  font-style: normal;
+  font-weight: 200;
+  src:font-path("KonnectThin.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Konnect";
+  font-style: italic;
+  font-weight: 200;
+  src:font-path("KonnectThinItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Konnect";
+  font-style: normal;
+  font-weight: 300;
+  src:font-path("KonnectLight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Konnect";
+  font-style: italic;
+  font-weight: 300;
+  src:font-path("KonnectLightItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Konnect";
+  font-style: normal;
+  font-weight: 500;
+  src:font-path("KonnectMedium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Konnect";
+  font-style: italic;
+  font-weight: 500;
+  src:font-path("KonnectMediumItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Konnect";
+  font-style: normal;
+  font-weight: 600;
+  src:font-path("KonnectSemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Konnect";
+  font-style: italic;
+  font-weight: 600;
+  src:font-path("KonnectSemiBoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Konnect";
+  font-style: normal;
+  font-weight: 700;
+  src:font-path("KonnectBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Konnect";
+  font-style: italic;
+  font-weight: 700;
+  src:font-path("KonnectBoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Konnect";
+  font-style: normal;
+  font-weight: 800;
+  src:font-path("KonnectExtraBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Konnect";
+  font-style: italic;
+  font-weight: 800;
+  src:font-path("KonnectExtraBoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Konnect";
+  font-style: normal;
+  font-weight: 900;
+  src:font-path("KonnectBlack.woff") format("woff");
+}
+@font-face {
+  font-family: "Konnect";
+  font-style: italic;
+  font-weight: 900;
+  src:font-path("KonnectBlackItalic.woff") format("woff");
+}

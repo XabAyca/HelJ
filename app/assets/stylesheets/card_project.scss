@@ -1,0 +1,56 @@
+.card__project{
+	width:100%;
+	min-height: 150px;
+	height: auto;
+	box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.137);
+	border-radius:var(--sp12);
+	margin-bottom:var(--sp24);
+	margin-left: 15px;
+	margin-right: 15px;
+	padding:var(--sp16) var(--sp20)
+}
+.card__project:hover{
+	box-shadow: inset 1px 1px 4px 1px rgba(0, 0, 0, 0.137);	
+}
+.project__infos{
+	display:flex;
+}
+.project__infos__text{
+	display:flex;
+	flex-direction: column;
+}
+.project__logo{
+	width:70px;
+	height: 70px;
+	border-radius: 50%;
+	margin-right:var(--sp12)
+}
+.project__title{
+	font-size:var(--fs16);
+	margin-bottom:var(--sp8)
+}
+.project__description{
+	font-size:var(--fs12);
+	margin-bottom:var(--sp8)
+}
+.project__link{
+	display:flex
+}
+.figma_project__link{
+	color:var(--blue500);
+	text-decoration: none;
+}
+.logo__link{
+	margin:var(--sp0) var(--sp4)
+}
+.logo__link i{
+margin:var(--sp0) var(--sp4)
+}
+.card__project__bottom{
+	display:flex;
+	justify-content: flex-end;
+}
+
+.project__title a{
+	color:var(--defaultBlack)
+}

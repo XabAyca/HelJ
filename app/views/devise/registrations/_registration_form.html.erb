@@ -1,0 +1,29 @@
+<div>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name),class:'form') do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+    <div>
+      <%= f.text_field :first_name, autofocus: true, class:'input input__lg ',placeholder:'Prénom', id: 'first_name' %>
+    </div>
+    <div>
+      <%= f.text_field :last_name, autofocus: true,class:'input input__lg ',placeholder:'Nom' , id: 'last_name'%>
+    </div>
+    <div>
+      <%= f.text_area :description, autofocus: true,class:'input input__lg ',placeholder:'Description', id: 'description' %>
+    </div>
+    <div>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email",class:'input input__lg ',placeholder:'Email' , id: 'email'%>
+    </div>
+    <div>
+      <%= f.password_field :password, autocomplete: "new-password",class:'input input__lg ',placeholder:'Mot de passe', id: 'password' %>
+      <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> caractères minimum)</em>
+      <% end %>
+    </div>
+    <div>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password",class:'input input__lg ',placeholder:'Confirmation', id: 'password_confirmation' %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Inscription",class:'pill__outlined button m-top align_right', id: 'sign_up' %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,100 @@
+// Place all the styles related to the messaging controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.messaging__wrapper{
+	display: flex;
+
+}
+
+.left{
+	padding: var(--sp12);
+    border: 1px solid black;
+	max-width: 280px;
+}
+
+
+
+.right{
+	flex: 1;
+   
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#messages{
+	display: flex;
+    flex-direction: column;
+}
+
+.message__bar__wrapper{
+	display: flex;
+    flex: 1;
+}
+
+.message__form {
+    display: flex;
+    flex: 1;
+}
+.message__bar {
+    display: flex;
+    flex: 1;
+}
+#message-input {
+    flex: 1;
+    height: 60px;
+}
+
+.room__link{
+	margin: var(--sp16)  var(--sp0) ;
+    color: var(--defaultBlack);
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+.room__name{
+	font-weight: 600;
+	margin-bottom:var(--sp4);
+	font-size:var(--fs16);
+	line-height: 100%;
+
+}
+
+.room__members{
+	font-size:var(--fs14);
+	font-family:var(--secondaryFont)
+}
+
+.form__bar{
+	display: flex;
+}
+.room__group{
+	padding:var(--sp8);
+	border-radius:var(--sp8);
+	margin:var(--sp4) var(--sp0);
+}
+.room__group:hover{
+	background:var(--grey200);
+	
+}
+.room__group.active{
+	background:var(--grey800);
+	
+}
+.room__group.active .room__link{
+	color:var(--beige)
+}
+
+#messages{
+	height: 100%;
+    margin-bottom: var(--sp20);
+	overflow-x: hidden;
+}
+
+.messaging__wrapper{
+	height: calc(100vh - 100px);
+}
+.messages__wrapper{
+	min-height: 70vh;
+	padding: var(--sp0) var(--sp12);
+}

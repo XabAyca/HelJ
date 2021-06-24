@@ -1,0 +1,30 @@
+/*teinte de gris*/
+/*blancs - beige*/
+/* blue */
+/*rest will be important as we need it*/
+:root {
+  --beige: #fafafa;
+  --blue100: #e1e8fe;
+  --blue200: #d0dafd;
+  --blue300: #aabcfb;
+  --blue400: #89a1f8;
+  --blue450: #6686f4;
+  --blue500: #2252f9;
+  --blue600: #123fe2;
+  --blue700: #0e35be;
+  --blue800: #0d2c9b;
+  --blue900: #0d2475;
+  --defaultBlack: var(--grey1000);
+  --pureWhite: #ffffff;
+  --grey1000: #162331;
+  --grey900: #162a41;
+  --grey800: #293b51;
+  --grey700: #394e66;
+  --grey600: #4e657f;
+  --grey500: #677d96;
+  --grey400: #869aaf;
+  --grey300: #a3b3c6;
+  --grey200: #dbe2eb;
+  --grey100: #f1f4f8;
+  --grey50: #f6f7f9;
+}

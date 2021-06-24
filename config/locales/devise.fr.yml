@@ -1,0 +1,63 @@
+fr:
+  devise:
+    confirmations:
+      confirmed: "Votre Email a été confirmé."
+      send_instructions: "Une confirmation vous a été envoyé par Email."
+      send_paranoid_instructions: "Si votre adresse est stockée dans notre base de données, vous aller recevoir un Email avec des instructions."
+    failure:
+      already_authenticated: "Vous etes déja connecté."
+      inactive: "Votre compte n'a pas encore été activé."
+      invalid: "%{authentication_keys} ou mot de passe invalide."
+      locked: "Votre compte est bloqué."
+      last_attempt: "Vous avez un dernier essai avant le bloquage de votre compte."
+      not_found_in_database: "%{authentication_keys} ou mot de passe invalide."
+      timeout: "Votre Session a expirée."
+      unauthenticated: "Vous devez vous connecter pour continuer."
+      unconfirmed: "Vous devez confirmer votre adresse Email pour pouvoir continuer."
+    mailer:
+      confirmation_instructions:
+        subject: "HelJ Instructions de Confirmation"
+      reset_password_instructions:
+        subject: "HelJ Récupération de mot de passe"
+      unlock_instructions:
+        subject: "HelJ Instructions de dévérouillage"
+      email_changed:
+        subject: "HelJ Adresse mail changée"
+      password_change:
+        subject: "HelJ Mot de passe changé"
+    omniauth_callbacks:
+      failure: "Nous n'avons pas réussi a vous connecter ( %{kind} because \"%{reason}\")."
+      success: "Connection réussie %{kind}."
+    passwords:
+      no_token: "Vous n'avez pas acces a cette page."
+      send_instructions: "Vous aller recevoir les instructions par Email."
+      send_paranoid_instructions: "Si votre adresse est stockée dans notre base de données, vous aller recevoir un Email avec des instructions.."
+      updated: "Votre mot de passe a été modifié avec succès."
+      updated_not_active: "Votre mot de passe a été changé."
+    registrations:
+      destroyed: "Bye! Votre compte a bien été supprimé."
+      signed_up: "Bienvenue sur HelJ."
+      signed_up_but_inactive: "Vous etes maintenant inscris. Vous ne pourrez pas vous connecter sans confirmation de votre compte."
+      signed_up_but_locked: "Vous etes maintenant inscris. Vous ne pourrez pas vous connecter car votre compte est bloqué."
+      signed_up_but_unconfirmed: "Un Email avec un lien d'activation vous a été envoyé."
+      update_needs_confirmation: "Votre compte a été mis a jour avec succès"
+      updated: "Votre compte a été mis a jour avec succès."
+      updated_but_not_signed_in: "Votre compte a été mis a jour avec succès. Votre Mot de passe a été changer, Veuillez vous reconnecter"
+    sessions:
+      signed_in: "Connexion réussie."
+      signed_out: "Déconnexion réussie."
+      already_signed_out: "Déconnexion réussie."
+    unlocks:
+      send_instructions: "Vous allez recevoir les instructions par Email pour dévérouiller votre compte."
+      send_paranoid_instructions: "Si votre adresse est stockée dans notre base de données, vous aller recevoir un Email avec des instructions pour le dévérouiller."
+      unlocked: "Votre compte a été débloqué avec succes. Vous pouvez maintenant vous connecter."
+  errors:
+    messages:
+      already_confirmed: "Veuillez vous connecter."
+      confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
+      expired: "has expired, please request a new one"
+      not_found: "Non trouvé"
+      not_locked: "n'a pas été vérouillé"
+      not_saved:
+        one: "1 error prohibited this %{resource} from being saved:"
+        other: "%{count} errors prohibited this %{resource} from being saved:"

@@ -1,0 +1,173 @@
+.button {
+    font-size: 16px;
+    font-family: var(--primaryFont);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    color: white;
+    border: none;
+    padding: 5px 5px 5px 5px;
+}
+
+.button__xl {
+    font-size: 18px;
+    padding: 9px 20px;
+}
+
+.button__lg {
+    font-size: 16px;
+    padding: 7px 16px;
+}
+
+.button__md {
+    font-size: 14px;
+    padding: 5px 14px;
+}
+
+.button__sm {
+    font-size: 12px;
+    padding: 4px 12px;
+}
+
+.button__xsm {
+    padding: 3px 9px;
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.button__filled {
+    background: #2252f9;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+.button__outlined {
+    border: 1px solid #2252f9 !important;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: #2252f9;
+    background-color: transparent;
+}
+
+.button__text {
+    color: #2252f9;
+    background-color: transparent;
+    border: transparent !important;
+}
+
+.pill__semioutlined {
+    background: #e1e8fe;
+    border: 2px solid #2252f9 !important;
+    color: #2252f9;
+    border-radius: 20px;
+}
+
+.pill__outlined {
+    border: 2px solid #2252f9 !important;
+    color: #2252f9;
+    background-color: transparent;
+    border-radius: 20px;
+}
+
+.pill__outlined:hover {
+    background-color: var(--blue300);
+    cursor: pointer
+}
+
+.pill__outlined:active {
+    box-shadow: 1px 1px 5px 2px rgba(0, 34, 187, 0.2);
+}
+
+.pill__filled {
+    background: #2252f9;
+    border-radius: 20px;
+}
+
+.pill__outlined__red {
+    border: 2px solid red;
+    color: red;
+    background-color: transparent;
+    border-radius: 20px;
+}
+
+.pill__outlined__red:hover {
+    background-color: rgba(255, 0, 0, 0.315);
+    cursor: pointer
+}
+
+.pill__outlined__red:active {
+    box-shadow: 1px 1px 5px 2px rgba(187, 0, 0, 0.2);
+}
+
+.button__outlined_red {
+    border: 1px solid red !important;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: red;
+    background-color: transparent;
+}
+
+.button__outlined_red:hover {
+    border: 1px solid white !important;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: white;
+    background-color: red;
+    cursor: pointer;
+}
+
+.button__outlined:hover {
+    border: 1px solid white !important;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: white;
+    background-color: #2252f9;
+    cursor: pointer;
+}
+
+.align_right {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.link {
+    color: #2252f9;
+    text-decoration: none;
+    margin-top: 7px;
+}
+
+.move_left {
+    display: inline-block;
+    transition: 400ms
+}
+
+.move_left:hover {
+    transform: translate(10px);
+}
+
+.move_left:active {
+    transform: scale(1.1);
+}
+
+.animation_scale {
+    text-decoration: none;
+    transition: 400ms;
+}
+
+.animation_scale:hover {
+    transform: scale(1.05);
+}
+
+.submit_button {
+    width: 13rem;
+}
+
+.rm_decoration {
+    text-decoration-line: none;
+}
+
+.cursor_off{
+    cursor:auto
+}

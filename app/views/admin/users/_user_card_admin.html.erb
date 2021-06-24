@@ -1,0 +1,27 @@
+<div class='row_admin'>
+  <div class='child_row'>
+    <div>
+      <p class='info_text'>#ID <%=user.id%></p>
+    </div>
+    <div >
+      <p class='info_text'><%=user.first_name.capitalize%></p>
+    </div>
+    <div>
+      <p class='info_text'><%=user.last_name.upcase%></p>
+    </div>
+    <div>
+      <p class='info_text'><%=user.email%></p>
+    </div>
+  </div>
+  <div class='child_row'>
+    <div>
+      <%=button_to 'Supprimer', admin_user_path(user.id), method:'delete', data: { confirm:'Supprimer l\'utilisateur ?'}, class:'button pill__outlined__red button__xsm'%>
+    </div>
+    <div >
+      <%= form_with model: [:admin, user], method: :put ,class:'checkbox' do |form| %>
+        <%= form.check_box :admin %>
+        <%= form.submit "Admin ?",class:'button pill__outlined button__xsm  ' %>
+      <% end %>
+    </div>
+  </div>  
+</div>

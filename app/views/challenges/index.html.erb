@@ -1,7 +1,10 @@
-<h1>Challenges#index</h1>
-<p>Find me in app/views/challenges/index.html.erb</p>
-<% @challenges.each do |challenge|  %>
-  <h3><%= challenge.challenge_name %></h3>
-  <p><%= challenge.challenge_description %></p>
-  <%= link_to "View challenge",  challenge_path(challenge) %>
-<%end%>
+ <main class="main__wrapper background">
+  <div class='form_page'>
+    <h1 class="challenges__title">Challenges</h1>
+    <div class='challenge_list'>
+      <% @challenges.each do |challenge|  %>
+        <%=render 'card_challenge', challenge:challenge %>
+      <%end%>
+    </div>
+  </div>
+</main>

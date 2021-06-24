@@ -1,0 +1,129 @@
+.form input {
+    margin-bottom: 20px !important;
+}
+
+.form:last-child {
+    margin-bottom: 0px;
+}
+
+.form {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.field {
+    display: flex;
+    justify-content: space-around;
+}
+
+.group-form {
+    display: flex;
+    justify-content: space-around;
+}
+
+.text-form-top {
+    margin-top: .5rem;
+    margin-left: .75rem;
+    margin-right: .5rem;
+}
+
+.field-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-area {
+    width: 16rem;
+    height: 8rem;
+}
+
+.m-top {
+    margin-top: 2rem;
+}
+
+.m-bot {
+    margin-bottom: 0.5rem;
+}
+
+.m-top-5 {
+    margin-top: 5rem;
+}
+
+.sparound {
+    display: flex;
+    justify-content: space-around;
+}
+
+.m-top-one {
+    margin-top: 1rem;
+    width: 100%
+}
+
+.v-line {
+    border-left: 5px solid #6686F4;
+    margin-left: 1.2rem;
+}
+
+.v-title {
+    display: flex;
+}
+
+.v-circle {
+    height: 2.8rem;
+    width: 2.8rem;
+    border: 10px solid #6686F4;
+    border-radius: 50%;
+    background-color: var(--beige);
+}
+
+.v-text {
+    color: #0D2475;
+    margin-top: .5rem;
+    margin-left: 1rem;
+    margin-bottom: 0 !important;
+}
+
+.title-page {
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.form_group {
+    width: 80%;
+    margin: auto;
+}
+
+.form_page {
+    width: 90%;
+    margin: auto;
+    padding-top: 100px;
+    min-height: 90vh;
+}
+
+.actions {
+    text-align: right;
+}
+
+em {
+    font-size: 0.8rem;
+    color: grey;
+}
+
+.bottom-margin-for-footer {
+    padding-bottom: 5rem;
+}
+
+textarea{
+    font-family:sans-serif;
+	resize: none;
+}
+
+.n__display{
+	display:none;
+}
+
+input{
+	font-size:0.9rem;
+}
+

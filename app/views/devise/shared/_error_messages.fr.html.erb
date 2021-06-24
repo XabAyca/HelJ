@@ -1,0 +1,15 @@
+<% if resource.errors.any? %>
+  <div id="error_explanation" class="alert ">
+    <p>
+      <% resource.errors.full_messages.each do |message| %>
+        <%= message %></p>
+    <% end %>
+    <span class="close">X</span>
+  </div>
+<% end %>
+<script>
+  let closeBtn = document.querySelector(".close");
+  closeBtn.addEventListener("click", function() {
+      this.parentElement.style.display = 'none';
+    });
+</script>

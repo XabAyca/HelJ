@@ -1,6 +1,32 @@
-<h2><%= @challenge.challenge_name%></h2>
-<p> <%= @challenge.challenge_description%> </p>
-<br>
-<p> level : <%= @challenge.level %> </p>
-<p> type : <%= @challenge.c_type %> </p>
-<p> url : <%= @challenge.challenge_link%> </p>
+<div style="background-color: var(--beige)">
+  <div class="challenge__hero">
+    <div class="challenge__hero__circle ">
+      <h1>
+        Challenge
+      </h1>
+    </div>
+  </div>
+  <main class="main__wrapper">
+    <div class='form_page'>
+      <div class="content__header">
+        <div class="content__header__top">
+          <h3 class="header__top__title"><%= @challenge.challenge_name.upcase%></h3>
+          <%= button_to 'Rejoindre', joint_the_challenge_path(current_user.id, @challenge.id) , class: "button button__md  pill__outlined"%>
+        </div>
+        <div>
+          <p class="challenge__classification"> <span class="challenge__type"><%= @challenge.c_type %></span> <span class="challenge__classification__separator"></span> <span class="challenge__level"><%= @challenge.level %></span> </p>
+        </div>
+      </div>
+      <hr class="separator">
+      <div class="challenge__main">
+        <div class="challenge__main__text">
+          <p> <%= @challenge.challenge_description%> </p>
+          <%=link_to 'Lien du challenge', @challenge.challenge_link, class:'link'%> 
+          <div class='challenge_img'>
+            <img class="challenge_img" src="<%=@challenge.challenge_img %>">
+          </div>
+        </div>    
+      </div>
+    </div>
+  </main>
+</div>

@@ -1,0 +1,20 @@
+<main class="main__wrapper">
+  <h1 class="projects__title">Trouvez votre prochain projet</h1>
+  <%= form_with url: projects_path, :html => { :class => "", :id => "project_search" }, method: "get" do |form| %>
+    <div class="search__inputs">
+      <div class="search__bar ">
+        <%= form.text_field :project_title, class: 'search__bar__text',placeholder:'Recherche' %>
+        <%= button_tag(type: "submit", class: "search__bar__icon") do %>
+          <i class="fas fa-search"></i>
+        <% end %>
+      </div>
+      <%= submit_tag("Recherche", class:'button button__sm pill__outlined') %>
+      <%= form.select :sort, ["Ancien", "Récent"], prompt: true,class:'select' %>
+    </div>
+  <% end %>
+  <div class="projects_wrapper">
+    <% @projects.each do |project| %>
+      <%= render "projects/card_project", project: project%>
+    <%end%>
+  </div>
+</main>

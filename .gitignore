@@ -16,6 +16,11 @@
 !/log/.keep
 !/tmp/.keep
 
+#ignore js files
+*/yarn.lock
+yarn.lock
+public/packs/js
+
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
 !/tmp/pids/
@@ -35,3 +40,10 @@
 .env
 .env*
 
+
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
