@@ -1,7 +1,7 @@
  <main class="main__wrapper background">
   <div class="form_page">
     <div class="form_group">
-      <h1 class='center'>Mot de passe oublié</h1>
+      <h2 class='center'>Mot de passe oublié</h2>
       <div>
         <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post },class:'form') do |f| %>
           <%= render "devise/shared/error_messages", resource: resource %>

@@ -1,23 +1,96 @@
+@import "media";
+
 :root {
-    --primaryFont: "Konnect";
-    --secondaryFont: "Libre Franklin";
-    --terciaryFont: "Jost";
-    --fs7: 7px;
-    --fs8: 8px;
-    --fs9: 9px;
-    --fs10: 10px;
-    --fs11: 11px;
-    --fs12: 12px;
-    --fs14: 14px;
-    --fs16: 16px;
-    --fs18: 18px;
-    --fs20: 20px;
-    --fs24: 24px;
-    --fs30: 30px;
-    --fs36: 36px;
-    --fs48: 48px;
-    --fs60: 60px;
-    --fs72: 72px;
+  --primaryFont: "Konnect";
+  --secondaryFont: "Libre Franklin";
+  --terciaryFont: "Jost";
+  --fs7: 7px;
+  --fs8: 8px;
+  --fs9: 9px;
+  --fs10: 10px;
+  --fs11: 11px;
+  --fs12: 12px;
+  --fs14: 14px;
+  --fs16: 16px;
+  --fs18: 18px;
+  --fs20: 20px;
+  --fs24: 24px;
+  --fs30: 30px;
+  --fs36: 36px;
+  --fs48: 48px;
+  --fs60: 60px;
+  --fs72: 72px;
+}
+
+h1 {
+  font-size: var(--fs60);
+}
+h2 {
+  font-size: var(--fs48);
+}
+h3 {
+  font-size: var(--fs24);
+}
+h4 {
+  font-size: 1.15rem;
+}
+h5 {
+  font-size: 1.1rem;
+}
+h6 {
+  font-size: 1.05rem;
+}
+@media (max-width: $LaptopSmall) {
+  h1 {
+    font-size: var(--fs48);
+  }
+  h2 {
+    font-size: var(--fs36);
+  }
+  h3 {
+    font-size: var(--fs24);
+  }
+}
+@media (max-width: $Tablet) {
+  h1 {
+    font-size: var(--fs48);
+  }
+  h2 {
+    font-size: var(--fs30);
+  }
+  h3 {
+    font-size: var(--fs20);
+  }
+}
+@media (max-width: $PhoneBig) {
+  h1 {
+    font-size: var(--fs30);
+  }
+  h2 {
+    font-size: var(--fs20);
+  }
+  h3 {
+    font-size: var(--fs20);
+  }
+}
+@media (max-width: $PhoneMiddle) {
+  h1 {
+    font-size: var(--fs24);
+  }
+  h2 {
+    font-size: var(--fs20);
+  }
+  h3 {
+    font-size: var(--fs18);
+  }
+}
+@media (max-width: $PhoneSmall) {
+  h1 {
+    font-size: var(--fs24);
+  }
+  h3 {
+    font-size: var(--fs18);
+  }
 }
 
 
@@ -33,24 +106,24 @@
 //  src: url('<%= asset_path('fonts/KonnectRegular.woff') %>');
 //src:url(asset-path('fonts/KonnectRegular.woff))format("woff");
 @font-face {
-    font-family: "Konnect";
-    font-style: normal;
-    font-weight: normal;
-    src: font-path("KonnectRegular.woff") format("woff");
+  font-family: "Konnect";
+  font-style: normal;
+  font-weight: normal;
+  src: font-path("KonnectRegular.woff") format("woff");
 }
 
 @font-face {
-    font-family: "Konnect";
-    font-style: italic;
-    font-weight: 400;
-    src: font-path("KonnectItalic.woff") format("woff");
+  font-family: "Konnect";
+  font-style: italic;
+  font-weight: 400;
+  src: font-path("KonnectItalic.woff") format("woff");
 }
 
 @font-face {
-    font-family: "Konnect";
-    font-style: normal;
-    font-weight: 400;
-    src: font-path("KonnectHairline.woff") format("woff");
+  font-family: "Konnect";
+  font-style: normal;
+  font-weight: 400;
+  src: font-path("KonnectHairline.woff") format("woff");
 }
 
 @font-face {

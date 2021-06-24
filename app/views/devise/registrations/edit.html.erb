@@ -1,22 +1,22 @@
 <%= render "devise/shared/error_messages", resource: resource %>
 <main class="secondary__wrapper">
-  <h1 class="title-page">Salut <%=current_user.first_name.capitalize%></h1>
+  <h2 class="title-page">Salut <%=current_user.first_name.capitalize%></h2>
   <div class="v-title">
     <span class="v-circle"></span>
-    <h2 class="v-text">Profil</h2>
+    <h3 class="v-text">Profil</h3>
   </div>
   <%=render 'edit_form'%>
   <div class="<%= 'n__display' if current_user.participation_challenges.count  == 0 %>">
     <div class="v-title">
       <span class="v-circle"></span>
-      <h2 class="v-text">Challenges</h2>
+      <h3 class="v-text">Challenges</h3>
     </div>
   </div>
   <%=render 'user_challenges'%>
   <div class="<%= 'n__display' if current_user.joint_users_to_projects.count == 0 %>">
     <div class="v-title ">
       <span class="v-circle"></span>
-      <h2 class="v-text">Projets</h2>
+      <h3 class="v-text">Projets</h3>
     </div>
     <%=render 'user_projects'%>
   </div>

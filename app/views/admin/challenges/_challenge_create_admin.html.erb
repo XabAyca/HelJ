@@ -1,25 +1,25 @@
 <div class="form_group">
-  <h1 class='center'>Création d'un Challenge</h1>
+  <h2 class='center'>Création d'un Challenge</h2>
   <div>
-<%= form_with model: @challenge, method: :post, url: admin_challenges_path ,class:'form' do |f| %>
-  <div>
-    <%= f.text_field :challenge_name, placeholder: 'Nom' , class:'input input__lg '%>
+    <%= form_with model: @challenge, method: :post, url: admin_challenges_path ,class:'form' do |f| %>
+      <div>
+        <%= f.text_field :challenge_name, placeholder: 'Nom' , class:'input input__lg '%>
+      </div>
+      <div>
+        <%= f.text_area :challenge_description, placeholder: 'Description' , class:'input input__lg '%>
+      </div>
+      <div>
+        <%= f.text_field :level, placeholder: 'Niveau', class:'input input__lg '%>
+      </div>
+      <div>
+        <%= f.text_field :c_type, placeholder: 'Type', class:'input input__lg '%>
+      </div>
+      <div>
+        <%= f.text_field :challenge_img, placeholder: 'Lien image', class:'input input__lg '%>
+      </div>
+      <div>
+        <%= f.text_field :challenge_link, placeholder: 'Lien challenge externe', class:'input input__lg '%>
+      </div>
+      <%= f.submit 'Créer' ,class:'pill__outlined button m-top align_right'%>
+    <% end %>
   </div>
-  <div>
-    <%= f.text_area :challenge_description, placeholder: 'Description' , class:'input input__lg '%>
-  </div>
-  <div>
-    <%= f.text_field :level, placeholder: 'Niveau', class:'input input__lg '%>
-  </div>
-  <div>
-    <%= f.text_field :c_type, placeholder: 'Type', class:'input input__lg '%>
-  </div>
-  <div>
-    <%= f.text_field :challenge_img, placeholder: 'Lien image', class:'input input__lg '%>
-  </div>
-  <div>
-    <%= f.text_field :challenge_link, placeholder: 'Lien challenge externe', class:'input input__lg '%>
-  </div>
-  <%= f.submit 'Créer' ,class:'pill__outlined button m-top align_right'%>
-<% end %>
-</div>

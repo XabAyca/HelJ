@@ -14,6 +14,9 @@
 	box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.13);
 	max-width: 280px;
 	background-color: var(--beige);
+	display: flex;
+	overflow-y: auto;
+	flex-direction: column;
 }
 
 .right{
@@ -66,9 +69,7 @@
 .room__name{
 	font-weight: 600;
 	margin-bottom:var(--sp4);
-	font-size:var(--fs16);
 	line-height: 100%;
-
 }
 
 .room__members{

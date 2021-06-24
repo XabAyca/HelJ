@@ -1,14 +1,14 @@
 <main class="main__wrapper background">
   <div class="form_page">
     <div>
-      <h1 class='center'>Proposer un bon projet</h1>
+      <h2 class='center'>Proposer un bon projet</h2>
       <br>
       <div>
         <p>Vous souhaitez proposer un projet à la communauté ? Pour attirer l’attention des membres et donc faire le plein de compétences sur votre micro-projet il est important de s’attarder sur certains points et conventions.</p>
         <h4>Titre, Description, Histoire</h4>
         <%=image_tag 'https://i.ibb.co/v1CPQ0Y/project-img.jpg', class:'project_img'%>
         <p>C’est là le coeur de votre projet. La description correspond au pitch que vous feriez pour vendre votre projet. Cela doit être court et percutant. Le lecteur doit comprendre en une phrase en quoi consiste votre projet. Ne négligez surtout pas cette partie car c’est l’une des seuls informations visible au premier coup d’oeil sur notre application. 
-        L’histoire par contre est facultative mais tout aussi appréciable. Vous pourrez expliquer pas à pas votre projet, vos ambitions, le chemin déjà parcouru, …</p>
+          L’histoire par contre est facultative mais tout aussi appréciable. Vous pourrez expliquer pas à pas votre projet, vos ambitions, le chemin déjà parcouru, …</p>
         <br>
         <hr class='separator'>
         <h4>Le Figma</h4>
@@ -17,15 +17,15 @@
           </svg>
         <%end%>
         <p>Figma est un outil de création et de manipulation graphique des éléments vectoriels pour le prototypage et la création des interfaces des logiciels, des applications Web et mobiles ainsi que des sites Web. Il s’agit d’un outil collaboratif par excellence qui permet de communiquer et réaliser des modifications en temps réel via un navigateur Web
-        Le lien Figma est obligatoire. C’est un gage de qualité. Cela vous pousse à proposer un projet réel et avancé et non une simple idée.
-        https://www.figma.com</p> 
+          Le lien Figma est obligatoire. C’est un gage de qualité. Cela vous pousse à proposer un projet réel et avancé et non une simple idée.
+          https://www.figma.com</p>
         <br>
         <hr class='separator'>
         <h4>Lien Trello</h4>
         <p>Facultatif mais très apprécié Trello est une application conçue pour le management des projets. Très efficace, cet outil ergonomique permet également d'être aux commandes de plusieurs projets simultanément. Par ailleurs, il s'agit aussi d'un gestionnaire de tâches qui sert à mieux classer les projets à travers une liste de tâches.
-        https://trello.com/fr</p>  
+          https://trello.com/fr</p>
         <br>
-        <hr class='separator'>  
+        <hr class='separator'>
         <h4>Lien GitHub</h4>
         <%= link_to 'https://github.com/', target:'_blank', class:'link link_admin project_img' do%>
             <svg width="150" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,15 +33,15 @@
             </svg>
             <%end%>
         <p>Si votre projet est déjà avancé partager votre lien GitHub est indispensable.
-        GitHub permet aux développeurs de stocker et de partager, publiquement ou non, le code qu’ils créent. La plate-forme accueille ainsi, dit-elle, plus de 80 millions de projets, qu’il s’agisse de logiciels, de sites Web, d’applications pour mobile ou tous autres types de programme informatique — et ce quel que soit le langage de programmation utilisé.
-        https://github.com/</p>
+          GitHub permet aux développeurs de stocker et de partager, publiquement ou non, le code qu’ils créent. La plate-forme accueille ainsi, dit-elle, plus de 80 millions de projets, qu’il s’agisse de logiciels, de sites Web, d’applications pour mobile ou tous autres types de programme informatique — et ce quel que soit le langage de programmation utilisé.
+          https://github.com/</p>
       </div>
-     </div>
+    </div>
     <div class='actions m-top-5'>
       <%=link_to root_path, class:'link move_left align_right' do%>
         Retour
         <svg width="47" height="12" viewBox="0 0 47 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1 7C0.447715 7 -4.82823e-08 7.44772 0 8C4.82823e-08 8.55228 0.447715 9 1 9L1 7ZM46.7071 8.7071C47.0976 8.31658 47.0976 7.68341 46.7071 7.29289L40.3431 0.928929C39.9526 0.538404 39.3195 0.538404 38.9289 0.928929C38.5384 1.31945 38.5384 1.95262 38.9289 2.34314L44.5858 8L38.9289 13.6569C38.5384 14.0474 38.5384 14.6805 38.9289 15.0711C39.3195 15.4616 39.9526 15.4616 40.3431 15.0711L46.7071 8.7071ZM1 9L46 9L46 7L1 7L1 9Z" fill="#2252F9"/>
+          <path d="M1 7C0.447715 7 -4.82823e-08 7.44772 0 8C4.82823e-08 8.55228 0.447715 9 1 9L1 7ZM46.7071 8.7071C47.0976 8.31658 47.0976 7.68341 46.7071 7.29289L40.3431 0.928929C39.9526 0.538404 39.3195 0.538404 38.9289 0.928929C38.5384 1.31945 38.5384 1.95262 38.9289 2.34314L44.5858 8L38.9289 13.6569C38.5384 14.0474 38.5384 14.6805 38.9289 15.0711C39.3195 15.4616 39.9526 15.4616 40.3431 15.0711L46.7071 8.7071ZM1 9L46 9L46 7L1 7L1 9Z" fill="#2252F9"/>
         </svg>
       <%end%>
     </div>
