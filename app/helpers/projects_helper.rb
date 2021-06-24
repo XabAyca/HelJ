@@ -6,7 +6,7 @@ module ProjectsHelper
     end
   end
 
-  #to comment
+  #helper to handle sorting
   def sorting_as_label(arr, string)
     case string
     when "Ancien"
