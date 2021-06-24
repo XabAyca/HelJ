@@ -1,9 +1,6 @@
-//not necessary
-//they're compiled anyway
 @use 'fonts';
 @use 'spacing';
 @use 'colors';
-// i'm not sure
 @import "media";
 
 * {
@@ -26,9 +23,6 @@ body {
   background-color: var(--beige);
 }
 
-//not needed since it's the last case
-//@media(max-width:$LaptopBig){
-//}
 .main__wrapper,
 .secondary__wrapper {
   padding: 0px 100px;
@@ -77,7 +71,6 @@ body {
   }
 }
 
-// for mobile view
 .hidden_menu {
   overflow-x: hidden;
 }

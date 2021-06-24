@@ -5,6 +5,6 @@ class ApplicationMailer < ActionMailer::Base
   def joint_the_challenge(challenge, user)
     @challenge = challenge
     @user = user
-    mail(to: @user.email , subject: "hey joint_the_challenge")
+    mail(to: @user.email , subject: "Tu as rejoint un challenge")
   end
 end

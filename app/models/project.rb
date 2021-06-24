@@ -21,10 +21,11 @@ class Project < ApplicationRecord
     format: { with: /(?:https:\/\/)?(?:www\.)?trello\.com(?:\/([0-9a-zA-Z]{2,128}))?(?:\/([0-9a-zA-Z]{1,128}))?(?:\/([0-9a-zA-Z]{2,128}))?(?:\/([0-9a-zA-Z]{2,128}))?(?:\/([0-9a-zA-Z]{2,128}))?/, message: 'Ce lien n\'est pas valide' }
 
   validates :needed,
-    presence: { message: "Le besoins doit être défini" }
+    presence: { message: "Le besoin doit être défini" }
 
   has_many :joint_users_to_projects
   has_many :users, through: :joint_users_to_projects
   belongs_to :needed
   belongs_to :owner, class_name: "User"
+
 end

@@ -21,9 +21,9 @@
       <%= image_tag("hero_image_smmobile.png", class:"hero__img",alt:"people collaborating") %>
     </div>
     <%if user_signed_in?%>
-      <a href="<%=new_project_path%>" class="button pill__outlined button__pill__outlined dropbtn link">Proposer un projet</a>
+      <%=link_to "Proposer un projet", new_project_path, class:"button pill__outlined button__pill__outlined dropbtn link" %>
     <% else %>
-      <a href="<%=new_user_session_path%>" class="button pill__outlined button__pill__outlined dropbtn link">Rejoindre la communauté</a>
+      <%=link_to "Rejoindre la communauté", new_user_session_path, class:"button pill__outlined button__pill__outlined dropbtn link"%>
     <%end%>
   </section>
   <section id="features">
@@ -49,21 +49,23 @@
         <%= image_tag("designer.png", class: "typology__card__img",alt:"work designer")  %>
         <div class="typology__text" id="designer">
           <h3 class="typology__card__title">Un Designer</h3>
-          <ul class="typology__card__list">
-            <li class="typology__list__first">
-              Travailler avec un développeur peut vous aider à comprendre comment changer un "Visuel" en code et comment l'intègrer au mieux à vos sites et applications.</li>
-            <li class="typology__list__last">
-              L'apprentissage du language CSS est une compétence appréciée pour un designer, il vous aidera à comprendre comment vos instructions sont traduites en code. 
-              Cela vous donne également la possibilité de créer votre propre site.</li>
-          </ul>
-          <button class="button button__md button__text typo__button">
-            <a href="https://webflow.com/" target="_blank" class="link move_left">
+          <p class="justify_text">
+            <ul class="typology__card__list">
+              <li class="typology__list__first">
+                Travailler avec un développeur peut vous aider à comprendre comment changer un "Visuel" en code et comment l'intègrer au mieux à vos sites et applications.</li>
+              <li class="typology__list__last">
+                L'apprentissage du language CSS est une compétence appréciée pour un designer, il vous aidera à comprendre comment vos instructions sont traduites en code. 
+                Cela vous donne également la possibilité de créer votre propre site.</li>
+            </ul>
+          </p>
+   
+            <%=link_to "https://webflow.com/", target:"_blank", class:"link move_left button button__text typo__button button__md" do%>
               Visitez le site Webflow pour concevoir et organiser votre page avec des outils "No code."
               <svg width="38" height="12" viewBox="0 0 38 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75L1 5.25ZM37.5303 6.53033C37.8232 6.23743 37.8232 5.76256 37.5303 5.46967L32.7574 0.696696C32.4645 0.403803 31.9896 0.403803 31.6967 0.696696C31.4038 0.98959 31.4038 1.46446 31.6967 1.75736L35.9393 6L31.6967 10.2426C31.4038 10.5355 31.4038 11.0104 31.6967 11.3033C31.9896 11.5962 32.4645 11.5962 32.7574 11.3033L37.5303 6.53033ZM1 6.75L37 6.75L37 5.25L1 5.25L1 6.75Z" fill="#2252F9"/>
               </svg>
-            </a>
-          </button>
+            <%end%>
+  
         </div>
       </div>
       <div class="typology__card">
@@ -76,14 +78,16 @@
             <li class="typology__list__last">Travailler avec d'autres personnes sur les projets vous aidera à réaliser des sites / applications plus aboutis 
               qui vous pousseront à acquerir davantage d'expériences de manière plus rapide qu'un apprentissage traditionnel. Que vous soyez développeur front-end ou back-end, 
               vous devriez y voir les nombreux bénéfices que ce type de pratique proposes.</li>
-          </ul>
-          <button class="button button__md button__text typo__button typo__button_right">
-            <a href="https://fr.wikipedia.org/wiki/Programmation_en_bin%C3%B4me" target="_blank" class="link move_left">
+            </ul>
+          </p>
+       
+            <%=link_to "https://fr.wikipedia.org/wiki/Programmation_en_bin%C3%B4me", target:"_blank", class:"link move_left button button__text typo__button_right button__md" do%>
+         
               Qu'est ce que le peer-programming?
               <svg width="38" height="12" viewBox="0 0 38 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75L1 5.25ZM37.5303 6.53033C37.8232 6.23743 37.8232 5.76256 37.5303 5.46967L32.7574 0.696696C32.4645 0.403803 31.9896 0.403803 31.6967 0.696696C31.4038 0.98959 31.4038 1.46446 31.6967 1.75736L35.9393 6L31.6967 10.2426C31.4038 10.5355 31.4038 11.0104 31.6967 11.3033C31.9896 11.5962 32.4645 11.5962 32.7574 11.3033L37.5303 6.53033ZM1 6.75L37 6.75L37 5.25L1 5.25L1 6.75Z" fill="#2252F9"/>
               </svg>
-            </a>
+            <%end%>
           </button>
         </div>
       </div>
@@ -91,21 +95,22 @@
         <%= image_tag("marketer.png", class: "typology__card__img",alt:"post-it") %>
         <div class="typology__text" id="marketer">
           <h3 class="typology__card__title">Un Commerçant</h3>
-          <ul class="typology__card__list">
-            <li class="typology__list__first">L'application de vos connaissances en marketing peut être un plus pour la communauté. </li>
-            <li class="typology__list__last">Tout en gérant un projet / produit, vous pouvez appliquer toutes vos compétences en matière de commerce et marketing.
-              Vous pourrez comprendre ce qu'est le web, comment il fonctionne et vous servir de ces atoûts pour mieux cibler votre clientèle et également 
-              vous rendre plus à l'aise sur des outils numériques. Pour ceux qui ont soif de conaissances, 
-              vous trouverez sur Hel-J de quoi vous formez sur des languages tels que HTML, CSS ou bien encore JavaScript.</li>
-          </ul>
-          <button class="button button__md button__text typo__button">
-            <a href="<%=resources_path%>" class="link move_left">
+          <p class="justify_text">
+            <ul class="typology__card__list">
+              <li class="typology__list__first">L'application de vos connaissances en marketing peut être un plus pour la communauté. </li>
+              <li class="typology__list__last">Tout en gérant un projet / produit, vous pouvez appliquer toutes vos compétences en matière de commerce et marketing.
+                Vous pourrez comprendre ce qu'est le web, comment il fonctionne et vous servir de ces atoûts pour mieux cibler votre clientèle et également 
+                vous rendre plus à l'aise sur des outils numériques. Pour ceux qui ont soif de conaissances, 
+                vous trouverez sur Hel-J de quoi vous formez sur des languages tels que HTML, CSS ou bien encore JavaScript.</li>
+            </ul>
+          </p>
+
+          <%=link_to resources_path, target:"_blank", class:"button button__md button__text typo__button link move_left" do%>
               Nos Ressources sur le Marketing  
               <svg width="38" height="12" viewBox="0 0 38 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75L1 5.25ZM37.5303 6.53033C37.8232 6.23743 37.8232 5.76256 37.5303 5.46967L32.7574 0.696696C32.4645 0.403803 31.9896 0.403803 31.6967 0.696696C31.4038 0.98959 31.4038 1.46446 31.6967 1.75736L35.9393 6L31.6967 10.2426C31.4038 10.5355 31.4038 11.0104 31.6967 11.3033C31.9896 11.5962 32.4645 11.5962 32.7574 11.3033L37.5303 6.53033ZM1 6.75L37 6.75L37 5.25L1 5.25L1 6.75Z" fill="#2252F9"/>
               </svg>
-            </a>
-          </button>
+          <%end%> 
         </div>
       </div>
     </section>
@@ -123,7 +128,7 @@
           Bienvenu sur Hel-J!
         </p>
         <%if !user_signed_in?%>
-          <a href="<%=new_user_registration_path%>" class="button pill__outlined button__pill__outlined dropbtn link">Rejoindre la communauté</a>
+          <%=button_to 'Rejoindre la communauté', new_user_registration_path, class:"button pill__outlined button__pill__outlined dropbtn link"%>
         <%end%>
       </div>
     </section>

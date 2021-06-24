@@ -60,7 +60,16 @@ class ProjectsController < ApplicationController
   private
 
   def post_params
-    params.require(:project).permit(:description, :logo_url, :project_title, :description, :figma_link, :git_link, :trello_link, :story, :needed_id)
+    params.require(:project).permit(
+      :description,
+      :logo_url,
+      :project_title,
+      :description,
+      :figma_link,
+      :git_link,
+      :trello_link,
+      :story, :needed_id
+    )
   end
 
   def neededs_list
