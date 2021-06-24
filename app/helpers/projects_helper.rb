@@ -9,9 +9,9 @@ module ProjectsHelper
   #to comment
   def sorting_as_label(arr, string)
     case string
-    when "Old"
+    when "Ancien"
       arr.sort { |a, b| a.created_at < b.created_at ? -1 : 1 }
-    when "Recent"
+    when "Récent"
       arr.sort { |a, b| a.created_at < b.created_at ? 1 : -1 }
     when ""
       return arr
