@@ -1,8 +1,8 @@
 <nav>
   <ul class="navlink__list__admin "> 
-    <div class="text_center">
+    <div class="space_under text_center">
       <li class="hover-underline-animation nav__link">
-      <%=link_to admin_root_path do%>
+      <%=link_to admin_root_path, class:'ab' do%>
         <i class="bi bi-speedometer"></i><br>
         Accueil
       <%end%>
@@ -39,7 +39,7 @@
         Besoins
       <%end%></li>
     </div>
-    <hr>
+    <hr class='admin_separator'>
     <div class="space_under">
       <li class="hover-underline-animation link_add ">
         <%=link_to new_admin_project_path,class:"link_add" do%>
