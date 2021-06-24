@@ -40,6 +40,7 @@
     background: #2252f9;
     border-radius: 4px;
     color: white;
+    cursor: pointer;
 }
 
 .button__outlined {
@@ -165,4 +166,8 @@
 
 .rm_decoration {
     text-decoration-line: none;
+}
+
+.cursor_off{
+    cursor:auto
 }

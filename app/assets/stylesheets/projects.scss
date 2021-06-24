@@ -28,8 +28,7 @@
     height: 4rem;
 }
 .projects_wrapper{
-	max-width:600px;
-	min-width:300px;
+	width:70%;
 	margin:var(--sp0) auto;
 	display: flex;
     flex-direction: column;
@@ -50,11 +49,12 @@
 
 .search__bar{
 	display:flex;
-	border: 1px solid var(--defaultBlack);
+	border: 1px solid grey;
     border-radius: 18px;
     width:100%;
 	padding:var(--sp4);
     outline: none;
+		
 }
 
 .search__inputs{
@@ -75,6 +75,12 @@ grid-template-columns: 1fr 55px 150px;
 	border: none;
 	background:var(--beige)
 }
+select{
+	border-radius: 18px;
+	border: 1px solid grey;
+	color:grey
+}
+
 @media(max-width:$LaptopSmall){
 
 }
