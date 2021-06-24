@@ -9,10 +9,10 @@ Pour vous connecter, 2 choix d'offrent à vous :
 
 Utiliser le Admin de test:  
 
-* Email Admin--> `adresse a définir`  
-* Mot de passe --> `motdepasse`  (mot de passe minimum 6 cararatère et 1 Majuscule)
+* Email Admin--> `foobar@gmail.com`  
+* Mot de passe --> `foobar`  (mot de passe minimum 6 cararatères)
 
-Ou passer par le process d'inscription classique.  
+Ou passez par le processus d'inscription classique.  
 
 ## OUTILS:
  
@@ -79,8 +79,8 @@ To connect, you have 2 choices:
 
 Use the test Admin:  
 
-* Email Admin--> `address to be defined`  
-* Password --> `password` (minimum password 6 characters and 1 shift)
+* Email Admin--> `foobar@gmail.com`  
+* Password --> `foobar` (minimum password 6 characters)
 
 Or go through the classic registration process.  
 
