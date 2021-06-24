@@ -11,7 +11,7 @@
       <div class="content__header">
         <div class="content__header__top">
           <h3 class="header__top__title"><%= @challenge.challenge_name.upcase%></h3>
-          <%= button_to 'Rejoindre', :action: => joint_the_challenge_path(current_user.id, @challenge.id) , class: "button button__md  pill__outlined"%>
+          <%= link_to 'Rejoindre' ,joint_the_challenge_path(current_user.id, @challenge.id) , class: "button button__md  pill__outlined"%>
         </div>
         <div>
           <p class="challenge__classification"> <span class="challenge__type"><%= @challenge.c_type %></span> <span class="challenge__classification__separator"></span> <span class="challenge__level"><%= @challenge.level %></span> </p>
