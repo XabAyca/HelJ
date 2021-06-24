@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
       p @message
       p @message.user.id
       p current_user.id
-      ActionCable.server.broadcast "room_channel_#{@message.room_id}", html: render_message
+      ActionCable.server.broadcast "roomchannel#{@message.room_id}", html: render_message
     end
   end
 
