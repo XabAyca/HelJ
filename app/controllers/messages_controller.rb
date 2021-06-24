@@ -9,6 +9,7 @@ class MessagesController < ApplicationController
     end
   end
 
+  #to comment
   def render_message
     MessagesController.renderer.instance_variable_set(
       :@env, {

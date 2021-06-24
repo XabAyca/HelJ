@@ -6,15 +6,15 @@ module ProjectsHelper
     end
   end
 
+  #to comment
   def sorting_as_label(arr, string)
     case string
     when "Old"
       arr.sort { |a, b| a.created_at < b.created_at ? -1 : 1 }
     when "Recent"
       arr.sort { |a, b| a.created_at < b.created_at ? 1 : -1 }
-	when ""
-		return arr
+    when ""
+      return arr
     end
-
   end
 end
