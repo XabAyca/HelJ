@@ -5,34 +5,36 @@
         <%= image_tag(@project.logo_url, class: "logo-img") %>
       <%else%>
         <%= image_tag('https://images.unsplash.com/photo-1572177812156-58036aae439c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80', class: "logo-img") %>
-      <%end%>  
-      <h1 class='center'><%= @project.project_title %></h1>
+      <%end%>
+      <h2 class='center'><%= @project.project_title %></h2>
       <div>
         <h4>Description</h4>
         <p class='justify_text'><%=@project.description%></p>
         <h4>Liens du projet</h4>
         <div class='links_list'>
-          <p><a href='<%=@project.figma_link%>' target='_blank' class='link'>
-            <svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 0 200 300"><path d="M50 300c27.6 0 50-22.4 50-50v-50H50c-27.6 0-50 22.4-50 50s22.4 50 50 50z" fill="#0acf83"/><path d="M0 150c0-27.6 22.4-50 50-50h50v100H50c-27.6 0-50-22.4-50-50z" fill="#a259ff"/><path d="M0 50C0 22.4 22.4 0 50 0h50v100H50C22.4 100 0 77.6 0 50z" fill="#f24e1e"/><path d="M100 0h50c27.6 0 50 22.4 50 50s-22.4 50-50 50h-50z" fill="#ff7262"/><path d="M200 150c0 27.6-22.4 50-50 50s-50-22.4-50-50 22.4-50 50-50 50 22.4 50 50z" fill="#1abcfe"/>
-            </svg>
-            Figma
-          </a><p>
+          <p>
+            <%=link_to @project.figma_link,target:'_blank', class:'link' do%>
+              <svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 0 200 300"><path d="M50 300c27.6 0 50-22.4 50-50v-50H50c-27.6 0-50 22.4-50 50s22.4 50 50 50z" fill="#0acf83"/><path d="M0 150c0-27.6 22.4-50 50-50h50v100H50c-27.6 0-50-22.4-50-50z" fill="#a259ff"/><path d="M0 50C0 22.4 22.4 0 50 0h50v100H50C22.4 100 0 77.6 0 50z" fill="#f24e1e"/><path d="M100 0h50c27.6 0 50 22.4 50 50s-22.4 50-50 50h-50z" fill="#ff7262"/><path d="M200 150c0 27.6-22.4 50-50 50s-50-22.4-50-50 22.4-50 50-50 50 22.4 50 50z" fill="#1abcfe"/>
+              </svg>
+              Figma
+            <%end%>
+          <p>
 
-          <%if @project.git_link%>
-          <p><a href='<%=@project.git_link%>' target='_blank' class='link'>
+          <%if @project.git_link != '' && @project.git_link != nil %>
+          <p><%=link_to @project.git_link,target:'_blank', class:'link' do%>
             <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 0C5.59375 0 0 5.59375 0 12.5C0 18.0312 3.57812 22.7031 8.54688 24.3594C9.17188 24.4687 9.40625 24.0937 9.40625 23.7656C9.40625 23.4687 9.39062 22.4844 9.39062 21.4375C6.25 22.0156 5.4375 20.6719 5.1875 19.9687C5.04688 19.6094 4.4375 18.5 3.90625 18.2031C3.46875 17.9687 2.84375 17.3906 3.89062 17.375C4.875 17.3594 5.57812 18.2812 5.8125 18.6562C6.9375 20.5469 8.73437 20.0156 9.45312 19.6875C9.5625 18.875 9.89062 18.3281 10.25 18.0156C7.46875 17.7031 4.5625 16.625 4.5625 11.8437C4.5625 10.4844 5.04688 9.35937 5.84375 8.48437C5.71875 8.17187 5.28125 6.89062 5.96875 5.17187C5.96875 5.17187 7.01562 4.84375 9.40625 6.45312C10.4062 6.17187 11.4687 6.03125 12.5312 6.03125C13.5937 6.03125 14.6562 6.17187 15.6562 6.45312C18.0469 4.82812 19.0938 5.17187 19.0938 5.17187C19.7812 6.89062 19.3438 8.17187 19.2188 8.48437C20.0156 9.35937 20.5 10.4687 20.5 11.8437C20.5 16.6406 17.5781 17.7031 14.7969 18.0156C15.25 18.4062 15.6406 19.1562 15.6406 20.3281C15.6406 22 15.625 23.3437 15.625 23.7656C15.625 24.0937 15.8594 24.4844 16.4844 24.3594C18.9658 23.5216 21.1221 21.9267 22.6496 19.7993C24.1772 17.6719 24.9993 15.119 25 12.5C25 5.59375 19.4062 0 12.5 0Z" fill="#2252F9"/>
             </svg>
               GitHub
-            </a><p>
+            <%end%><p>
           <%end%>
 
-          <%if @project.trello_link%>
-          <p><a href='<%=@project.trello_link%>' target='_blank' class='link'>
+          <%if @project.trello_link != '' && @project.trello_link != nil %>
+          <p><%=link_to @project.trello_link,target:'_blank', class:'link' do%>
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="25" viewBox="0 0 256 256" version="1.1" preserveAspectRatio="xMidYMid"><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1"><stop stop-color="#0091E6" offset="0%"/><stop stop-color="#0079BF" offset="100%"/></linearGradient></defs><g><g><rect fill="url(#linearGradient-1)" x="0" y="0" width="256" height="256" rx="25"/><rect fill="#FFFFFF" x="144.64" y="33.28" width="78.08" height="112" rx="12"/><rect fill="#FFFFFF" x="33.28" y="33.28" width="78.08" height="176" rx="12"/></g></g>
             </svg>
               Trello
-          </a><p>
+          <%end%><p>
           <%end%>
         </div>
         <h4>Histoire complète</h4>
@@ -40,7 +42,7 @@
           <p class='justify_text'><%=@project.story%></p>
         <%end%>  
         <h4 class=''>Besoins</h4>
-        <button href='' class='btn pill__outlined button__lg '>+ <%=@project.needed.name%></button>
+        <div class='button button__filled button__lg cursor_off btn_needed'>+ <%=@project.needed.name%></div>
         
         <%if @project.owner.id == current_user.id%>
           <%=button_to "Supprimer le projet", project_path(@project.id), method:'delete',data: { confirm:'Valider la suppression?'},class:'pill__outlined__red button m-top align_right'%>

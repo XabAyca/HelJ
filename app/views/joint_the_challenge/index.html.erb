@@ -1,3 +1,6 @@
-<h1>Hello <%= @user.first_name %></h1>
-
-<h2>Thank for yours participation to : <%= @challenge.challenge_name %></h2>
+<div class="challenge_section">
+    <h2>Tu participe au challenge : <%= @challenge.challenge_name %></h2>
+    <p>niveau : <%= @challenge.level %></p>
+    <p>type : <%= @challenge.c_type %></p>
+    <%= link_to 'Retour', root_path, class: "button button__outlined challenge go_back" %>
+</div>

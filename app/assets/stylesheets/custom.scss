@@ -1,11 +1,7 @@
-//not necessary 
-//they're compiled anyway
 @use 'fonts';
 @use 'spacing';
 @use 'colors';
-// i'm not sure
-@import 'media';
-
+@import "media";
 
 * {
   box-sizing: border-box !important;
@@ -15,57 +11,66 @@ body {
   margin: 0;
   color: var(--defaultBlack);
   font-family: var(--primaryFont);
-	overflow-x: hidden;
-	position: relative;
+  overflow-x: hidden;
+  position: relative;
 }
-.contact__link{
-	text-decoration: underline;
+.contact__link {
+  text-decoration: underline;
 }
-.main__wrapper{
-	min-height: calc(100vh - 100px);
-	background-color: var(--beige);
-}
-
-
-//not needed since it's the last case
-//@media(max-width:$LaptopBig){
-//}
-.main__wrapper{
-	padding:0px 100px;
-	padding-bottom: 15px;
-}
-@media(max-width:$LaptopSmall){
-	.main__wrapper{
-		padding:0px 80px;
-		padding-bottom: 15px;
-	}
-}
-@media(max-width:$Tablet){
-	.main__wrapper{
-		padding:0px 50px;
-		padding-bottom: 15px;
-	}
-}
-@media(max-width:$PhoneBig){
-	.main__wrapper{
-		padding:0px 30px;
-		padding-bottom: 15px;
-	}
-}
-@media(max-width:$PhoneMiddle){
-	.main__wrapper{
-		padding:0px 20px;
-		padding-bottom: 15px;
-	}
-}
-@media(max-width:$PhoneSmall){
-	.main__wrapper{
-		padding:0px 15px;
-		padding-bottom: 15px;
-	}
+.main__wrapper,
+.secondary__wrapper {
+  min-height: calc(100vh - 100px);
+  background-color: var(--beige);
 }
 
-// for mobile view
-.hidden_menu{
-	overflow-x: hidden;
+.main__wrapper,
+.secondary__wrapper {
+  padding: 0px 100px;
+  padding-bottom: 15px;
+}
+
+@media (max-width: $LaptopSmall) {
+  .main__wrapper {
+    padding: 0px 80px;
+  }
+  .secondary__wrapper {
+    padding: 0px 60px;
+  }
+}
+@media (max-width: $Tablet) {
+  .main__wrapper {
+    padding: 0px 50px;
+  }
+  .secondary__wrapper {
+    padding: 0px 30px;
+  }
+}
+@media (max-width: $PhoneBig) {
+  .main__wrapper {
+    padding: 0px 30px;
+    padding-bottom: 15px;
+  }
+  .secondary__wrapper {
+    padding: 0px 20px;
+  }
+}
+@media (max-width: $PhoneMiddle) {
+  .main__wrapper {
+    padding: 0px 20px;
+  }
+  .secondary__wrapper {
+    padding: 0px 15px;
+  }
+}
+@media (max-width: $PhoneSmall) {
+  .main__wrapper {
+    padding: 0px 15px;
+  }
+  .secondary__wrapper {
+    padding: 0px 10px;
+  }
+}
+
+.hidden_menu {
+  overflow-x: hidden;
 }

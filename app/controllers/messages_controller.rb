@@ -5,14 +5,17 @@ class MessagesController < ApplicationController
       p @message
       p @message.user.id
       p current_user.id
-      ActionCable.server.broadcast "roomchannel#{@message.room_id}", html: render_message
+      ActionCable.server.broadcast "room_channel_#{@message.room_id}", html: render_message
     end
   end
 
+  #couldn't use a job /cron job because of current_user wasn't passed in
+  #instead i found this work-around
+  # i handle the ajax call for creating a new message
   def render_message
     MessagesController.renderer.instance_variable_set(
       :@env, {
-        "HTTP_HOST" => "localhost:3000",
+        "HTTP_HOST" => "http://localhost:3000/",
         "HTTPS" => "off",
         "REQUEST_METHOD" => "GET",
         "SCRIPT_NAME" => "",

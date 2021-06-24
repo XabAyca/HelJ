@@ -3,7 +3,7 @@
     border-radius: 18px;
     padding: 6px 14px;
     width:100%;
-    margin-top:20px;
+    margin-top:10px;
     outline: none;
 }
 
@@ -25,4 +25,9 @@
 
 .input__xsm {
     padding: 6px 14px;
+}
+
+.input__neumorphism{
+	box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #ffffff73;
+	border: none;
 }

@@ -1,12 +1,10 @@
 <div class='card_challenge'>
-  <a href='<%=challenge_path(challenge.id)%>' class='link'>
+  <%= link_to challenge_path(challenge.id), class:'link' do%>
     <div class='card_challenge_header'>
-      <h4><%=challenge.challenge_name.upcase%></h4>
+      <h5><%=challenge.challenge_name.upcase%></h5>
     </div>
-    
     <div class='card_challenge_body'>
-    
       <p class="challenge__classification"> <span class="challenge__type"><%= challenge.c_type %></span> <span class="challenge__classification__separator"></span> <span class="challenge__level"><%= challenge.level %></span> </p>
     </div>
-  </a>
+  <%end%>
 </div>  

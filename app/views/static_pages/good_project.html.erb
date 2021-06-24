@@ -1,47 +1,47 @@
 <main class="main__wrapper background">
   <div class="form_page">
     <div>
-      <h1 class='center'>Proposer un bon projet</h1>
+      <h2 class='center'>Proposer un bon projet</h2>
       <br>
       <div>
         <p>Vous souhaitez proposer un projet à la communauté ? Pour attirer l’attention des membres et donc faire le plein de compétences sur votre micro-projet il est important de s’attarder sur certains points et conventions.</p>
         <h4>Titre, Description, Histoire</h4>
         <%=image_tag 'https://i.ibb.co/v1CPQ0Y/project-img.jpg', class:'project_img'%>
         <p>C’est là le coeur de votre projet. La description correspond au pitch que vous feriez pour vendre votre projet. Cela doit être court et percutant. Le lecteur doit comprendre en une phrase en quoi consiste votre projet. Ne négligez surtout pas cette partie car c’est l’une des seuls informations visible au premier coup d’oeil sur notre application. 
-        L’histoire par contre est facultative mais tout aussi appréciable. Vous pourrez expliquer pas à pas votre projet, vos ambitions, le chemin déjà parcouru, …</p>
+          L’histoire par contre est facultative mais tout aussi appréciable. Vous pourrez expliquer pas à pas votre projet, vos ambitions, le chemin déjà parcouru, …</p>
         <br>
         <hr class='separator'>
         <h4>Le Figma</h4>
-        <a href='https://www.figma.com' target='_blank' class='link link_admin project_img_r'>
+        <%= link_to 'https://www.figma.com', target:'_blank', class:'link link_admin project_img_r' do%>
           <svg xmlns="http://www.w3.org/2000/svg" height="150" viewBox="0 0 200 300"><path d="M50 300c27.6 0 50-22.4 50-50v-50H50c-27.6 0-50 22.4-50 50s22.4 50 50 50z" fill="#0acf83"/><path d="M0 150c0-27.6 22.4-50 50-50h50v100H50c-27.6 0-50-22.4-50-50z" fill="#a259ff"/><path d="M0 50C0 22.4 22.4 0 50 0h50v100H50C22.4 100 0 77.6 0 50z" fill="#f24e1e"/><path d="M100 0h50c27.6 0 50 22.4 50 50s-22.4 50-50 50h-50z" fill="#ff7262"/><path d="M200 150c0 27.6-22.4 50-50 50s-50-22.4-50-50 22.4-50 50-50 50 22.4 50 50z" fill="#1abcfe"/>
           </svg>
-        </a>
+        <%end%>
         <p>Figma est un outil de création et de manipulation graphique des éléments vectoriels pour le prototypage et la création des interfaces des logiciels, des applications Web et mobiles ainsi que des sites Web. Il s’agit d’un outil collaboratif par excellence qui permet de communiquer et réaliser des modifications en temps réel via un navigateur Web
-        Le lien Figma est obligatoire. C’est un gage de qualité. Cela vous pousse à proposer un projet réel et avancé et non une simple idée.
-        https://www.figma.com</p> 
+          Le lien Figma est obligatoire. C’est un gage de qualité. Cela vous pousse à proposer un projet réel et avancé et non une simple idée.
+          https://www.figma.com</p>
         <br>
         <hr class='separator'>
         <h4>Lien Trello</h4>
         <p>Facultatif mais très apprécié Trello est une application conçue pour le management des projets. Très efficace, cet outil ergonomique permet également d'être aux commandes de plusieurs projets simultanément. Par ailleurs, il s'agit aussi d'un gestionnaire de tâches qui sert à mieux classer les projets à travers une liste de tâches.
-        https://trello.com/fr</p>  
+          https://trello.com/fr</p>
         <br>
-        <hr class='separator'>  
+        <hr class='separator'>
         <h4>Lien GitHub</h4>
-        <a href='https://github.com/' target='_blank' class='link link_admin project_img'>
+        <%= link_to 'https://github.com/', target:'_blank', class:'link link_admin project_img' do%>
             <svg width="150" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 0C5.59375 0 0 5.59375 0 12.5C0 18.0312 3.57812 22.7031 8.54688 24.3594C9.17188 24.4687 9.40625 24.0937 9.40625 23.7656C9.40625 23.4687 9.39062 22.4844 9.39062 21.4375C6.25 22.0156 5.4375 20.6719 5.1875 19.9687C5.04688 19.6094 4.4375 18.5 3.90625 18.2031C3.46875 17.9687 2.84375 17.3906 3.89062 17.375C4.875 17.3594 5.57812 18.2812 5.8125 18.6562C6.9375 20.5469 8.73437 20.0156 9.45312 19.6875C9.5625 18.875 9.89062 18.3281 10.25 18.0156C7.46875 17.7031 4.5625 16.625 4.5625 11.8437C4.5625 10.4844 5.04688 9.35937 5.84375 8.48437C5.71875 8.17187 5.28125 6.89062 5.96875 5.17187C5.96875 5.17187 7.01562 4.84375 9.40625 6.45312C10.4062 6.17187 11.4687 6.03125 12.5312 6.03125C13.5937 6.03125 14.6562 6.17187 15.6562 6.45312C18.0469 4.82812 19.0938 5.17187 19.0938 5.17187C19.7812 6.89062 19.3438 8.17187 19.2188 8.48437C20.0156 9.35937 20.5 10.4687 20.5 11.8437C20.5 16.6406 17.5781 17.7031 14.7969 18.0156C15.25 18.4062 15.6406 19.1562 15.6406 20.3281C15.6406 22 15.625 23.3437 15.625 23.7656C15.625 24.0937 15.8594 24.4844 16.4844 24.3594C18.9658 23.5216 21.1221 21.9267 22.6496 19.7993C24.1772 17.6719 24.9993 15.119 25 12.5C25 5.59375 19.4062 0 12.5 0Z" fill="#2252F9"/>
             </svg>
-            </a>
+            <%end%>
         <p>Si votre projet est déjà avancé partager votre lien GitHub est indispensable.
-        GitHub permet aux développeurs de stocker et de partager, publiquement ou non, le code qu’ils créent. La plate-forme accueille ainsi, dit-elle, plus de 80 millions de projets, qu’il s’agisse de logiciels, de sites Web, d’applications pour mobile ou tous autres types de programme informatique — et ce quel que soit le langage de programmation utilisé.
-        https://github.com/</p>
+          GitHub permet aux développeurs de stocker et de partager, publiquement ou non, le code qu’ils créent. La plate-forme accueille ainsi, dit-elle, plus de 80 millions de projets, qu’il s’agisse de logiciels, de sites Web, d’applications pour mobile ou tous autres types de programme informatique — et ce quel que soit le langage de programmation utilisé.
+          https://github.com/</p>
       </div>
-     </div>
+    </div>
     <div class='actions m-top-5'>
       <%=link_to root_path, class:'link move_left align_right' do%>
         Retour
         <svg width="47" height="12" viewBox="0 0 47 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1 7C0.447715 7 -4.82823e-08 7.44772 0 8C4.82823e-08 8.55228 0.447715 9 1 9L1 7ZM46.7071 8.7071C47.0976 8.31658 47.0976 7.68341 46.7071 7.29289L40.3431 0.928929C39.9526 0.538404 39.3195 0.538404 38.9289 0.928929C38.5384 1.31945 38.5384 1.95262 38.9289 2.34314L44.5858 8L38.9289 13.6569C38.5384 14.0474 38.5384 14.6805 38.9289 15.0711C39.3195 15.4616 39.9526 15.4616 40.3431 15.0711L46.7071 8.7071ZM1 9L46 9L46 7L1 7L1 9Z" fill="#2252F9"/>
+          <path d="M1 7C0.447715 7 -4.82823e-08 7.44772 0 8C4.82823e-08 8.55228 0.447715 9 1 9L1 7ZM46.7071 8.7071C47.0976 8.31658 47.0976 7.68341 46.7071 7.29289L40.3431 0.928929C39.9526 0.538404 39.3195 0.538404 38.9289 0.928929C38.5384 1.31945 38.5384 1.95262 38.9289 2.34314L44.5858 8L38.9289 13.6569C38.5384 14.0474 38.5384 14.6805 38.9289 15.0711C39.3195 15.4616 39.9526 15.4616 40.3431 15.0711L46.7071 8.7071ZM1 9L46 9L46 7L1 7L1 9Z" fill="#2252F9"/>
         </svg>
       <%end%>
     </div>

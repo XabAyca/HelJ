@@ -32,6 +32,14 @@ class Admin::ChallengesController < ApplicationController
   private
 
   def post_params
-    params.require(:challenge).permit(:c_ype, :level, :challenge_slug, :challenge_description, :challenge_img, :challenge_link, :challenge_name )
+    params.require(:challenge).permit(
+      :c_ype,
+      :level,
+      :challenge_slug,
+      :challenge_description,
+      :challenge_img,
+      :challenge_link,
+      :challenge_name
+    )
   end
 end

@@ -1,103 +1,103 @@
-
-@import 'media';
+@import "media";
 // Place all the styles related to the projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.projects__title{
-	text-align: center;
-	font-size:var(--fs36);
-	padding-top:var(--sp64);
-	padding-bottom:var(--sp16);
+.projects__title {
+  text-align: center;
+
+  padding-top: var(--sp64);
+  padding-bottom: var(--sp16);
 }
 .title {
-    display: flex;
-    margin-left: 15vw;
+  display: flex;
+  margin-left: 15vw;
 }
 
 .logo-title {
-    display: block;
-    margin-top: auto;
-    margin-bottom: auto;
-    font-size: 3rem;
-    margin-left: 15px;
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 3rem;
+  margin-left: 15px;
 }
 
 .logo-img {
-    border-radius: 50%;
-    width: 4rem;
-    height: 4rem;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
 }
-.projects_wrapper{
-	max-width:600px;
-	min-width:300px;
-	margin:var(--sp0) auto;
-	display: flex;
-    flex-direction: column;
-    align-items: center;
+.projects_wrapper {
+  width: 70%;
+  margin: var(--sp0) auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-#project_search{
-	display:flex;
-	justify-content: center;
-	margin-bottom:var(--sp24)
-}
-
-.links_list{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;  
+#project_search {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--sp24);
 }
 
-.search__bar{
-	display:flex;
-	border: 1px solid var(--defaultBlack);
-    border-radius: 18px;
-    width:100%;
-	padding:var(--sp4);
-    outline: none;
+.links_list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.search__inputs{
-display:grid;
-grid-template-columns: 1fr 55px 150px;
-	width:550px;
-	grid-gap:var(--sp12)
+.search__bar {
+  display: flex;
+  border: 1px solid grey;
+  border-radius: 18px;
+  width: 100%;
+  padding: var(--sp4);
+  outline: none;
 }
 
-.search__bar__text{
-	border:none;
-	background:var(--beige);
-	outline: none;
-	margin: var(--sp0) var(--sp4);
-	flex:1
-}
-.search__bar__icon{
-	border: none;
-	background:var(--beige)
-}
-@media(max-width:$LaptopSmall){
-
+.search__inputs {
+  display: grid;
+  grid-template-columns: 1fr 75px 150px;
+  width: 550px;
+  grid-gap: var(--sp12);
 }
 
-
-
-
-@media(max-width:$PhoneBig){
-
-	.projects__title{
-
-		font-size:var(--fs24);
-
-	}
+.search__bar__text {
+  border: none;
+  background: var(--beige);
+  outline: none;
+  margin: var(--sp0) var(--sp4);
+  flex: 1;
+}
+.search__bar__icon {
+  border: none;
+  background: var(--beige);
+}
+select {
+  border-radius: 18px;
+  border: 1px solid grey;
+  color: grey;
 }
 
-
-@media(max-width:$PhoneMiddle){
-
-
+@media (max-width: $LaptopSmall) {
 }
 
+@media (max-width: $PhoneBig) {
+  .search__inputs {
+    grid-template-columns: 1fr 1fr;
+  }
+  #sort {
+    grid-column: span 2;
+  }
+  .projects__title {
+  }
+  .projects_wrapper {
+    width: 100%;
+  }
+}
 
-@media(max-width:$PhoneSmall){
+@media (max-width: $PhoneMiddle) {
+}
 
+@media (max-width: $PhoneSmall) {
 }

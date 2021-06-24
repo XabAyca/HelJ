@@ -1,5 +1,4 @@
 <div>
-
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name),class:'form') do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
     <div>
@@ -7,9 +6,6 @@
     </div>
     <div>
       <%= f.text_field :last_name, autofocus: true,class:'input input__lg ',placeholder:'Nom' , id: 'last_name'%>
-    </div>
-    <div>
-      <%= f.text_area :description, autofocus: true,class:'input input__lg ',placeholder:'Description', id: 'description' %>
     </div>
     <div>
       <%= f.email_field :email, autofocus: true, autocomplete: "email",class:'input input__lg ',placeholder:'Email' , id: 'email'%>

@@ -9,13 +9,13 @@ class Admin::UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    redirect_to admin_users_path, notice:'Utilisateur supprimé'
+    redirect_to admin_users_path, notice: 'Utilisateur supprimé'
   end
 
   def update
     @user = User.find(params[:id])
     @user.update(post_params)
-    redirect_to admin_users_path, notice:'Administrateur modifié'
+    redirect_to admin_users_path, notice: 'Administrateur modifié'
   end
 
   private
@@ -23,5 +23,4 @@ class Admin::UsersController < ApplicationController
   def post_params
     params.require(:user).permit(:admin)
   end
-
 end

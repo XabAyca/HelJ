@@ -1,11 +1,16 @@
 .card__project{
-	max-width:580px;
-	border: 1px solid #000000;
+	width:100%;
+	min-height: 150px;
+	height: auto;
+	box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.137);
 	border-radius:var(--sp12);
 	margin-bottom:var(--sp24);
 	margin-left: 15px;
 	margin-right: 15px;
 	padding:var(--sp16) var(--sp20)
+}
+.card__project:hover{
+	box-shadow: inset 1px 1px 4px 1px rgba(0, 0, 0, 0.137);	
 }
 .project__infos{
 	display:flex;
