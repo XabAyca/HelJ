@@ -25,7 +25,7 @@
       <div class="challenge__main">
         <div class="challenge__main__text">
           <p> <%= @challenge.challenge_description%> </p>
-          <%=link_to 'Lien du challenge', @challenge.challenge_link, class:'link'%>
+          <%=link_to 'Lien du challenge', @challenge.challenge_link, class:'link', target:'_blank' %>
           <div class='challenge_img'>
             <img class="challenge_img" src="<%=@challenge.challenge_img %>">
           </div>
