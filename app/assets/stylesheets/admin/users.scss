@@ -47,4 +47,8 @@
 
 .participation_user_wrapper{
 padding:2rem 1rem;
+display:grid;
+
+ grid-template-columns: repeat(auto-fill, minmax(250px, 320px));
+ grid-row-gap: 2rem;
 }
