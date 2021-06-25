@@ -11,11 +11,11 @@
       <div class="content__header">
         <div class="content__header__top">
           <h3 class="header__top__title"><%= @challenge.challenge_name.upcase%></h3>
-          <%= link_to 'Rejoindre' ,joint_the_challenge_path(current_user.id, @challenge.id) , class: "button button__md  pill__outlined"%>
+          <%=!!current_user.challenges_id[@challenge.id]%>
           <%if !!current_user.challenges_id[@challenge.id]%>
-            <%= button_to 'Quitter' ,joint_the_challenge_path(current_user.id, @challenge.id) , class: "button button__md  pill__outlined"%>
+            <%= button_to 'Quitter' ,joint_users_to_ppation_path , params:{participation_id:current_user.challenges_id[@challenge.id],id_challenge:@challenge.id },method:'delete', class: "button button__md  pill__outlined"%>
           <%else%>
-            <%= button_to 'Rejoindre' ,joint_the_challenge_path(current_user.id, @challenge.id) , class: "button button__md  pill__outlined"%>
+            <%= button_to 'Rejoindre' ,joint_users_to_ppations_path ,params:{id_challenge:@challenge.id,id_user:current_user.id}, class: "button button__md  pill__outlined"%>
           <%end%>
         </div>
         <div>

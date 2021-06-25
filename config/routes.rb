@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :messages, only: [:create]
   resources :challenges, only: [:index, :show]
   resources :joint_users_to_projects, only: [:create, :destroy]
-  get "/joint_the_challenge/:id_user/:id_challenge", to: "joint_the_challenge#index", as: "joint_the_challenge"
+  resources :joint_users_to_ppations, only: [:create, :destroy]
 
   namespace :admin do
     root "static_pages#index"
