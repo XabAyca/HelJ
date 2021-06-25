@@ -42,7 +42,7 @@ class User < ApplicationRecord
     self.participation_challenges.each do |participation|
       challenge_id = participation.challenge.id
       p challenge_id
-      user_challenges_id[challenge_id] = true
+      user_challenges_id[challenge_id] = participation.id
     end
     return user_challenges_id
   end
