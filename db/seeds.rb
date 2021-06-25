@@ -150,28 +150,6 @@ Challenge.create(
   challenge_name: "ip adresse tracker",
 )
 
-10.times do |i|
-  Room.create(
-    name: "#{i}",
-  )
-  p "#{i} room created"
-end
-10.times do |i|
-  JointUserRoom.create(
-    user_id: User.all.sample.id,
-    room_id: Room.all.sample.id,
-  )
-  p "#{i} joint user room created"
-end
-
-30.times do |i|
-  Message.create(
-    user_id: User.all.sample,
-    room_id: Room.all.sample,
-    content: "#{i}",
-  )
-  p "#{i} message created"
-end
 
 p "*" * 30
 p "Seed finished"

@@ -2,7 +2,7 @@ class JointUsersToPpationsController < ApplicationController
   def create
     @user = User.find(params["id_user"])
     @challenge = Challenge.find(params["id_challenge"])
-    pc = ParticipationChallenge.create(challenge_id: @challenge.id,user_id:@user.id)
+    pc = ParticipationChallenge.create(challenge_id: @challenge.id)
     JointUsersToPpation.create(user_id: @user.id, participation_challenge_id: pc.id)
     redirect_to challenge_path(@challenge.id), notice: "Vous êtes bien inscrit sur le challenge"
   end
