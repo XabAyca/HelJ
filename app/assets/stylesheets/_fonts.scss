@@ -102,9 +102,6 @@ h6 {
 @import url('../fonts/Konnect/KonnectRegular.woff');
 
 /*font-face konnect*/
-
-//  src: url('<%= asset_path('fonts/KonnectRegular.woff') %>');
-//src:url(asset-path('fonts/KonnectRegular.woff))format("woff");
 @font-face {
   font-family: "Konnect";
   font-style: normal;
