@@ -24,16 +24,26 @@ class User < ApplicationRecord
 
   def self.from_omniauth(access_token)
     data = access_token.info
-    user = User.where(email: data['email']).first
+    user = User.where(email: data["email"]).first
 
     unless user
       user = User.create(
-        first_name: data['first_name'],
-        last_name: data['last_name'],
-        email: data['email'],
-        password: Devise.friendly_token[0,20]
+        first_name: data["first_name"],
+        last_name: data["last_name"],
+        email: data["email"],
+        password: Devise.friendly_token[0, 20],
       )
     end
     user
+  end
+
+  def challenges_id
+    user_challenges_id = {}
+    self.participation_challenges.each do |participation|
+      challenge_id = participation.challenge.id
+      p challenge_id
+      user_challenges_id[challenge_id] = true
+    end
+    return user_challenges_id
   end
 end

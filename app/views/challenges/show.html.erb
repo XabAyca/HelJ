@@ -12,6 +12,11 @@
         <div class="content__header__top">
           <h3 class="header__top__title"><%= @challenge.challenge_name.upcase%></h3>
           <%= link_to 'Rejoindre' ,joint_the_challenge_path(current_user.id, @challenge.id) , class: "button button__md  pill__outlined"%>
+          <%if !!current_user.challenges_id[@challenge.id]%>
+            <%= button_to 'Quitter' ,joint_the_challenge_path(current_user.id, @challenge.id) , class: "button button__md  pill__outlined"%>
+          <%else%>
+            <%= button_to 'Rejoindre' ,joint_the_challenge_path(current_user.id, @challenge.id) , class: "button button__md  pill__outlined"%>
+          <%end%>
         </div>
         <div>
           <p class="challenge__classification"> <span class="challenge__type"><%= @challenge.c_type %></span> <span class="challenge__classification__separator"></span> <span class="challenge__level"><%= @challenge.level %></span> </p>
@@ -21,11 +26,11 @@
       <div class="challenge__main">
         <div class="challenge__main__text">
           <p> <%= @challenge.challenge_description%> </p>
-          <%=link_to 'Lien du challenge', @challenge.challenge_link, class:'link'%> 
+          <%=link_to 'Lien du challenge', @challenge.challenge_link, class:'link'%>
           <div class='challenge_img'>
             <img class="challenge_img" src="<%=@challenge.challenge_img %>">
           </div>
-        </div>    
+        </div>
       </div>
     </div>
   </main>

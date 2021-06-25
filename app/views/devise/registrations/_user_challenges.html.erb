@@ -1,14 +1,16 @@
 <div class="v-line">
-  <% current_user.participation_challenges.each do |participation|  %>
-    <hr class="challenge__separator">
-    <div class="challenge__main">
-      <div class="challenge__main__text">
-        <h4> <%= participation.challenge.challenge_name%> </h4>
-        <p><%= participation.challenge.challenge_description%> </p>
-        <div class="submit_button">
-          <%= link_to "Voir le challenge",  challenge_path(participation.challenge), class: "button button__md button__outlined rm_decoration" %>
-        </div>
+  <div class="participation_user_wrapper">
+    <% current_user.participation_challenges.each do |participation|  %>
+      <div class='card_challenge card_challenge_user'>
+        <%= link_to challenge_path(participation.challenge.id), class:'link' do%>
+          <div class='card_challenge_header'>
+            <h5><%=participation.challenge.challenge_name.upcase%></h5>
+          </div>
+          <div class='card_challenge_body'>
+            <p class="challenge__classification"> <span class="challenge__type"><%= participation.challenge.c_type %></span> <span class="challenge__classification__separator"></span> <span class="challenge__level"><%= participation.challenge.level %></span> </p>
+          </div>
+        <%end%>
       </div>
-    </div>
-  <%end%>
+    <%end%>
+  </div>
 </div>
