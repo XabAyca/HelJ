@@ -39,9 +39,11 @@ class User < ApplicationRecord
 
   def challenges_id
     user_challenges_id = {}
-    self.participation_challenges.each do |participation|
-      challenge_id = participation.challenge.id
-      user_challenges_id[challenge_id] = participation.id
+    if self.participation_challenges.count > 0
+      self.participation_challenges.each do |participation|
+        challenge_id = participation.challenge.id
+        user_challenges_id[challenge_id] = participation.id
+      end
     end
     return user_challenges_id
   end
