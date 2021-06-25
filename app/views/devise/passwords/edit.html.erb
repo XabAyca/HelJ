@@ -10,10 +10,10 @@
             <% if @minimum_password_length %>
               <em>(<%= @minimum_password_length %> characters minimum)</em><br />
             <% end %>
-            <%= f.password_field :password, autofocus: true, autocomplete: "new-password",class:'input input__lg ', placeholder:'Nouveau mot de passe' %>
+            <%= f.password_field :password, autofocus: true, autocomplete: "new-password",class:'input input__lg input__neumorphism', placeholder:'Nouveau mot de passe' %>
           </div>
           <div>
-            <%= f.password_field :password_confirmation, autocomplete: "new-password",class:'input input__lg ', placeholder:'Confirmation'  %>
+            <%= f.password_field :password_confirmation, autocomplete: "new-password",class:'input input__lg input__neumorphism', placeholder:'Confirmation'  %>
           </div>
           <div class="actions">
             <%= f.submit "Changer mon mot de passe",class:'pill__outlined button m-top align_right'%>

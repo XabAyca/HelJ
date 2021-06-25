@@ -3,10 +3,10 @@
   <div>
     <%= form_with model: @needed, method: :post, url: admin_neededs_path ,class:'form' do |f| %>
       <div>
-        <%= f.text_field :name, placeholder: 'Titre' , class:'input input__lg '%>
+        <%= f.text_field :name, placeholder: 'Titre' , class:'input input__lg input__neumorphism'%>
       </div>
       <div>
-        <%= f.text_area :description, placeholder: 'Description' , class:'input input__lg '%>
+        <%= f.text_area :description, placeholder: 'Description' , class:'input input__lg input__neumorphism'%>
       </div>
       <div>
         <%= f.submit 'Créer' ,class:'pill__outlined button m-top align_right'%>

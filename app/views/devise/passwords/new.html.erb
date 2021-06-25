@@ -6,7 +6,7 @@
         <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post },class:'form') do |f| %>
           <%= render "devise/shared/error_messages", resource: resource %>
           <div>
-            <%= f.email_field :email, autofocus: true, autocomplete: "email",class:'input input__lg ', placeholder:'Email' %>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email",class:'input input__lg input__neumorphism', placeholder:'Email' %>
           </div>
           <div class="actions">
             <%= f.submit "Envoyer le mail de réinitialisation",class:'pill__outlined button m-top align_right'%>

@@ -73,9 +73,11 @@ ActiveRecord::Schema.define(version: 2021_06_21_123210) do
 
   create_table "participation_challenges", force: :cascade do |t|
     t.bigint "challenge_id"
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["challenge_id"], name: "index_participation_challenges_on_challenge_id"
+    t.index ["user_id"], name: "index_participation_challenges_on_user_id"
   end
 
   create_table "projects", force: :cascade do |t|

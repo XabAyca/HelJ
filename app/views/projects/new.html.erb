@@ -5,28 +5,28 @@
       <div>
         <%= form_with model: @project, method: :post, url: projects_path ,class:'form' do |f| %>
           <div>
-            <%= f.text_field :project_title, placeholder: 'Titre' , class:'input input__lg '%>
+            <%= f.text_field :project_title, placeholder: 'Titre' , class:'input input__lg input__neumorphism'%>
           </div>
           <div>
-            <%= f.text_area :description, placeholder: 'Description rapide' , class:'input input__lg '%>
+            <%= f.text_area :description, placeholder: 'Description rapide' , class:'input input__lg input__neumorphism'%>
           </div>
           <div>
-            <%= f.text_area :story, placeholder: 'Histoire compléte', class:'input input__lg '%>
+            <%= f.text_area :story, placeholder: 'Histoire compléte', class:'input input__lg input__neumorphism'%>
           </div>
           <div>
-            <%= f.text_field :logo_url, placeholder: 'Image', class:'input input__lg '%>
+            <%= f.text_field :logo_url, placeholder: 'Lien de l\'image', class:'input input__lg input__neumorphism'%>
           </div>
           <div>
-            <%= f.text_field :figma_link, placeholder: 'Lien Figma', class:'input input__lg '%>
+            <%= f.text_field :figma_link, placeholder: 'Lien Figma', class:'input input__lg input__neumorphism'%>
           </div>
           <div>
-            <%= f.text_field :trello_link, placeholder: 'Lien Trello', class:'input input__lg '%>
+            <%= f.text_field :trello_link, placeholder: 'Lien Trello', class:'input input__lg input__neumorphism'%>
           </div>
           <div>
-            <%= f.text_field :git_link, placeholder: 'Lien GitHub', class:'input input__lg '%>
+            <%= f.text_field :git_link, placeholder: 'Lien GitHub', class:'input input__lg input__neumorphism'%>
           </div>
           <div>
-            <%= f.collection_select :needed_id, @neededs,:id , :name,{}, placeholder: 'Compétence recherchée' , class:'input input__lg '%>
+            <%= f.collection_select :needed_id, @neededs,:id , :name,{}, placeholder: 'Compétence recherchée' , class:'input input__lg input__neumorphism'%>
           </div>
           <%= f.submit 'Créer un projet' ,class:'pill__outlined button m-top align_right'%>
         <% end %>
