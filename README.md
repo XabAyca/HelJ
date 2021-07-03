@@ -1,6 +1,7 @@
 # HelJ (Version Francaise)
 
-Cette application est un site de mise en relation de web developpeur Juniors, réalisé dans le but d'apprendre en équipe, et de mutualiser nos compétences après 3 mois de formation en développement web. Il a été réalisé en 10 jours.  
+Cette application est un site de mise en relation de web developpeur Juniors, réalisé dans le but d'apprendre en équipe, et de mutualiser nos compétences après 3 mois de formation en développement web. Il a été réalisé en 10 jours. 
+![website-hero](./Hero.png) 
 
 ## ACCES:
 
